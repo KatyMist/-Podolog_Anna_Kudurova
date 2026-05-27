@@ -1,0 +1,52 @@
+@use '../helpers/index' as *;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(8);
+    padding: rem(14) rem(28);
+    background-color: var(--accent);
+    color: #fff;
+    border-radius: 100px;
+    font-size: rem(20);
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition);
+
+    @include hover {
+        background-color: var(--accent-light);
+    }
+
+    @include tablet {
+        padding: rem(10) rem(18);
+        font-size: rem(15);
+    }
+
+    @include mobile {
+        padding: rem(10) rem(16);
+        font-size: rem(14);
+    }
+}
+
+.btn__arrow {
+    width: rem(26);
+    height: rem(26);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    @include flex-center;
+    font-size: rem(13);
+
+    @include tablet {
+        width: rem(22);
+        height: rem(22);
+        font-size: rem(11);
+    }
+}
+
+.btn--sm {
+    padding: rem(10) rem(22);
+    font-size: rem(15);
+    width: fit-content; // не растягивается на всю ширину
+}

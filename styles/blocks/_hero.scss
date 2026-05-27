@@ -1,0 +1,229 @@
+@use '../helpers/index' as *;
+
+// ─── Hero ──────────────────────────────────────────────────
+
+.hero {
+    padding-block: rem(80) rem(60);
+    background-image:
+        radial-gradient(ellipse 120% 100% at 5% 5%, rgba(45, 125, 210, 0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 60% at 95% 95%, rgba(45, 125, 210, 0.12) 0%, transparent 55%);
+
+    @include tablet {
+        padding-block: rem(60) rem(40);
+    }
+
+    @include mobile {
+        padding-block: rem(40) rem(32);
+    }
+}
+
+.hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: rem(40);
+    position: relative;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+// ─── Content ───────────────────────────────────────────────
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(24);
+
+    @include tablet {
+        align-items: center;
+        order: 1; // контент идёт первым
+    }
+}
+
+.hero__label {
+    font-size: rem(18);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.hero__title {
+    @include fluid-text(64, 36); 
+
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: var(--text);
+}
+
+.hero__desc {
+    font-size: rem(18);
+    color: var(--muted);
+    line-height: 1.6;
+
+    @include mobile {
+        font-size: rem(16);
+    }
+}
+
+// ─── Кнопка "Узнать больше" ────────────────────────────────
+
+.hero__more {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(10);
+    font-size: rem(16);
+    font-weight: 400;
+    color: var(--text);
+    text-decoration: none;
+    padding: rem(12) rem(24);
+    border: 1px solid var(--border-light);
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    transition: background-color var(--transition), border-color var(--transition);
+
+    @include hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-color: var(--accent);
+    }
+}
+
+.hero__more-icon {
+    font-size: rem(14);
+    color: var(--accent-light);
+}
+
+// ─── Image placeholder ─────────────────────────────────────
+
+.hero__image {
+    aspect-ratio: 4 / 5; // было 3/4 — чуть приземистее
+    max-height: rem(760); // ограничиваем высоту
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 50%;
+    }
+
+    @include tablet {
+        aspect-ratio: 3 / 2;
+        max-height: rem(480);
+        order: 2;
+        margin-inline: auto; // центрирует блок по горизонтали
+        width: 80%; // чтобы не растягивалось на всю ширину
+    }
+
+    @include mobile {
+        aspect-ratio: 4 / 3;
+        max-height: rem(360); // было rem(260)
+        order: 2;
+    }
+}
+
+// ─── Cards ─────────────────────────────────────────────────
+
+.hero__cards {
+    @include container;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(16);
+    margin-left: auto;
+    width: 55%;
+    margin-top: rem(-80);
+    position: relative;
+    z-index: 2;
+
+    @include tablet {
+        width: 100%;
+        margin-top: rem(24);
+    }
+
+    @include mobile {
+        grid-template-columns: repeat(3, 1fr); // три в ряд
+        width: 100%;
+        margin-top: rem(16);
+        gap: rem(8);
+    }
+}
+
+.hero__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(12);
+    padding: rem(28) rem(24);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    transition: background-color var(--transition), box-shadow var(--transition);
+
+    @include hover {
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: var(--shadow-blue);
+    }
+    
+    @include laptop {
+        padding: rem(18) rem(16);
+        gap: rem(8);
+    }
+
+    @include mobile {
+        padding: rem(14) rem(8); // компактнее
+        gap: rem(6);
+        border-radius: rem(12);
+    }
+
+    @include mobile-s {
+        padding: rem(8) rem(4);
+        gap: rem(3);
+        border-radius: rem(8);
+    }
+}
+
+.hero__card-icon {
+    font-size: rem(24);
+    color: var(--accent);
+    line-height: 1;
+
+    @include mobile {
+        font-size: rem(18);
+    }
+
+    @include mobile-s {
+        font-size: rem(12);
+
+        svg {
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+
+.hero__card-text {
+    font-size: rem(16);
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.4;
+
+    @include mobile {
+        font-size: rem(11);
+    }
+
+    @include mobile-s {
+        font-size: rem(8);
+    }
+}

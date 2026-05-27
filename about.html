@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О себе | Анна Кудурова — Подолог</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="icon" type="image/svg+xml" href="./icons/logo.svg">
+    <script src="./scripts/main.js" type="module" defer></script>
+</head>
+<body>
+ 
+    <header class="header">
+        <div class="header__inner">
+            <a href="#" class="header__logo" aria-label="На главную">
+                <img src="./icons/logo.svg" alt="Подология Анны Кудуровой" width="64" height="64">
+            </a>
+            <nav class="header__nav" id="nav">
+                <ul class="header__nav-list">
+                    <li><a href="./index.html" class="header__nav-link">Главная</a></li>
+                    <li><a href="./about.html" class="header__nav-link is-active">О себе</a></li>
+                    <li><a href="./index.html#services" class="header__nav-link">Услуги</a></li>
+                    <li><a href="./index.html#cases" class="header__nav-link">Кейсы</a></li>
+                    <li><a href="./index.html#contacts" class="header__nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="https://vk.com/im/convo/708439222?tab=all" class="header__btn btn" target="_blank" rel="noopener noreferrer">
+                Записаться
+                <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+ 
+    <main>
+ 
+        <!-- Hero -->
+        <section class="about-hero">
+            <div class="about-hero__inner container">
+ 
+                <div class="about-hero__image-wrap">
+                    <img class="about-hero__image" src="./images/Anna.jpg" alt="Анна Кудурова">
+                    <div class="about-hero__badge">
+                        <img src="./icons/People.svg" alt="" width="52" height="52">
+                        <span class="about-hero__badge-num">500+</span>
+                        <span class="about-hero__badge-label">клиентов</span>
+                    </div>
+                </div>
+ 
+                <div class="about-hero__content">
+                    <p class="about-hero__label">О себе</p>
+ 
+                    <h1 class="about-hero__name">Анна Кудурова</h1>
+ 
+                    <p class="about-hero__roles">Подолог · Инструктор · Спикер</p>
+ 
+                    <p class="about-hero__text">
+                        Я практикующий подолог, инструктор, спикер и человек, который всерьёз увлёкся здоровьем стоп и ногтей.
+                    </p>
+ 
+                    <p class="about-hero__text">
+                        В нейл-индустрии я работаю с 2020 года, но несколько лет назад, когда прошла обучение по педикюру, поняла — это именно моё. Однако очень быстро осознала, что педикюр — это не только про эстетику и красивый внешний вид. За красивым результатом часто стоит гораздо больше: комфорт и качество жизни человека.
+                    </p>
+ 
+                    <p class="about-hero__text">
+                        Именно поэтому я начала углублённо изучать подологию и уже более 3 лет профессионально работаю со сложными случаями, помогая клиентам решать проблемы стоп и ногтей.
+                    </p>
+
+                    <p class="about-hero__text">
+                        Сегодня моя работа — это не только практика с клиентами, но и обучение мастеров, выступления и развитие профессионального сообщества.
+                    </p>
+                </div>
+ 
+            </div>
+        </section>
+
+ 
+        <!-- Инструкторская деятельность -->
+        <section class="about-teaching">
+            <div class="container">
+                <h2 class="about-teaching__title">Инструкторская деятельность</h2>
+                <p class="about-teaching__desc">С 2024 года я являюсь инструктором бренда Rosilak и провожу обучение по программам:</p>
+ 
+                <div class="about-teaching__timeline">
+                    <div class="about-teaching__card">
+                        <h3>Программы Rosilak</h3>
+                        <p>• Базовое введение в мир педикюра — Пилинг-педикюр Rosilak</p>
+                        <p>• Повышение квалификации по технике Пилинг-педикюра Rosilak</p>
+                    </div>
+
+                    <div class="about-teaching__card">
+                        <h3>Авторские курсы</h3>
+                        <p>• Аппаратный педикюр с введением в подологию</p>
+                        <p>• Коррекция ногтей без страха и боли (титановые нити, тампонады, тейпирование)</p>
+                        <p>• Повышение квалификации по индивидуальному запросу</p>
+                    </div>
+
+                    <div class="about-teaching__card">
+                        <h3>Практика и обучение</h3>
+                        <p>Продолжаю создавать актуальные образовательные программы и делиться опытом с коллегами по всей стране</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Профессиональная деятельность -->
+        <section class="about-pro">
+            <div class="about-pro__inner container">
+                <div class="about-pro__content">
+                    <h2 class="about-pro__title">Профессиональная деятельность</h2>
+                    <p class="about-pro__text">Я являюсь спикером онлайн- и офлайн-конференций, регулярно выступаю на темы подологии, развития специалистов, правовых норм и профессионального роста. Также активно участвую в организации профессиональных мероприятий. </p>
+                    <p class="about-pro__text">Одним из таких проектов стала подологическая конференция «Опора 1.0», которая состоялась 25 апреля 2026 года в городе Ульяновске и объединила специалистов для обмена знаниями, опытом и развития подологии в регионе.</p>
+                    <p class="about-pro__text">Помимо практической и преподавательской деятельности, я продолжаю профессиональное развитие и сейчас получаю медицинское образование, которое завершаю в 2027 году. Для меня это не просто очередной диплом, а возможность ещё глубже понимать процессы, происходящие в организме, и смотреть на проблемы клиентов шире.</p>
+                </div>
+                <div class="about-pro__image">
+                    <img src="./images/Prof.jpg" alt="Профессиональная деятельность" >
+                </div>
+            </div>
+        </section>
+
+        <!-- Почему доверяют -->
+        <section class="about-trust">
+            <div class="container">
+                <h2 class="about-trust__title">Почему мне доверяют</h2>
+                <div class="about-trust__line"></div>
+ 
+                <div class="about-trust__grid">
+                    <div class="about-trust__item">
+                        <img src="./icons/People.svg" alt="" width="46" height="46">
+                        <p>Более 500 клиентов в базе</p>
+                    </div>
+                    <div class="about-trust__item">
+                        <img src="./icons/I.svg" alt="" width="46" height="46">
+                        <p>Рейтинг 5.0 на Яндекс Картах и статус «Хорошее место 2025 и 2026»</p>
+                    </div>
+                    <div class="about-trust__item">
+                        <img src="./icons/brand.svg" alt="" width="46" height="46">
+                        <p>Инструктор бренда Rosilak</p>
+                    </div>
+                    <div class="about-trust__item">
+                        <img src="./icons/pen.svg" alt="" width="46" height="46">
+                        <p>Авторские программы обучения</p>
+                    </div>
+                    <div class="about-trust__item">
+                        <img src="./icons/calendar.svg" alt="" width="46" height="46">
+                        <p>Спикер и организатор профессиональных мероприятий</p>
+                    </div>
+                    <div class="about-trust__item">
+                        <img src="./icons/cap.svg" alt="" width="46" height="46">
+                        <p>Получаю медицинское образование (окончание в 2027 году)</p>
+                    </div>
+                    <div class="about-trust__item">
+                        <img src="./icons/book.svg" alt="" width="46" height="46">
+                        <p>Постоянно обучаюсь и повышаю квалификацию</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Подход -->
+        <section class="about-approach">
+            <div class="about-approach__inner container">
+
+                <div class="about-approach__left">
+                    <p class="about-approach__label">Мой подход</p>
+                    <div class="about-approach__line"></div>
+
+                    <p class="about-approach__principle">
+                        Мой принцип работы:<br>
+                        Здоровье + эстетика + бережный подход
+                    </p>
+                </div>
+
+                <div class="about-approach__right">
+                    <p class="about-approach__text">Я уверена, что работа специалиста — это не просто выполнение процедуры.</p>
+                    <p class="about-approach__text">Для меня важно понимать процессы глубже, искать причину проблемы, работать бережно и помогать людям не только получать красивый результат, но и чувствовать комфорт.</p>
+                    <p class="about-approach__text">В своих социальных сетях я делюсь полезной информацией о здоровье стоп и ногтей, разбираю мифы, показываю реальные случаи и объясняю сложные вещи простым языком.</p>
+
+                    <div class="about-approach__footer">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21C12 21 3 14 3 8.5C3 6 5 4 7.5 4C9 4 10.5 4.8 12 6.5C13.5 4.8 15 4 16.5 4C19 4 21 6 21 8.5C21 14 12 21 12 21Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Буду рада знакомству</span>
+                    </div>
+                </div>
+                
+
+            </div>
+        </section>
+ 
+    </main>
+ 
+    <div class="cursor" id="cursor"></div>
+ 
+</body>
+</html>
+ 

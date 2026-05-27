@@ -1,0 +1,149 @@
+@use './helpers/index' as *;
+
+// Base 
+body {
+    @include fluid-text(30, 20);
+
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-base);
+    min-height: 100%;
+}
+
+main {
+    flex-grow: 1;
+}
+
+// Заголовки 
+h1, .h1 {
+    @include fluid-text(70, 30);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h2, .h2 {
+    @include fluid-text(58, 28);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h3, .h3 {
+    @include fluid-text(40, 24);
+    font-weight: 400;
+}
+
+h4, .h4 {
+    @include fluid-text(26, 18);
+    font-weight: 400;
+}
+
+/*
+h5, .h5 {
+    @include fluid-text(24, 18);
+    font-weight: 400;
+}
+
+h6, .h6 {
+    @include fluid-text(20, 16);
+    font-weight: 400;
+}
+*/
+
+
+// Ссылки
+a {
+    color: inherit;
+
+    @include hover {
+        color: var(--color-light);
+    }
+
+    &[class] {
+        text-decoration: none;
+    }
+}
+
+// Кнопки и ссылки с aria-label
+a,
+button {
+    &[aria-label]:not(.burger) {
+        position: relative;
+
+        &::before {
+            @include abs-center;
+            @include square(rem(44));
+            content: '';
+        }
+    }
+}
+
+// Плавность переходов 
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+// Фокус
+:focus-visible {
+    outline: rem(2) dashed var(--color-powdery);
+    outline-offset: rem(4);
+    transition-duration: 0s !important;
+}
+
+body {
+    @include fluid-text(30, 20);
+
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-base);
+    min-height: 100%;
+    background-color: var(--bg);
+}
+
+// Скрываем стандартный курсор
+* {
+    cursor: none !important;
+}
+
+// Кастомный курсор
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: rem(12);
+    height: rem(12);
+    background-color: #5fa3e8;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+.cursor--hover {
+    width: rem(36);
+    height: rem(36);
+    opacity: 0.5;
+}
+
+body {
+    @include fluid-text(30, 20);
+
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-base);
+    min-height: 100%;
+
+    background-color: #ffffff;
+    background-image:
+        radial-gradient(ellipse 100% 40% at 20% 10%, rgba(45, 125, 210, 0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 40% at 80% 35%, rgba(94, 163, 232, 0.12) 0%, transparent 65%),
+        radial-gradient(ellipse 100% 40% at 10% 60%, rgba(45, 125, 210, 0.10) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 40% at 90% 80%, rgba(94, 163, 232, 0.12) 0%, transparent 65%);
+    background-attachment: fixed; // градиент фиксирован — не скролится вместе со страницей
+}

@@ -1,0 +1,28 @@
+@use './helpers/index' as *;
+
+
+//ограничивает максимальную ширину контента и центрирует его на странице
+.container { 
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+
+//утилитарный класс для скрытия элементов визуально, но с сохранением доступности для скринридеров и SEO
+.visually-hidden {
+    @include visually-hidden;
+}
+
+//скрывает элемент на мобильных устройствах
+.hidden-mobile {
+    @include mobile {
+        display: none !important;
+    }
+}
+
+// показывает элемент только на мобильных
+.visible-mobile {
+    @include mobile-above {
+        display: none !important;
+    }
+}

@@ -1,0 +1,113 @@
+@use '../helpers/index' as *;
+ 
+// ─── Why ───────────────────────────────────────────────────
+ 
+.why {
+    padding-block: rem(80);
+    
+
+    @include tablet { padding-block: rem(60); }
+    @include mobile { padding-block: rem(40); }
+}
+
+// ─── Top ───────────────────────────────────────────────────
+ 
+.why__top {
+    margin-bottom: rem(64);
+ 
+    @include tablet {
+        margin-bottom: rem(40);
+    }
+}
+ 
+.why__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    text-align: center;
+    color: var(--text);
+    margin-bottom: rem(48);
+ 
+    @include mobile {
+        margin-bottom: rem(32);
+    }
+}
+ 
+.why__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+ 
+// ─── Item ──────────────────────────────────────────────────
+ 
+.why__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(16);
+    padding: rem(40) rem(32);
+    background-color: transparent;
+    text-align: center;
+
+    &:not(:last-child) {
+        border-right: 1px solid var(--border);
+
+        @include mobile {
+            border-right: none;
+            border-bottom: 1px solid var(--border);
+        }
+    }
+
+    @include tablet {
+        padding: rem(32) rem(20);
+    }
+
+    @include mobile {
+        padding: rem(24) rem(16);
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+ 
+.why__icon {
+    flex-shrink: 0;
+    color: var(--accent);
+ 
+    @include mobile {
+        width: rem(36);
+        height: rem(36);
+    }
+}
+ 
+.why__item-title {
+    font-size: rem(18);
+    font-weight: 500;
+    color: var(--text);
+ 
+    @include mobile {
+        font-size: rem(16);
+    }
+}
+ 
+.why__item-desc {
+    font-size: rem(15);
+    color: var(--muted);
+    line-height: 1.6;
+ 
+    @include mobile {
+        font-size: rem(14);
+    }
+}
+ 
+// ─── Bottom ────────────────────────────────────────────────
+ 
+.why__bottom {
+    // будет заполнено позже
+}
+ 

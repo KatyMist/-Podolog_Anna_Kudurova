@@ -1,0 +1,184 @@
+@use '../helpers/index' as *;
+ 
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--bg);
+}
+ 
+.header__inner {
+    @include container;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: rem(32);
+    height: rem(80);
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: rem(1);
+        background-color: var(--border);
+    }
+}
+ 
+// Logo
+ 
+.header__logo {
+    // img наследует размер через width/height в HTML
+    flex-shrink: 0;
+    margin-right: auto; // прижимает nav и btn вправо
+ 
+    @include hover {
+        opacity: 0.8;
+    }
+}
+ 
+// Nav
+ 
+.header__nav {
+    // убрать position: absolute и translate
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+        @include hide;
+
+        position: fixed;
+        inset: rem(72) 0 0 0;
+        background-color: var(--bg);
+        padding: rem(24) rem(20);
+        transition: opacity var(--transition), visibility var(--transition);
+
+        &.is-open {
+            @include show;
+        }
+    }
+}
+ 
+.header__nav-list {
+    display: flex;
+    align-items: center;
+    column-gap: rem(40);
+
+    @include tablet {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 0;
+    }
+}
+ 
+//Nav link 
+ 
+.header__nav-link {
+    position: relative;
+    font-size: rem(25);
+    font-weight: 400;
+    color: var(--muted);
+    text-decoration: none;
+    padding-bottom: rem(22); // тянется до полоски
+    transition: color var(--transition);
+ 
+    // полоска под ссылкой (часть общей линии)
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: rem(2);
+        background-color: var(--accent);
+        border-radius: rem(2);
+        opacity: 0;
+        transition: opacity var(--transition);
+    }
+ 
+    &.is-active {
+        color: var(--text);
+    }
+
+    @include hover {
+        color: var(--text);
+    }
+ 
+    &.is-active::after {
+        opacity: 1;
+    }
+ 
+    @include tablet {
+        display: block;
+        width: 100%;
+        font-size: rem(18);
+        padding: rem(16) 0;
+        border-bottom: 1px solid var(--border);
+ 
+        &::after {
+            display: none;
+        }
+    }
+}
+ 
+// ─── CTA Button ───────────────────────────────────────────
+ 
+.header__btn {
+    flex-shrink: 0;
+ 
+    @include mobile {
+        display: none; // на мобиле кнопка уходит внутрь меню
+    }
+}
+ 
+// ─── Burger ───────────────────────────────────────────────
+ 
+.burger {
+    display: none; // скрыт на десктопе
+ 
+    @include tablet {
+        @include flex-center;
+        @include square(rem(40));
+ 
+        flex-direction: column;
+        row-gap: rem(5);
+        flex-shrink: 0;
+        background: transparent;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        transition: background-color var(--transition), border-color var(--transition);
+ 
+        span {
+            display: block;
+            height: rem(1.5);
+            background-color: var(--text);
+            border-radius: rem(2);
+            transition: width var(--transition), background-color var(--transition);
+ 
+            &:nth-child(1) { width: rem(18); }
+            &:nth-child(2) { width: rem(12); }
+            &:nth-child(3) { width: rem(18); }
+        }
+ 
+        @include hover {
+            background-color: var(--accent);
+            border-color: var(--accent);
+ 
+            span {
+                background-color: #fff;
+                &:nth-child(2) { width: rem(18); } // выравниваем при hover
+            }
+        }
+ 
+        &[aria-expanded='true'] {
+            background-color: var(--accent);
+            border-color: var(--accent);
+ 
+            span { background-color: #fff; }
+        }
+    }
+}

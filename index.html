@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анна Кудурова | Подолог</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="icon" type="image/svg+xml" href="./icons/logo.svg">
+    
+    <script src="./scripts/main.js" type="module" defer></script>
+</head>
+<body>
+    <div class="cursor" id="cursor"></div>
+    
+    <header class="header"> 
+        <div class="header__inner">
+            <a href="#" class="header__logo" aria-label="На главную">
+                <img src="./icons/logo.svg" alt="Подология Анны Кудуровой" width="64" height="64">
+            </a>
+    
+            <nav class="header__nav" id="nav">
+                <ul class="header__nav-list">
+                    <li><a href="./index.html" class="header__nav-link is-active">Главная</a></li>
+                    <li><a href="./about.html" class="header__nav-link">О себе</a></li>
+                    <li><a href="./services.html" class="header__nav-link">Услуги</a></li>
+                    <li><a href="#cases" class="header__nav-link">Кейсы</a></li>
+                    <li><a href="#contacts" class="header__nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+    
+            <a href="https://vk.com/im/convo/708439222?tab=all" class="header__btn btn" target="_blank" rel="noopener noreferrer">
+                Записаться
+                <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+    
+            <button
+                class="header__burger burger"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+                aria-controls="nav"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+    
+        </div>
+
+    </header>
+ 
+        <section class="hero">
+            <div class="hero__inner container">
+        
+                <div class="hero__content">
+                    <p class="hero__label">
+                        Школа — студия подологии и здоровой эстетики<br>
+                        Анны Кудуровой
+                    </p>
+                    
+                    <h1 class="hero__title">
+                        Всё начинается<br>
+                        со стоп
+                    </h1>
+        
+                    <p class="hero__desc">Работаем со сложными случаями</p>
+        
+                    <a href="#services" class="hero__more">
+                        Узнать больше
+                        <span class="hero__more-icon" aria-hidden="true">↓</span>
+                    </a>
+                </div>
+        
+                <div class="hero__image">
+                    <img src="./images/Main.jpg" alt="Анна Кудурова — подолог" width="600" height="800">
+                </div>
+        
+        
+            </div>
+        
+            <div class="hero__cards container">
+                <div class="hero__card"> <!-- цвет svg #5fa3e8 -->
+                    <span class="hero__card-icon" aria-hidden="true">
+                        <img src="./icons/foot.svg" alt="" width="38" height="38" fill="none">
+                    </span>
+                    <p class="hero__card-text">Индивидуальный подход</p>
+                </div>
+                <div class="hero__card"> 
+                    <span class="hero__card-icon" aria-hidden="true">
+                        <img src="./icons/shield.svg" alt="" width="38" height="38" fill="none">
+                    </span>
+                    <p class="hero__card-text">Работаем с первопричиной</p>
+                </div>
+                <div class="hero__card">
+                    <span class="hero__card-icon" aria-hidden="true">
+                        <img src="./icons/stylishly.svg" alt="" width="38" height="38" fill="none">
+                    </span>
+                    <p class="hero__card-text">Безопасность и стерильность</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="why">
+ 
+            <!-- Верхний блок -->
+            <div class="why__top">
+                <div class="why__container container">
+                    <h2 class="why__title">Почему выбирают меня</h2>
+        
+                    <div class="why__items">
+                        <div class="why__item">
+                            <img class="why__icon" src="./icons/cap.svg" alt="" width="48" height="48">
+                            <h3 class="why__item-title">Опыт и квалификация</h3>
+                            <p class="why__item-desc">Регулярно повышаю уровень знаний и работаю по современным методикам</p>
+                        </div>
+        
+                        <div class="why__item">
+                            <img class="why__icon" src="./icons/glass.svg" alt="" width="48" height="48">
+                            <h3 class="why__item-title">Индивидуальный подход</h3>
+                            <p class="why__item-desc">Каждая процедура под ваши особенности</p>
+                        </div>
+        
+                        <div class="why__item">
+                            <img class="why__icon" src="./icons/heart.svg" alt="" width="48" height="48">
+                            <h3 class="why__item-title">Комфорт</h3>
+                            <p class="why__item-desc">Без боли, спешки и дискомфорта</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Нижний блок — пока пустой -->
+            <div class="why__bottom">
+                <div class="container">
+                    <!-- будет добавлено позже -->
+                </div>
+            </div>
+        
+        </section>
+
+</body>
+</html>
