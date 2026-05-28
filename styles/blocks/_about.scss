@@ -29,13 +29,13 @@
     overflow: visible;
  
     @include tablet { 
-        height: rem(360);
-        width: 70%;
+        height: rem(500);
+        width: 100%;
     }
 
     @include mobile {
-        height: rem(300);
-        width: 60%;
+        height: rem(400);
+        width: 100%;
     }
 
     @include mobile-s {
@@ -51,40 +51,60 @@
     object-position: center 60%;
     border-radius: var(--radius-md);
     display: block;
+
+
 }
  
 .about-hero__badge {
     position: absolute;
-    bottom: rem(32);
-    left: rem(-20);
+    bottom: rem(24);
+    left: rem(-16);
     background: rgba(255,255,255,0.95);
     backdrop-filter: blur(12px);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    padding: rem(16) rem(20);
+    padding: rem(10) rem(14);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: rem(4);
+    gap: rem(2);
     box-shadow: var(--shadow-blue);
- 
+
+    @include laptop {
+        bottom: rem(16);
+        left: rem(8);
+        padding: rem(6) rem(9);
+    }
+
+    @include tablet {
+        bottom: rem(16);
+        left: rem(8);
+        padding: rem(6) rem(9);
+    }
+
     @include mobile {
-        left: rem(12);
-        bottom: rem(12);
+        bottom: rem(8);
+        left: rem(6);
+        padding: rem(3) rem(6);
     }
 }
  
 .about-hero__badge-num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: rem(32);
+    font-size: rem(22); // было rem(32)
     font-weight: 600;
     color: var(--text);
     line-height: 1;
+
+    @include tablet { font-size: rem(18); }
+    @include mobile { font-size: rem(16); }
 }
  
 .about-hero__badge-label {
-    font-size: rem(12);
+    font-size: rem(10); // было rem(12)
     color: var(--muted);
+
+    @include mobile { font-size: rem(9); }
 }
  
 .about-hero__content {
@@ -347,12 +367,16 @@
     }
 }
  
-.about-pro__title {
+.about-pro__title { //ПРОФДЕЯТЕЛЬНОСТЬ
     @include fluid-text(36, 24);
     font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
     color: var(--text);
     margin-bottom: rem(24);
+
+    @include tablet {
+        text-align: center;
+    }
 
     @include mobile-s {
         grid-template-columns: 1fr;
@@ -361,13 +385,17 @@
     }
 }
  
-.about-pro__text {
+.about-pro__text { //ТЕКСТ В ПРОФДЕЯТЕЛЬНОСТИ
     font-size: rem(18);
     color: var(--muted);
     line-height: 1.7;
     margin-bottom: rem(16);
  
     &:last-child { margin-bottom: 0; }
+
+    @include tablet {
+        text-align: center;
+    }
 }
  
 .about-pro__image {
@@ -438,6 +466,10 @@
     text-transform: uppercase;
     color: var(--muted);
     margin-bottom: rem(12);
+
+    @include tablet {
+        text-align: center;
+    }
 }
 
 .about-approach__line {
@@ -446,6 +478,10 @@
     background-color: var(--accent);
     border-radius: rem(2);
     margin-bottom: rem(32);
+
+    @include tablet {
+        margin-inline: auto;
+    }
 }
 
 .about-approach__principle {
@@ -454,6 +490,10 @@
     @include fluid-text(24, 18);
     color: var(--accent);
     line-height: 1.5;
+
+    @include tablet {
+        text-align: center;
+    }
 }
 
 .about-approach__decor {
@@ -470,6 +510,11 @@
     display: flex;
     flex-direction: column;
     gap: rem(16);
+
+    @include tablet {
+        align-items: center;
+        text-align: center;
+    }
 }
 
  
@@ -490,6 +535,10 @@
     font-size: rem(15);
     color: var(--muted);
     line-height: 1.7;
+
+    @include tablet {
+        text-align: center;
+    }
 }
 
 .about-approach__footer {
