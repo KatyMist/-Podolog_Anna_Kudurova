@@ -1,0 +1,207 @@
+@use '../helpers/index' as *;
+
+// ─── Footer ────────────────────────────────────────────────
+
+.footer {
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(95, 163, 232, 0.08) 10%,
+        rgba(95, 163, 232, 0.25) 30%,
+        rgba(95, 163, 232, 0.55) 55%,
+        rgba(95, 163, 232, 0.82) 75%,
+        #5fa3e8 100%
+    );
+    padding-block: rem(28);
+
+    // убрать &::before полностью
+
+    @include mobile { padding-block: rem(24); }
+}
+
+.footer__inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: rem(40);
+
+    @include tablet {
+        grid-template-columns: auto 1fr auto;
+        gap: rem(24);
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: rem(20);
+    }
+}
+
+// ─── Brand ─────────────────────────────────────────────────
+
+.footer__brand {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+}
+
+.footer__logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: rem(36);
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.footer__brand-text {
+    font-size: rem(12);
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+
+    @include tablet { display: none; }
+}
+
+// ─── Contacts ──────────────────────────────────────────────
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+
+    @include mobile {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.footer__phone {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(8);
+    font-size: rem(16);
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity var(--transition);
+
+    @include hover { opacity: 0.8; }
+}
+
+.footer__schedule {
+    font-size: rem(13);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__socials {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    margin-top: rem(8);
+}
+
+.footer__social {
+    width: rem(36);
+    height: rem(36);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition);
+
+    img {
+        width: rem(40);
+        height: rem(40);
+        //filter: brightness(0) invert(1); // белые иконки
+    }
+
+    @include hover {
+        background-color: rgba(255, 255, 255, 0.35);
+    }
+}
+
+// ─── Btn ───────────────────────────────────────────────────
+
+.footer__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(10);
+    padding: rem(12) rem(22);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 100px;
+    color: #fff;
+    font-size: rem(14);
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color var(--transition), border-color var(--transition);
+    white-space: nowrap;
+
+    @include hover {
+        background-color: rgba(255, 255, 255, 0.25);
+        border-color: rgba(255, 255, 255, 0.7);
+    }
+
+    @include tablet { display: none; }
+}
+
+// ─── Dev ───────────────────────────────────────────────────
+
+.footer__dev {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+    text-decoration: none;
+    padding: rem(14) rem(18);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-sm);
+    transition: background-color var(--transition), border-color var(--transition);
+
+    @include hover {
+        background-color: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    @include mobile {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.footer__dev-name {
+    text-align: center;
+    font-size: rem(13);
+    font-weight: 600;
+    color: #fff;
+
+    span {
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.footer__dev-skills {
+    text-align: center;
+    font-size: rem(12);
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.04em;
+}
+
+.footer__dev-desc {
+    text-align: center;
+    font-size: rem(11);
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: rem(2);
+}
+
+.footer__dev-link {
+    text-align: center;
+    font-size: rem(12);
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: rem(4);
+    font-weight: 500;
+}
