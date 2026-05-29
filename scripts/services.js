@@ -13,14 +13,12 @@ export default class Services {
             btn?.addEventListener('click', () => {
                 const isOpen = category.classList.contains('is-open');
 
-                // закрываем все
                 this.categories.forEach(c => {
                     c.classList.remove('is-open');
                     c.querySelector('.services__items')?.classList.remove('is-open');
                     c.querySelector('.services__category-btn')?.setAttribute('aria-expanded', 'false');
                 });
 
-                // открываем текущий если был закрыт
                 if (!isOpen) {
                     category.classList.add('is-open');
                     items?.classList.add('is-open');
@@ -28,5 +26,25 @@ export default class Services {
                 }
             });
         });
+
+        // Раскрываем категорию из URL параметра
+        const params = new URLSearchParams(window.location.search);
+        const categoryParam = params.get('category');
+
+        if (categoryParam) {
+            const target = document.querySelector(`[data-category="${categoryParam}"]`);
+            if (target) {
+                const btn = target.querySelector('.services__category-btn');
+                const items = target.querySelector('.services__items');
+                target.classList.add('is-open');
+                items?.classList.add('is-open');
+                btn?.setAttribute('aria-expanded', 'true');
+
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
     }
 }
+
