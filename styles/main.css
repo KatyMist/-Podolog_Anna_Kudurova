@@ -373,6 +373,11 @@ body {
 * {
   cursor: none !important;
 }
+@media (width <= 63.99875rem) {
+  * {
+    cursor: auto !important;
+  }
+}
 
 .cursor {
   position: fixed;

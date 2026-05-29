@@ -108,6 +108,10 @@ body {
 // Скрываем стандартный курсор
 * {
     cursor: none !important;
+
+    @include tablet {
+        cursor: auto !important;
+    }
 }
 
 // Кастомный курсор
