@@ -1,0 +1,154 @@
+@use '../helpers/index' as *;
+
+// ─── Contacts ──────────────────────────────────────────────
+
+.contacts {
+    padding-block: rem(80);
+    position: relative;
+    overflow: hidden;
+
+    @include tablet { padding-block: rem(60); }
+    @include mobile { padding-block: rem(40); }
+}
+
+.contacts__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    align-items: start;
+    gap: rem(48);
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: rem(40);
+    }
+}
+
+// ─── Content ───────────────────────────────────────────────
+
+.contacts__content {
+    position: relative;
+}
+
+.contacts__title {
+    @include fluid-text(56, 36);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: rem(12);
+}
+
+.contacts__desc {
+    font-size: rem(16);
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: rem(32);
+}
+
+// ─── List ──────────────────────────────────────────────────
+
+.contacts__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+}
+
+// ─── Item ──────────────────────────────────────────────────
+
+.contacts__item {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+    padding: rem(16) rem(20);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: box-shadow var(--transition), background-color var(--transition);
+
+    @include hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: var(--shadow-blue);
+    }
+
+    &--static {
+        cursor: default;
+
+        @include hover {
+            box-shadow: none;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+
+.contacts__item-icon {
+    width: rem(44);
+    height: rem(44);
+    border-radius: 50%;
+    background-color: var(--accent-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    img {
+        width: rem(40);
+        height: rem(40);
+    }
+}
+
+.contacts__item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: rem(2);
+}
+
+.contacts__item-label {
+    font-size: rem(12);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.contacts__item-value {
+    font-size: rem(15);
+    color: var(--text);
+    line-height: 1.4;
+}
+
+.contacts__item-arrow {
+    font-size: rem(20);
+    color: var(--muted);
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+
+// ─── Map ───────────────────────────────────────────────────
+
+.contacts__map {
+    position: static; // убираем sticky
+    height: 100%; // растягивается по высоте левой колонки
+    min-height: rem(480);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-blue);
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    @include tablet {
+        min-height: rem(400);
+    }
+
+    @include mobile {
+        min-height: rem(280);
+    }
+}

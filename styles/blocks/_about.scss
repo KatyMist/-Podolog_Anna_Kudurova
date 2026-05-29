@@ -90,7 +90,7 @@
  
 .about-hero__badge-num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: rem(22); // было rem(32)
+    font-size: rem(22); 
     font-weight: 600;
     color: var(--text);
     line-height: 1;
@@ -100,7 +100,7 @@
 }
  
 .about-hero__badge-label {
-    font-size: rem(10); // было rem(12)
+    font-size: rem(10); 
     color: var(--muted);
 
     @include mobile { font-size: rem(9); }
@@ -113,7 +113,7 @@
     padding-top: rem(20);
  
     @include tablet {
-        align-items: center; // центрируем контент
+        align-items: center; 
         text-align: center;
         padding-top: 0;
         width: 100%;
@@ -521,7 +521,7 @@
     @include fluid-text(48, 30);
     font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
-    color: #fff;
+    color: var(--bg);
     line-height: 1.2;
  
     span {
