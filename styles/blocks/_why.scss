@@ -6,8 +6,10 @@
     padding-block: rem(80);
     
 
-    @include tablet { padding-block: rem(60); }
-    @include mobile { padding-block: rem(40); }
+    @include tablet { 
+        padding-block: rem(32); 
+    }
+
 }
 
 // ─── Top ───────────────────────────────────────────────────
@@ -26,6 +28,11 @@
     text-align: center;
     color: var(--text);
     margin-bottom: rem(30);
+
+    @include tablet {
+        font-size: rem(28);
+        margin-bottom: rem(24);
+    }
  
     @include mobile {
         margin-bottom: rem(32);
@@ -38,8 +45,13 @@
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
 
+    @include tablet {
+        gap: rem(1);
+    }
+
     @include mobile {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; // одна колонка вместо трёх
+        border-top: none;
     }
 }
  
@@ -64,14 +76,17 @@
     }
 
     @include tablet {
-        padding: rem(32) rem(20);
+        padding: rem(24) rem(16);
+        gap: rem(10);
     }
 
     @include mobile {
-        padding: rem(24) rem(16);
-        flex-direction: row;
-        text-align: left;
-        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: rem(16) rem(12);
+        gap: rem(6);
     }
 }
  
@@ -79,9 +94,15 @@
     flex-shrink: 0;
     color: var(--accent);
  
-    @include mobile {
+    @include tablet {
         width: rem(36);
         height: rem(36);
+    }
+
+    @include mobile {
+        width: rem(28);
+        height: rem(28);
+        flex-shrink: 0;
     }
 }
  
@@ -89,9 +110,14 @@
     font-size: rem(18);
     font-weight: 500;
     color: var(--text);
- 
+
+    @include tablet {
+        font-size: rem(13);
+    }
+
     @include mobile {
-        font-size: rem(16);
+        font-size: rem(15);
+        margin-bottom: rem(4);
     }
 }
  
@@ -101,6 +127,6 @@
     line-height: 1.6;
  
     @include mobile {
-        font-size: rem(14);
+        font-size: rem(13);
     }
 }

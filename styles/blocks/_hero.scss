@@ -26,7 +26,7 @@
 
     @include tablet {
         grid-template-columns: 1fr;
-        text-align: center;
+        justify-items: center;
     }
 }
 
@@ -44,15 +44,20 @@
     }
 }
 
-.hero__label {
+.hero__label { //Школа — студия подологии и здоровой эстетики Анны Кудуровой
     font-size: rem(18);
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--accent);
+
+    @include tablet {
+        text-align: center;
+    }
+
 }
 
-.hero__title {
+.hero__title { // ВСЕ НАЧИНАЕТСЯ СО СТОП
     @include fluid-text(64, 36); 
 
     font-family: 'Cormorant Garamond', serif;
@@ -60,6 +65,10 @@
     text-transform: uppercase;
     line-height: 1.1;
     color: var(--text);
+
+    @include tablet {
+        text-align: center;
+    }
 }
 
 .hero__desc {
@@ -103,30 +112,36 @@
 // ─── Image placeholder ─────────────────────────────────────
 
 .hero__image {
-    aspect-ratio: 4 / 5; // было 3/4 — чуть приземистее
-    max-height: rem(760); // ограничиваем высоту
+    aspect-ratio: 4 / 5;
+    max-height: rem(760);
     border-radius: var(--radius-md);
     overflow: hidden;
     border: 1px solid var(--border);
+    align-self: start;
+    width: 100%; // явно задаём
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center 50%;
+        object-position: center 20%;
     }
 
     @include tablet {
-        aspect-ratio: 3 / 2;
-        max-height: rem(480);
+        aspect-ratio: 3 / 4;
+        max-height: rem(940);
+        max-width: rem(360); // ограничиваем максимальную ширину
+        width: 100%;
+        margin-inline: auto;
         order: 2;
-        margin-inline: auto; // центрирует блок по горизонтали
-        width: 80%; // чтобы не растягивалось на всю ширину
     }
 
     @include mobile {
-        aspect-ratio: 4 / 3;
-        max-height: rem(360); // было rem(260)
+        aspect-ratio: 3 / 4;
+        max-height: rem(320);
+        max-width: rem(280);
+        width: 100%;
+        margin-inline: auto;
         order: 2;
     }
 }
