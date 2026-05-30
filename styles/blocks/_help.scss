@@ -3,9 +3,39 @@
 // ─── Help ──────────────────────────────────────────────────
 
 .help {
-    padding-block: rem(10);
+    padding-block: rem(80);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: rem(-20);
+        left: rem(-40);
+        width: rem(500);
+        height: rem(500);
+        background-image: url('/icons/contacts/Flo2.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        opacity: 0.25;
+        pointer-events: none;
+        z-index: 0;
+
+        @include tablet {
+            width: rem(300);
+            height: rem(300);
+            left: rem(-80);
+            bottom: rem(-60);
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
 
     @include tablet { padding-block: rem(32); }
+    @include mobile { padding-block: rem(32); }
 }
 
 .help__inner {
@@ -13,6 +43,8 @@
     grid-template-columns: rem(280) 1fr;
     align-items: center;
     gap: rem(48);
+    position: relative;
+    z-index: 1;
 
     @include tablet {
         grid-template-columns: rem(220) 1fr;
@@ -32,9 +64,7 @@
     flex-direction: column;
     gap: rem(16);
 
-    @include tablet {
-        gap: rem(12);
-    }
+    @include tablet { gap: rem(12); }
 
     @include mobile {
         text-align: center;
@@ -57,9 +87,7 @@
     color: var(--text);
     line-height: 1.15;
 
-    @include tablet {
-        font-size: rem(28);
-    }
+    @include tablet { font-size: rem(28); }
 }
 
 .help__accent-line {
@@ -68,9 +96,7 @@
     background-color: var(--accent);
     border-radius: rem(2);
 
-    @include mobile {
-        display: none;
-    }
+    @include mobile { display: none; }
 }
 
 .help__desc {
@@ -90,16 +116,13 @@
     margin-top: rem(8);
     transition: gap var(--transition);
 
-    @include hover {
-        gap: rem(14);
-    }
+    @include hover { gap: rem(14); }
 }
 
 // ─── Scroll wrap ───────────────────────────────────────────
 
 .help__scroll-wrap {
     overflow: hidden;
-    // маска — плавное затухание по краям
     mask-image: linear-gradient(
         to right,
         transparent 0%,
@@ -128,11 +151,9 @@
     padding-block: rem(8);
     padding-inline: rem(20);
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; // скрываем скроллбар Firefox
+    scrollbar-width: none;
 
-    &::-webkit-scrollbar {
-        display: none; // скрываем скроллбар Chrome
-    }
+    &::-webkit-scrollbar { display: none; }
 }
 
 // ─── Card ──────────────────────────────────────────────────
@@ -153,13 +174,8 @@
         transform: translateY(rem(-4));
     }
 
-    @include tablet {
-        width: rem(200);
-    }
-
-    @include mobile {
-        width: rem(170);
-    }
+    @include tablet { width: rem(200); }
+    @include mobile { width: rem(170); }
 }
 
 .help__card-image {
@@ -168,9 +184,7 @@
     overflow: hidden;
     position: relative;
 
-    @include tablet {
-        aspect-ratio: 2 / 3;
-    }
+    @include tablet { aspect-ratio: 2 / 3; }
 
     img {
         width: 100%;
@@ -180,7 +194,6 @@
         transition: transform var(--transition);
     }
 
-    // градиент снизу для читаемости текста
     &::after {
         content: '';
         position: absolute;
@@ -212,9 +225,7 @@
     font-weight: 500;
     color: var(--text);
 
-    @include mobile {
-        font-size: rem(14);
-    }
+    @include mobile { font-size: rem(14); }
 }
 
 .help__card-btn {

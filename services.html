@@ -9,6 +9,23 @@
     <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
+    <!-- Секция "экран загрузки" -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <img src="./icons/AK.svg" alt="АК" class="preloader__logo-img" width="120" height="120">
+            <p class="preloader__school">Школа подологии и здоровой эстетики<br>Анны Кудуровой</p>
+            <div class="preloader__tagline">
+                <span class="preloader__foot"></span>
+                ВСЁ НАЧИНАЕТСЯ СО СТОП
+                <span class="preloader__foot"></span>
+            </div>
+            <p class="preloader__dots">Забота · Эстетика · Здоровье</p>
+            <div class="preloader__bar-wrap">
+                <div class="preloader__bar" id="preloaderBar"></div>
+            </div>
+            <span class="preloader__percent" id="preloaderPercent">0%</span>
+        </div>
+    </div>
 
     <header class="header">
         <div class="header__inner">
@@ -309,11 +326,14 @@
                         <button class="services__category-btn" aria-expanded="false">
                             <div class="services__category-info">
                                 <div class="services__category-icon">
-                                    <img src="./images/4foto.png" alt="" width="50" height="50">
+                                    <img src="./images/4foto.png" alt="" width="32" height="32">
                                 </div>
                                 <div>
                                     <h2 class="services__category-title">Обучение (для специалистов)</h2>
                                     <p class="services__category-subtitle">Повышение квалификации и профессиональное развитие</p>
+                                    <p class="services__category-subtitle">Офлайн-обучение | г. Ульяновск</p>
+                                    
+                                    
                                 </div>
                             </div>
                             <span class="services__category-toggle" aria-hidden="true">
@@ -323,22 +343,180 @@
                         </button>
 
                         <div class="services__items services__items--education">
-                            <div class="services__edu-card">
-                                <h3>Базовое введение в мир педикюра</h3>
-                                <p>Пилинг-педикюр Rosilak — авторская программа для начинающих специалистов</p>
+
+                            <div class="edu__card">
+                                <div class="edu__card-image">
+                                    <!-- фото будет добавлено позже -->
+                                </div>
+                                <div class="edu__card-content">
+                                    <div class="edu__card-badge">База</div>
+                                    <h3 class="edu__card-title">Базовое введение в мир педикюра</h3>
+                                    <p class="edu__card-subtitle">(Пилинг-педикюр Rosilak)</p>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">Формат:</p>
+                                        <p class="edu__card-text">3 дня + доступ к онлайн-курсу на 1 месяц</p>
+                                    </div>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">Для кого:</p>
+                                        <ul class="edu__card-list">
+                                            <li>новички</li>
+                                            <li>мастера маникюра</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">Результат:</p>
+                                        <ul class="edu__card-list">
+                                            <li>безопасная и понятная база педикюра</li>
+                                            <li>понимание логики работы со стопой</li>
+                                            <li>уверенность в действиях уже с первыми клиентами</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">В комплекте:</p>
+                                        <ul class="edu__card-list">
+                                            <li>рабочая тетрадь</li>
+                                            <li>2 пособия: «Заболевания кожи» и «Заболевания ногтей»</li>
+                                            <li>возможность получения удостоверения установленного образца</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="services__edu-card">
-                                <h3>Повышение квалификации</h3>
-                                <p>Техника Пилинг-педикюра Rosilak для практикующих мастеров</p> 
+
+                            <div class="edu__card">
+                                <div class="edu__card-image">
+                                    <!-- фото будет добавлено позже -->
+                                </div>
+                                <div class="edu__card-content">
+                                    <div class="edu__card-badge">Техника и скорость</div>
+                                    <h3 class="edu__card-title">Пилинг-педикюр Rosilak</h3>
+                                    <p class="edu__card-subtitle">(повышение квалификации)</p>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">Формат:</p>
+                                        <p class="edu__card-text">1 день + доступ к онлайн-курсу на 1 месяц</p>
+                                    </div>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">Результат:</p>
+                                        <ul class="edu__card-list">
+                                            <li>быстрая, щадящая и коммерчески выгодная техника</li>
+                                            <li>увеличение скорости работы и среднего чека</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">В комплекте:</p>
+                                        <ul class="edu__card-list">
+                                            <li>рабочая тетрадь</li>
+                                            <li>2 пособия: «Заболевания кожи» и «Заболевания ногтей»</li>
+                                            <li>возможность получения удостоверения установленного образца</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="services__edu-card">
-                                <h3>Аппаратный педикюр с введением в подологию</h3>
-                                <p>Авторский курс — от базы до углублённой работы со стопой</p>
+
+                            <div class="edu__card edu__card--featured">
+                                <div class="edu__card-image">
+                                    <!-- фото будет добавлено позже -->
+                                </div>
+                                <div class="edu__card-content">
+                                    <div class="edu__card-badge edu__card-badge--accent">Флагман</div>
+                                    <h3 class="edu__card-title">Аппаратный педикюр с введением в подологию</h3>
+                                    <p class="edu__card-subtitle">(на базе Пилинг-педикюра Rosilak)</p>
+                                    <p class="edu__card-desc">Флагманский курс для мастеров, планирующих работать со сложными случаями</p>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">Формат:</p>
+                                        <ul class="edu__card-list">
+                                            <li>3 дня интенсив</li>
+                                            <li>1 день отработки в течение 6 месяцев</li>
+                                            <li>доступ к онлайн-курсу на 1 месяц</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">Результат:</p>
+                                        <ul class="edu__card-list edu__card-list--check">
+                                            <li>работа со сложными стопами</li>
+                                            <li>понимание подологических состояний</li>
+                                            <li>уверенность в сложных клиентах</li>
+                                            <li>рост среднего чека</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">В комплекте:</p>
+                                        <ul class="edu__card-list">
+                                            <li>рабочая тетрадь</li>
+                                            <li>2 пособия: «Заболевания кожи» и «Заболевания ногтей»</li>
+                                            <li>возможность получения удостоверения установленного образца</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="services__edu-card">
-                                <h3>Коррекция ногтей без страха и боли</h3>
-                                <p>Титановые нити, тампонады, тейпирование — авторская программа</p>
+
+                            <div class="edu__card">
+                                <div class="edu__card-image">
+                                    <!-- фото будет добавлено позже -->
+                                </div>
+                                <div class="edu__card-content">
+                                    <div class="edu__card-badge">Экспертный</div>
+                                    <h3 class="edu__card-title">Онихокриптоз без страха: титановая нить в подологии</h3>
+                                    <p class="edu__card-subtitle">(титановые нити, тампонады, тейпирование, раневой процесс)</p>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">Формат:</p>
+                                        <p class="edu__card-text">1 день, практика</p>
+                                    </div>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">Результат:</p>
+                                        <ul class="edu__card-list edu__card-list--check">
+                                            <li>уверенная работа с вросшими ногтями</li>
+                                            <li>понимание тактики и этапов коррекции</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">В комплекте:</p>
+                                        <ul class="edu__card-list">
+                                            <li>рабочая тетрадь</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
+
+                            <div class="edu__card edu__card--compact">
+                                <div class="edu__card-content">
+                                    <div class="edu__card-badge">Повышение квалификации</div>
+                                    <h3 class="edu__card-title">Повышение квалификации</h3>
+                                    <p class="edu__card-text">1 день, по запросу. Темы подбираются индивидуально под запрос группы или мастера.</p>
+                                    <p class="edu__card-text">Подходит для тех, кому важно точечно закрыть пробелы в практике.</p>
+
+                                </div>
+                            </div>
+
+                            <div class="edu__card edu__card--compact">
+                                <div class="edu__card-content">
+                                    <div class="edu__card-badge edu__card-badge--soft">Индивидуальный формат</div>
+                                    <h3 class="edu__card-title">Индивидуальное обучение / наставничество</h3>
+
+                                    <div class="edu__card-row">
+                                        <p class="edu__card-label">Формат:</p>
+                                        <ul class="edu__card-list">
+                                            <li>1–3 дня</li>
+                                            <li>или сопровождение мастера</li>
+                                        </ul>
+                                    </div>
+
+                                    <p class="edu__card-text">Для тех, кому важно максимальное внимание и работа под личные задачи.</p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

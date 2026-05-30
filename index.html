@@ -10,6 +10,24 @@
     <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
+    <!-- Секция "экран загрузки" -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <img src="./icons/AK.svg" alt="АК" class="preloader__logo-img" width="120" height="120">
+            <p class="preloader__school">Школа подологии и здоровой эстетики<br>Анны Кудуровой</p>
+            <div class="preloader__tagline">
+                <span class="preloader__foot"></span>
+                ВСЁ НАЧИНАЕТСЯ СО СТОП
+                <span class="preloader__foot"></span>
+            </div>
+            <p class="preloader__dots">Забота · Эстетика · Здоровье</p>
+            <div class="preloader__bar-wrap">
+                <div class="preloader__bar" id="preloaderBar"></div>
+            </div>
+            <span class="preloader__percent" id="preloaderPercent">0%</span>
+        </div>
+    </div>
+
     <div class="cursor" id="cursor"></div>
     
     <header class="header"> 
@@ -205,6 +223,76 @@
                                 </span>
                             </div>
                         </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Секция "Результаты" -->
+        <section class="results" id="cases">
+            <div class="results__inner container">
+
+                <!-- Левая часть -->
+                <div class="results__content">
+                    <p class="results__label">Результаты</p>
+                    <h2 class="results__title">Реальные изменения —<br>до и после</h2>
+                    <a href="./cases.html" class="results__link">
+                        Смотреть все кейсы
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Правая часть — скролл лента -->
+                <div class="results__scroll-wrap">
+                    <div class="results__scroll">
+
+                        <div class="results__card">
+                            <div class="results__card-before">
+                                <img src="./images/results/before-1.jpg" alt="До">
+                                <span class="results__card-tag results__card-tag--before">До</span>
+                            </div>
+                            <div class="results__card-after">
+                                <img src="./images/results/after-1.jpg" alt="После">
+                                <span class="results__card-tag results__card-tag--after">После</span>
+                            </div>
+                        </div>
+
+                        <div class="results__card">
+                            <div class="results__card-before">
+                                <img src="./images/results/before-2.jpg" alt="До">
+                                <span class="results__card-tag results__card-tag--before">До</span>
+                            </div>
+                            <div class="results__card-after">
+                                <img src="./images/results/after-2.jpg" alt="После">
+                                <span class="results__card-tag results__card-tag--after">После</span>
+                            </div>
+                        </div>
+
+                        <div class="results__card">
+                            <div class="results__card-before">
+                                <img src="./images/results/before-3.jpg" alt="До">
+                                <span class="results__card-tag results__card-tag--before">До</span>
+                            </div>
+                            <div class="results__card-after">
+                                <img src="./images/results/after-3.jpg" alt="После">
+                                <span class="results__card-tag results__card-tag--after">После</span>
+                            </div>
+                        </div>
+
+                        <div class="results__card">
+                            <div class="results__card-before">
+                                <img src="./images/results/before-4.jpg" alt="До">
+                                <span class="results__card-tag results__card-tag--before">До</span>
+                            </div>
+                            <div class="results__card-after">
+                                <img src="./images/results/after-4.jpg" alt="После">
+                                <span class="results__card-tag results__card-tag--after">После</span>
+                            </div>
+                        </div>
 
                     </div>
                 </div>

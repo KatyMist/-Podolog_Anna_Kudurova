@@ -9,7 +9,24 @@
     <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
- 
+    <!-- Секция "экран загрузки" -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <img src="./icons/AK.svg" alt="АК" class="preloader__logo-img" width="120" height="120">
+            <p class="preloader__school">Школа подологии и здоровой эстетики<br>Анны Кудуровой</p>
+            <div class="preloader__tagline">
+                <span class="preloader__foot"></span>
+                ВСЁ НАЧИНАЕТСЯ СО СТОП
+                <span class="preloader__foot"></span>
+            </div>
+            <p class="preloader__dots">Забота · Эстетика · Здоровье</p>
+            <div class="preloader__bar-wrap">
+                <div class="preloader__bar" id="preloaderBar"></div>
+            </div>
+            <span class="preloader__percent" id="preloaderPercent">0%</span>
+        </div>
+    </div>
+
     <header class="header">
         <div class="header__inner">
             <a href="./index.html" class="header__logo" aria-label="На главную">

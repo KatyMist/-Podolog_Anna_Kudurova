@@ -1,0 +1,139 @@
+@use '../helpers/index' as *;
+
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    background-image:
+        radial-gradient(ellipse 100% 40% at 20% 10%, rgba(45, 125, 210, 0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 40% at 80% 35%, rgba(94, 163, 232, 0.12) 0%, transparent 65%),
+        radial-gradient(ellipse 100% 40% at 10% 60%, rgba(45, 125, 210, 0.10) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 40% at 90% 80%, rgba(94, 163, 232, 0.12) 0%, transparent 65%);
+    background-attachment: fixed;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.preloader__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(16);
+    text-align: center;
+    padding-inline: rem(32);
+    margin-top: rem(-120);
+}
+
+.preloader__logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: rem(96);
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1;
+    letter-spacing: 0.05em;
+
+    // убрать &::before и &::after полностью
+
+    @include mobile {
+        font-size: rem(72);
+    }
+}
+
+.preloader__school {
+    font-size: rem(13);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    line-height: 1.6;
+    margin-top: rem(24);
+}
+
+.preloader__tagline {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: rem(28);
+    font-weight: 500;
+    color: var(--text);
+
+    @include mobile {
+        font-size: rem(22);
+    }
+}
+
+.preloader__foot {
+    font-size: rem(24);
+
+    @include mobile {
+        font-size: rem(18);
+    }
+}
+
+.preloader__dots {
+    font-size: rem(15);
+    color: var(--muted);
+    letter-spacing: 0.05em;
+}
+
+.preloader__bar-wrap {
+    width: rem(320);
+    height: rem(4);
+    background-color: rgba(45, 125, 210, 0.15);
+    border-radius: rem(4);
+    overflow: hidden;
+    margin-top: rem(24);
+
+    @include mobile {
+        width: rem(240);
+    }
+}
+
+.preloader__bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, var(--accent-light), var(--accent));
+    border-radius: rem(4);
+    transition: width 0.1s ease;
+}
+
+.preloader__percent {
+    font-size: rem(14);
+    color: var(--accent);
+    font-weight: 500;
+    align-self: flex-end;
+    margin-top: rem(-8);
+    padding-right: rem(4);
+}
+
+.preloader__logo-img {
+    width: rem(120);
+    height: rem(120);
+    object-fit: contain;
+    margin-bottom: rem(8);
+}
+
+.preloader__tagline {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: rem(24);
+    font-weight: 600;
+    color: var(--muted); // белый не будет виден на светлом фоне — оставим акцентный
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    @include mobile {
+        font-size: rem(18);
+    }
+}
