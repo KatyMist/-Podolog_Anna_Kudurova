@@ -57,17 +57,19 @@
 
 }
 
-.hero__title { // ВСЕ НАЧИНАЕТСЯ СО СТОП
-    @include fluid-text(64, 36); 
-
+.hero__title { //Всё начинается со стоп
+    @include fluid-text(64, 36);
     font-family: 'Cormorant Garamond', serif;
     font-weight: 500;
     text-transform: uppercase;
     line-height: 1.1;
     color: var(--text);
+    transition: color var(--transition);
+    cursor: default;
 
-    @include tablet {
-        text-align: center;
+    @include hover {
+        color: var(--accent);
+        font-weight: 700;
     }
 }
 
