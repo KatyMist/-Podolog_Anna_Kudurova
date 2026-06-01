@@ -1,0 +1,95 @@
+@use '../helpers/index' as *;
+
+// ─── 404 ───────────────────────────────────────────────────
+
+.not-found {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+    text-align: center;
+    padding: rem(40) rem(20);
+    background-color: #ffffff;
+    background-image:
+        radial-gradient(ellipse 100% 40% at 20% 10%, rgba(45, 125, 210, 0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 40% at 80% 35%, rgba(94, 163, 232, 0.12) 0%, transparent 65%),
+        radial-gradient(ellipse 100% 40% at 10% 60%, rgba(45, 125, 210, 0.10) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 40% at 90% 80%, rgba(94, 163, 232, 0.12) 0%, transparent 65%);
+    background-attachment: fixed;
+}
+
+.not-found__logo {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(-16);
+    margin-bottom: rem(-24);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: rem(32);
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    margin-bottom: rem(0);
+
+    @include hover { opacity: 0.7; }
+}
+
+.not-found__num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: rem(180);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    margin-top: rem(-16);
+    background: linear-gradient(
+        to bottom,
+        rgba(45, 125, 210, 0.6) 0%,
+        rgba(45, 125, 210, 0.15) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    @include tablet { font-size: rem(140); }
+    @include mobile { font-size: rem(100); }
+}
+
+.not-found__text {
+    font-family: 'Cormorant Garamond', serif;
+    @include fluid-text(28, 20);
+    font-weight: 400;
+    color: var(--text);
+    margin-top: rem(8);
+}
+
+.not-found__sub {
+    font-size: rem(15);
+    color: var(--muted);
+}
+
+.not-found__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(10);
+    margin-top: rem(16);
+    padding: rem(14) rem(32);
+    border: 1px solid var(--border-light);
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    color: var(--text);
+    font-size: rem(15);
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color var(--transition), border-color var(--transition), box-shadow var(--transition);
+
+    svg { color: var(--accent); }
+
+    @include hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-color: var(--accent);
+        box-shadow: var(--shadow-blue);
+    }
+}
