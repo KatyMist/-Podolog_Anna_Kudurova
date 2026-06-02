@@ -43,6 +43,7 @@
     display: flex;
     align-items: center;
     gap: rem(16);
+    flex-wrap: wrap;
 
     @include mobile {
         justify-content: center;
@@ -68,6 +69,18 @@
     letter-spacing: 0.04em;
 
     @include tablet { display: none; }
+}
+
+.footer__ai-note {
+    font-size: rem(9);
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.5;
+    margin-left: rem(80); 
+}
+
+.footer__brand-content {
+    display: flex;
+    flex-direction: column;
 }
 
 // ─── Contacts ──────────────────────────────────────────────
