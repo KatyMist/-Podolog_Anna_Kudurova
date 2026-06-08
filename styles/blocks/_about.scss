@@ -7,34 +7,6 @@
     position: relative;
     overflow: hidden;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: rem(600);
-        height: 100%;
-        background-image: url('../images/f1.png');
-        background-repeat: no-repeat;
-        background-position: right top;
-        background-size: contain;
-        opacity: 0.5;
-        pointer-events: none;
-        z-index: 0;
-
-        @include tablet {
-            width: rem(550);
-            opacity: 0.4;
-            right: rem(-60);
-            top: rem(-20);
-            z-index: 2;
-        }
-
-        @include mobile {
-            display: none;
-        }
-    }
-
     @include tablet { padding-block: rem(48) rem(32); }
     @include mobile { padding-block: rem(32) rem(24); }
 }
@@ -51,6 +23,28 @@
         grid-template-columns: 1fr;
         gap: rem(32);
         justify-items: center;
+    }
+}
+
+.about-hero__decor-img {
+    position: absolute;
+    top: rem(-40);
+    right: rem(-40);
+    width: rem(570);
+    height: auto;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 2;
+
+    @include tablet {
+        width: rem(500);
+        right: rem(-60);
+        top: rem(-20);
+        opacity: 0.4;
+    }
+
+    @include mobile {
+        display: none;
     }
 }
  
