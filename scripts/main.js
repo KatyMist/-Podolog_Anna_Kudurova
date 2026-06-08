@@ -1,10 +1,14 @@
 import header from './header.js'
-import Cursor from './cursor.js';
-import Services from './services.js';
+import cursor from './cursor.js';
+import services from './services.js';
+import cases from './cases.js';
+import cookies from './cookies.js';
 
 new header()
-new Cursor();
-new Services();
+new cursor();
+new services();
+new cases();
+new cookies();
 
 // Плавный переход между страницами
 document.querySelectorAll('a[href]').forEach(link => {

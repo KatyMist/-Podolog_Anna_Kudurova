@@ -32,8 +32,8 @@
                     <li><a href="./index.html" class="header__nav-link">Главная</a></li>
                     <li><a href="./about.html" class="header__nav-link">О себе</a></li>
                     <li><a href="./services.html" class="header__nav-link is-active">Услуги</a></li>
-                    <li><a href="./index.html#cases" class="header__nav-link">Кейсы</a></li>
-                    <li><a href="./index.html#contacts" class="header__nav-link">Контакты</a></li>
+                    <li><a href="./cases.html" class="header__nav-link">Кейсы</a></li>
+                    <li><a href="./contacts.html" class="header__nav-link">Контакты</a></li>
                 </ul>
             </nav>
             <a href="https://vk.me/podolog_anna_kudurova" class="header__btn btn btn--sm" target="_blank" rel="noopener noreferrer">
@@ -582,69 +582,98 @@
                     </div>
             </div>
         </section>
+
+
     </main>
 
     <div class="cursor" id="cursor"></div>
 
-</body>
+    <footer class="footer">
+        <div class="footer__inner container">
 
-<footer class="footer">
-    <div class="footer__inner container">
+            <!-- Лого и описание -->
+            <div class="footer__brand">
+                <a href="./index.html" class="header__logo" aria-label="На главную">
+                    <img src="./icons/AK.svg" alt="Подология Анны Кудуровой" width="64" height="64">
+                </a>
+                
+                <p class="footer__brand-text">
+                    Школа — студия подологии<br>
+                    и здоровой эстетики<br>
+                    Анны Кудуровой
+                </p>
+            </div>
 
-        <!-- Лого и описание -->
-        <div class="footer__brand">
-            <a href="./index.html" class="header__logo" aria-label="На главную">
-                <img src="./icons/AK.svg" alt="Подология Анны Кудуровой" width="64" height="64">
+            <!-- Телефон и соцсети -->
+            <div class="footer__contacts">
+                <a href="tel:+79041838568" class="footer__phone">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor"/>
+                    </svg>
+                    +7 (995) 335-78-08
+                </a>
+                <p class="footer__schedule">Ежедневно 10:00 — 20:00</p>
+
+                <div class="footer__socials">
+                    <a href="https://vk.com/podolog_anna_kudurova" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">
+                        <img src="./icons/contacts/vk.svg" alt="VK" width="20" height="20">
+                    </a>
+                    <a href="https://t.me/podolog_anna_kudurova_ul" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                        <img src="./icons/contacts/telegram.svg" alt="Telegram" width="20" height="20">
+                    </a>
+                    <a href="https://max.ru/u/f9LHodD0cOKuqBhmrnhg5dCg-Mo-H_g73IvKzCMbZ4Sr70a2YdIQnEO0F1E" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="MAX">
+                        <img src="./icons/contacts/max.svg" alt="MAX" width="20" height="20">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Кнопка записи -->
+            <a href="https://vk.me/podolog_anna_kudurova" class="footer__btn" target="_blank" rel="noopener noreferrer">
+                <img src="./icons/calendar.svg" alt="" width="30" height="30">
+                Записаться на приём
             </a>
             
-            <p class="footer__brand-text">
-                Школа — студия подологии<br>
-                и здоровой эстетики<br>
-                Анны Кудуровой
-            </p>
-        </div>
 
-        <!-- Телефон и соцсети -->
-        <div class="footer__contacts">
-            <a href="tel:+79041838568" class="footer__phone">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <path d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor"/>
-                </svg>
-                +7 (995) 335-78-08
+            <!-- Разработчик -->
+            <a href="https://katymist.github.io/Portfolio/#projects" class="footer__dev" target="_blank" rel="noopener noreferrer">
+                <div class="footer__dev-info">
+                    <p class="footer__dev-name">Екатерина Туманова</p>
+                    <p class="footer__dev-skills">Frontend Developer & Designer</p>
+                </div>
             </a>
-            <p class="footer__schedule">Ежедневно 10:00 — 20:00</p>
 
-            <div class="footer__socials">
-                <a href="https://vk.com/podolog_anna_kudurova" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">
-                    <img src="./icons/contacts/vk.svg" alt="VK" width="20" height="20">
-                </a>
-                <a href="https://t.me/podolog_anna_kudurova_ul" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-                    <img src="./icons/contacts/telegram.svg" alt="Telegram" width="20" height="20">
-                </a>
-                <a href="https://max.ru/u/f9LHodD0cOKuqBhmrnhg5dCg-Mo-H_g73IvKzCMbZ4Sr70a2YdIQnEO0F1E" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="MAX">
-                    <img src="./icons/contacts/max.svg" alt="MAX" width="20" height="20">
-                </a>
-            </div>
         </div>
-
-        <!-- Кнопка записи -->
-        <a href="https://vk.me/podolog_anna_kudurova" class="footer__btn" target="_blank" rel="noopener noreferrer">
-            <img src="./icons/calendar.svg" alt="" width="30" height="30">
-            Записаться на приём
-        </a>
-
-        <!-- Разработчик -->
-        <a href="https://katymist.github.io/Portfolio/#projects" class="footer__dev" target="_blank" rel="noopener noreferrer">
-            <div class="footer__dev-info">
-                <p class="footer__dev-name">Екатерина Туманова <span>| Frontend Developer</span></p>
-                <p class="footer__dev-skills">Design · Style · Development</p>
-                <p class="footer__dev-desc">Дизайн и frontend-разработка сайта</p>
-                <p class="footer__dev-desc">по клиентскому брифу</p>
-                <p class="footer__dev-desc">в рамках практического проекта</p>
-                <p class="footer__dev-link">katymist.github.io ↗</p>
+        <!-- Нижняя часть футера -->
+         <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <!-- Левая часть: Копирайт -->
+                     <div class="footer__bottom-left">
+                        <p class="footer__copyright">УСЛУГА НЕ ЯВЛЯЕТСЯ МЕДИЦИНСКОЙ </p> 
+                        <p class="footer__copyright">© 2025 Школа-студия подологии и здоровой эстетики Анны Кудуровой</p> 
+                        <p class="footer__rights">Все права защищены</p> 
+                     </div>
+                     <!-- Центр: AI note -->
+                     <div class="footer__bottom-center">
+                        <p class="footer__ai-note">
+                            Отдельные материалы сайта созданы 
+                            с применением искусственного интеллекта
+                        </p>
+                     </div>
+                     <!-- Правая часть: Политика и аналитика -->
+                     <div class="footer__bottom-right">
+                        <a href="#" class="footer__policy">
+                            <span class="hero__card-icon" aria-hidden="true">
+                                <img src="./icons/shield.svg" alt="" width="28" height="28" fill="none">
+                            </span>
+                            Политика конфиденциальности
+                        </a>
+                        <p class="footer__yandex">Сайт использует сервис веб-аналитики Яндекс.Метрика</p>
+                     </div>
+                </div>
             </div>
-        </a>
+         </div>
+    </footer>
+</body>
 
-    </div>
-</footer>
 </html>

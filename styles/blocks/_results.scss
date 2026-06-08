@@ -112,13 +112,14 @@
 
 .results__card {
     flex-shrink: 0;
-    width: rem(320);
+    width: rem(220);
     border-radius: var(--radius-md);
     overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--border);
     scroll-snap-align: start;
+    text-decoration: none;
     transition: box-shadow var(--transition), transform var(--transition);
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(8px);
@@ -128,21 +129,20 @@
         transform: translateY(rem(-4));
     }
 
-    @include tablet { width: rem(260); }
-    @include mobile { width: rem(240); }
+    @include tablet { width: rem(190); }
+    @include mobile { width: rem(170); }
 }
 
 .results__card-before,
 .results__card-after {
+    aspect-ratio: 1;
     position: relative;
-    aspect-ratio: 3 / 4;
     overflow: hidden;
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
         transition: transform var(--transition);
     }
 }
@@ -176,4 +176,73 @@
         background-color: var(--accent);
         color: #fff;
     }
+}
+
+// ─── Grid (новая сетка вместо скролла) ─────────────────────
+
+.results__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(24);
+
+    @include tablet {
+        gap: rem(16);
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr 1fr;
+        gap: rem(12);
+    }
+}
+
+.results__grid .results__card {
+    width: auto;
+    flex-shrink: unset;
+    display: flex;
+    flex-direction: row; // фото слева, текст справа
+    text-decoration: none;
+    scroll-snap-align: unset;
+}
+
+.results__card-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border);
+}
+
+.results__card-info {
+    padding: rem(14) rem(16);
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+}
+
+.results__card-title {
+    font-size: rem(14);
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+}
+
+.results__card-duration {
+    font-size: rem(12);
+    color: var(--muted);
+    margin: 0;
+}
+
+.results__card-link {
+    font-size: rem(13);
+    color: var(--accent);
+    font-weight: 500;
+    margin-top: rem(6);
+    display: inline-flex;
+    align-items: center;
+    gap: rem(4);
+}
+
+.results__desc {
+    font-size: rem(14);
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
 }

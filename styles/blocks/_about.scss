@@ -4,7 +4,37 @@
  
 .about-hero {
     padding-block: rem(80) rem(60);
- 
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: rem(600);
+        height: 100%;
+        background-image: url('../images/f1.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: contain;
+        opacity: 0.5;
+        pointer-events: none;
+        z-index: 0;
+
+        @include tablet {
+            width: rem(550);
+            opacity: 0.4;
+            right: rem(-60);
+            top: rem(-20);
+            z-index: 2;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
     @include tablet { padding-block: rem(48) rem(32); }
     @include mobile { padding-block: rem(32) rem(24); }
 }
@@ -12,6 +42,8 @@
 .about-hero__inner {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
+    position: relative;
+    z-index: 1;
     align-items: start;
     gap: rem(64);
  
@@ -416,37 +448,46 @@
 .about-approach {
     padding-block: rem(48);
     border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     position: relative;
     overflow: hidden;
 
     @include tablet { padding-block: rem(36); }
     @include mobile { padding-block: rem(28); }
+}
 
-    // рисунок как фон секции
-    &::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: rem(600);
-        height: 100%;
-        background-image: url('../icons/flower.svg');
-        background-repeat: no-repeat;
-        background-position: bottom left;
-        background-size: contain;
-        opacity: 0.8;
-        pointer-events: none;
-        z-index: 0;
+.about-approach__decor-img {
+    position: absolute;
+    bottom: rem(-270);
+    left: rem(-70);
+    width: rem(500);
+    height: auto;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 0;
+
+    @include laptop {
+        bottom: rem(-250);
+        left: rem(-20);
     }
 
-    @include mobile { padding-block: rem(48); }
+    @include mobile {
+        display: none;
+    }
+}
+
+.about-approach__left,
+.about-approach__right {
+    position: relative;
+    z-index: 1;
 }
  
 .about-approach__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: rem(48);
-    align-items: start; 
+    align-items: start;
+    position: relative;
 
     @include tablet {
         grid-template-columns: 1fr;

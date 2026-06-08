@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кейсы — Школа-студия подологии</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="icon" type="image/svg+xml" href="./icons/logo.svg">
+    <script src="./scripts/main.js" type="module" defer></script>
+</head>
+<body>
+    <!-- Секция "экран загрузки" -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <img src="./icons/AK.svg" alt="АК" class="preloader__logo-img" width="120" height="120">
+            <p class="preloader__school">Школа подологии и здоровой эстетики<br>Анны Кудуровой</p>
+            <p class="preloader__dots">Подолог · Инструктор · Спикер</p>
+            <div class="preloader__bar-wrap">
+                <div class="preloader__bar" id="preloaderBar"></div>
+            </div>
+            <span class="preloader__percent" id="preloaderPercent">0%</span>
+        </div>
+    </div>
+
+    <div class="cursor" id="cursor"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__inner">
+            <a href="./index.html" class="header__logo" aria-label="На главную">
+                <img src="./icons/logo.svg" alt="Подология Анны Кудуровой" width="64" height="64">
+            </a>
+            <nav class="header__nav" id="nav">
+                <ul class="header__nav-list">
+                    <li><a href="./index.html" class="header__nav-link">Главная</a></li>
+                    <li><a href="./about.html" class="header__nav-link">О себе</a></li>
+                    <li><a href="./services.html" class="header__nav-link">Услуги</a></li>
+                    <li><a href="./cases.html" class="header__nav-link is-active">Кейсы</a></li>
+                    <li><a href="./contacts.html" class="header__nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="https://vk.me/podolog_anna_kudurova" class="header__btn btn" target="_blank" rel="noopener noreferrer">
+                Записаться
+                <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main">
+        <!-- Cases section -->
+        <section class="cases">
+            <div class="container">
+                <div class="cases-hero">
+                    <div class="cases-hero__content">
+                        <h1 class="cases-hero__title">Кейсы</h1>
+                        <p class="cases-hero__description">Реальные результаты работы с разными проблемами стоп и ногтей.</br> Каждый случай — это индивидуальный подход и профессиональное решение.</p>
+                    </div>
+                    <div class="cases-hero__image">
+                        <img src="./images/cases.jpg" alt="Анна Кудурова" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статистика -->
+            <section class="cases-stats">
+                <div class="container">
+                    <div class="cases-stats__grid">
+                        <div class="cases-stats__item">
+                            <div class="cases-stats__icon">
+                                <img src="./icons/People.svg" alt="" width="46" height="46">
+                            </div>
+                            <div class="cases-stats__content">
+                                <div class="cases-stats__number">5000+</div>
+                                <div class="cases-stats__label">консультаций</div>
+                            </div>
+                        </div>
+                        <div class="cases-stats__item">
+                            <div class="cases-stats__icon">
+                                <span class="hero__card-icon" aria-hidden="true">
+                                    <img src="./icons/shield.svg" alt="" width="38" height="38" fill="none">
+                                </span>
+                            </div>
+                            <div class="cases-stats__content">
+                                <div class="cases-stats__number">3000+</div>
+                                <div class="cases-stats__label">решённых случаев</div>
+                            </div>
+                        </div>
+                        <div class="cases-stats__item">
+                            <div class="cases-stats__icon">
+                                <span class="hero__card-icon" aria-hidden="true">
+                                    <img src="./icons/stylishly.svg" alt="" width="38" height="38" fill="none">
+                                </span>
+                            </div>
+                            <div class="cases-stats__content">
+                                <div class="cases-stats__number">6+</div>
+                                <div class="cases-stats__label">лет практики</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Кейсы -->
+            <section class="cases-list">
+                <div class="container">
+                    <div class="cases-category">
+                        <h2 class="cases-category__title">Подология</h2>
+
+                        <!-- Кейс 1 -->
+                        <article class="case-item">
+                            <div class="case-item__images">
+                                <div class="case-item__image-wrapper">
+                                    <img src="./images/cases/ingrown-nail-before.jpg" alt="До" class="case-item__image case-item__image--active" loading="lazy">
+                                    <img src="./images/cases/ingrown-nail-after.jpg" alt="После" class="case-item__image" loading="lazy">
+                                    <button class="case-item__toggle" aria-label="Переключить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6"/>
+                                        </svg>
+                                    </button>
+                                    <div class="case-item__labels">
+                                        <span class="case-item__label case-item__label--before">До</span>
+                                        <span class="case-item__label case-item__label--after">После</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="case-item__content">
+                                <h3 class="case-item__title">Лечение вросшего ногтя</h3>
+                                <div class="case-item__section">
+                                    <p class="case-item__label-text"><strong>Проблема:</strong> вросшегнесть, покраснение и воспаление боковой валика, врастание ногтевой пластины.</p>
+                                </div>
+                                <div class="case-item__section">
+                                    <p class="case-item__label-text"><strong>Решение:</strong> коррекция ногтевой пластины с использованием подологических методик, обработка, рекомендация по домашнему уходу.</p>
+                                </div>
+                                <div class="case-item__section">
+                                    <p class="case-item__label-text"><strong>Результат:</strong> устранение боли и воспаления, восстановление здорового роста ногтя.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Кейс 2 -->
+                        <article class="case-item">
+                            <div class="case-item__images">
+                                <div class="case-item__image-wrapper">
+                                    <img src="./images/cases/fungus-treatment-before.jpg" alt="До" class="case-item__image case-item__image--active" loading="lazy">
+                                    <img src="./images/cases/fungus-treatment-after.jpg" alt="После" class="case-item__image" loading="lazy">
+                                    <button class="case-item__toggle" aria-label="Переключить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6"/>
+                                        </svg>
+                                    </button>
+                                    <div class="case-item__labels">
+                                        <span class="case-item__label case-item__label--before">До</span>
+                                        <span class="case-item__label case-item__label--after">После</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="case-item__content">
+                                <h3 class="case-item__title">Лечение грибка ногтя</h3>
+                                <div class="case-item__section">
+                                    <p class="case-item__label-text"><strong>Проблема:</strong> утолщение ногтевой пластины, изменение цвета, врастание ногтевой пластины.</p>
+                                </div>
+                                <div class="case-item__section">
+                                    <p class="case-item__label-text"><strong>Решение:</strong> антисептическая обработка, подбор противогрибковой терапии.</p>
+                                </div>
+                                <div class="case-item__section">
+                                    <p class="case-item__label-text"><strong>Результат:</strong> здоровый цвет и структура ногтевой пластины, отсутствие грибковой инфекции.</p>
+                                </div>
+                                <div class="case-item__meta">
+                                    <span class="case-item__meta-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>4 процедуры</span>
+                                    <span class="case-item__meta-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>4 месяца</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Кейс 3 -->
+                        <article class="case-item">
+                            <div class="case-item__images">
+                                <div class="case-item__image-wrapper">
+                                    <img src="./images/cases/heel-treatment-before.jpg" alt="До" class="case-item__image case-item__image--active" loading="lazy">
+                                    <img src="./images/cases/heel-treatment-after.jpg" alt="После" class="case-item__image" loading="lazy">
+                                    <button class="case-item__toggle" aria-label="Переключить">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6"/>
+                                        </svg>
+                                    </button>
+                                    <div class="case-item__labels">
+                                        <span class="case-item__label case-item__label--before">До</span>
+                                        <span class="case-item__label case-item__label--after">После</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="case-item__content">
+                                <h3 class="case-item__title">Обработка трещин стопы</h3>
+                                <div class="case-item__section">
+                                    <p class="case-item__label-text"><strong>Проблема:</strong> сухая кожа, глубокие трещины, болезненность при ходьбе.</p>
+                                </div>
+                                <div class="case-item__section">
+                                    <p class="case-item__label-text"><strong>Решение:</strong> обработка трещин, удаление ороговевших тканей, восстановление кожи, подбор уходов.</p>
+                                </div>
+                                <div class="case-item__section">
+                                    <p class="case-item__label-text"><strong>Результат:</strong> гладкая кожа стоп, отсутствие трещин и дискомфорта.</p>
+                                </div>
+                                <div class="case-item__meta">
+                                    <span class="case-item__meta-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>2 процедуры</span>
+                                    <span class="case-item__meta-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>1 месяц</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <div class="cases-cta">
+                <div class="container">
+                    <p class="cases-cta__text">Каждый случай уникален. Для подбора оптимального решения необходима консультация специалиста.</p>
+                    <a href="https://vk.me/podolog_anna_kudurova" class="cases-cta__btn btn" target="_blank" rel="noopener noreferrer">
+                        Записаться на приём
+                        <span class="btn__arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__inner container">
+
+            <!-- Лого и описание -->
+            <div class="footer__brand">
+                <a href="./index.html" class="header__logo" aria-label="На главную">
+                    <img src="./icons/AK.svg" alt="Подология Анны Кудуровой" width="64" height="64">
+                </a>
+                
+                <p class="footer__brand-text">
+                    Школа — студия подологии<br>
+                    и здоровой эстетики<br>
+                    Анны Кудуровой
+                </p>
+            </div>
+
+            <!-- Телефон и соцсети -->
+            <div class="footer__contacts">
+                <a href="tel:+79041838568" class="footer__phone">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor"/>
+                    </svg>
+                    +7 (995) 335-78-08
+                </a>
+                <p class="footer__schedule">Ежедневно 10:00 — 20:00</p>
+
+                <div class="footer__socials">
+                    <a href="https://vk.com/podolog_anna_kudurova" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">
+                        <img src="./icons/contacts/vk.svg" alt="VK" width="20" height="20">
+                    </a>
+                    <a href="https://t.me/podolog_anna_kudurova_ul" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                        <img src="./icons/contacts/telegram.svg" alt="Telegram" width="20" height="20">
+                    </a>
+                    <a href="https://max.ru/u/f9LHodD0cOKuqBhmrnhg5dCg-Mo-H_g73IvKzCMbZ4Sr70a2YdIQnEO0F1E" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="MAX">
+                        <img src="./icons/contacts/max.svg" alt="MAX" width="20" height="20">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Кнопка записи -->
+            <a href="https://vk.me/podolog_anna_kudurova" class="footer__btn" target="_blank" rel="noopener noreferrer">
+                <img src="./icons/calendar.svg" alt="" width="30" height="30">
+                Записаться на приём
+            </a>
+            
+
+            <!-- Разработчик -->
+            <a href="https://katymist.github.io/Portfolio/#projects" class="footer__dev" target="_blank" rel="noopener noreferrer">
+                <div class="footer__dev-info">
+                    <p class="footer__dev-name">Екатерина Туманова</p>
+                    <p class="footer__dev-skills">Frontend Developer & Designer</p>
+                </div>
+            </a>
+
+        </div>
+        <!-- Нижняя часть футера -->
+         <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <!-- Левая часть: Копирайт -->
+                     <div class="footer__bottom-left">
+                        <p class="footer__copyright">УСЛУГА НЕ ЯВЛЯЕТСЯ МЕДИЦИНСКОЙ </p> 
+                        <p class="footer__copyright">© 2025 Школа-студия подологии и здоровой эстетики Анны Кудуровой</p> 
+                        <p class="footer__rights">Все права защищены</p> 
+                     </div>
+                     <!-- Центр: AI note -->
+                     <div class="footer__bottom-center">
+                        <p class="footer__ai-note">
+                            Отдельные материалы сайта созданы 
+                            с применением искусственного интеллекта
+                        </p>
+                     </div>
+                     <!-- Правая часть: Политика и аналитика -->
+                     <div class="footer__bottom-right">
+                        <a href="#" class="footer__policy">
+                            <span class="hero__card-icon" aria-hidden="true">
+                                <img src="./icons/shield.svg" alt="" width="28" height="28" fill="none">
+                            </span>
+                            Политика конфиденциальности
+                        </a>
+                        <p class="footer__yandex">Сайт использует сервис веб-аналитики Яндекс.Метрика</p>
+                     </div>
+                </div>
+            </div>
+         </div>
+    </footer>
+</body>
+</html>

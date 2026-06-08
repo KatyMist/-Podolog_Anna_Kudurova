@@ -136,10 +136,11 @@ body {
 }
 
 .cursor--hover {
-    width: rem(36);
-    height: rem(36);
-    opacity: 0.5;
+    width: rem(20);
+    height: rem(20);
+    opacity: 0.4;
 }
+
 
 body {
     @include fluid-text(30, 20);
