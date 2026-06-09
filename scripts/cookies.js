@@ -30,8 +30,7 @@ class CookiesBanner {
 
                 <div class="cookies-banner__content">
                     <p class="cookies-banner__text">
-                        Мы используем <a href="./privacy.html" class="cookies-banner__link">cookie-файлы</a> 
-                        для корректной работы сайта
+                        Продолжая пользоваться сайтом, вы соглашаетесь с использованием <a href="./privacy.html" class="cookies-banner__link">cookie-файлов</a> и обработкой обезличенных данных через Яндекс.Метрику согласно Политике конфиденциальности
                     </p>
                 </div>
 
