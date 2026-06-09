@@ -1,0 +1,160 @@
+@use '../helpers/index' as *;
+
+// ─── Privacy Hero ──────────────────────────────────────────
+
+.privacy__hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: rem(64);
+    padding-block: rem(80) rem(60);
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: rem(32);
+        padding-block: rem(48) rem(32);
+    }
+
+    @include mobile {
+        padding-block: rem(32) rem(24);
+    }
+}
+
+.privacy__breadcrumb {
+    font-size: rem(12);
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin-bottom: rem(16);
+}
+
+.privacy__title {
+    @include fluid-text(56, 32);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.1;
+    margin-bottom: rem(20);
+    text-transform: uppercase;
+}
+
+.privacy__intro {
+    font-size: rem(16);
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: rem(16);
+    max-width: rem(520);
+}
+
+.privacy__date {
+    font-size: rem(13);
+    color: var(--muted);
+    margin: 0;
+}
+
+.privacy__hero-image {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+    }
+
+    @include tablet { order: -1; }
+}
+
+// ─── Privacy Content ───────────────────────────────────────
+
+.privacy__content {
+    padding-bottom: rem(80);
+
+    @include tablet { padding-bottom: rem(48); }
+    @include mobile { padding-bottom: rem(32); }
+}
+
+.privacy__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(24);
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: rem(16);
+    }
+}
+
+// ─── Privacy Item ──────────────────────────────────────────
+
+.privacy__item {
+    display: flex;
+    gap: rem(16);
+    padding: rem(24) rem(20);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition: box-shadow var(--transition);
+
+    @include hover {
+        box-shadow: var(--shadow-blue);
+    }
+
+    @include mobile {
+        padding: rem(16);
+        gap: rem(12);
+    }
+}
+
+.privacy__item-icon {
+    flex-shrink: 0;
+    width: rem(48);
+    height: rem(48);
+    border-radius: 50%;
+    background: var(--accent-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: rem(24);
+        height: rem(24);
+    }
+}
+
+.privacy__item-body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+}
+
+.privacy__item-title {
+    font-size: rem(16);
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.privacy__item-text {
+    font-size: rem(14);
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.privacy__list {
+    font-size: rem(14);
+    color: var(--muted);
+    line-height: 1.7;
+    padding-left: rem(20);
+    margin: rem(8) 0 0;
+
+    li {
+        margin-bottom: rem(4);
+
+        &:last-child { margin-bottom: 0; }
+    }
+}
