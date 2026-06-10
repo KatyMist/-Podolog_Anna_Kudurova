@@ -3553,7 +3553,7 @@ body {
 
 .results__card {
   flex-shrink: 0;
-  width: 13.75rem;
+  width: 21.875rem;
   border-radius: var(--radius-md);
   overflow: hidden;
   display: flex;
