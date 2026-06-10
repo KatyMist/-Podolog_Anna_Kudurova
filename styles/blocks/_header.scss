@@ -62,6 +62,15 @@
         }
     }
 }
+
+.header__btn {
+    flex-shrink: 0;
+    margin-left: auto;
+
+    @include mobile {
+        display: none;
+    }
+}
  
 .header__nav-list {
     display: flex;
