@@ -168,7 +168,7 @@
     align-items: center;
     gap: rem(10);
     padding: rem(14) rem(22);
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: var(--transition);
     border: 1px solid var(--accent-light);
     border-radius: 100px;
     color: var(--accent-light);
@@ -179,6 +179,7 @@
     white-space: nowrap;
 
     @include hover {
+        color: var(--accent-light);
         background-color: rgba(95, 163, 232, 0.12);
         border-color: #5fa3e8;
         box-shadow: 0 0 18px rgba(95, 163, 232, 0.35);
@@ -193,7 +194,13 @@
     @include mobile {
         width: auto; 
         justify-content: center;
-        padding: rem(14) rem(40);
+        padding: rem(8) rem(12);
+    }
+
+    @include mobile-s {
+        width: auto; 
+        justify-content: center;
+        padding: rem(6) rem(8);
     }
 }
  
@@ -217,10 +224,9 @@
     }
 
     @include mobile {
-        width: auto;
-        text-align: center;
-        align-items: center;
-        padding: rem(14) rem(40);
+        width: auto; 
+        justify-content: center;
+        padding: rem(8) rem(12);
     }
 }
  

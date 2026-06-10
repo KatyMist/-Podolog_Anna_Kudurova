@@ -91,6 +91,11 @@
         padding-block: rem(24);
         margin-bottom: rem(32);
     }
+
+    @include mobile {
+        padding-block: rem(14);
+        margin-bottom: rem(22);
+    }
 }
 
 .cases-stats__grid {
@@ -100,14 +105,15 @@
     justify-items: center;
 
     @include tablet {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: rem(24);
-        justify-items: start;
+        justify-items: center;
     }
 
     @include mobile {
-        gap: rem(16);
+        gap: rem(15);
     }
+
 }
 
 .cases-stats__item {
@@ -133,8 +139,7 @@
     color: var(--accent);
 
     @include mobile {
-        width: rem(40);
-        height: rem(40);
+        display: none;
     }
 }
 
@@ -145,7 +150,7 @@
     text-align: center;
 
     @include tablet {
-        text-align: left;
+        text-align: center;
     }
 }
 
@@ -155,12 +160,27 @@
     font-weight: 500;
     color: var(--text);
     line-height: 1;
+
+    @include mobile {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    @include mobile-s {
+        font-size: 14px;
+        text-align: center;
+    }
 }
 
 .cases-stats__label {
     font-size: rem(14);
     color: var(--muted);
     line-height: 1.4;
+
+    @include mobile {
+        font-size: 14px;
+        text-align: center;
+    }
 }
 
 // ─── Cases List ─────────────────────────────────────────────
