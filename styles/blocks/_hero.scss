@@ -71,6 +71,10 @@
         color: var(--accent);
         font-weight: 700;
     }
+
+    @include tablet {
+        text-align: center;
+    }
 }
 
 .hero__desc {
