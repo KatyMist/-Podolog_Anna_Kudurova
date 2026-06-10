@@ -3526,6 +3526,11 @@ body {
   color: var(--text);
   line-height: 1.2;
 }
+@media (width <= 63.99875rem) {
+  .results__title {
+    font-size: 1.75rem;
+  }
+}
 
 .results__link {
   display: inline-flex;
@@ -3716,7 +3721,7 @@ body {
 }
 
 .results__desc {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: var(--muted);
   line-height: 1.6;
   margin: 0;

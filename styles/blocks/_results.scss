@@ -58,6 +58,10 @@
     font-weight: 500;
     color: var(--text);
     line-height: 1.2;
+
+    @include tablet {
+        font-size: rem(28);
+    }
 }
 
 .results__link {
@@ -246,7 +250,7 @@
 }
 
 .results__desc {
-    font-size: rem(14);
+    font-size: rem(15);
     color: var(--muted);
     line-height: 1.6;
     margin: 0;
