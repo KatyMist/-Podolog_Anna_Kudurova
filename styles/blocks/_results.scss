@@ -3,14 +3,18 @@
 // ─── Results ───────────────────────────────────────────────
 
 .results {
+    position: relative;
+    overflow: hidden;
     padding-block: rem(80);
-    
 
     @include tablet { padding-block: rem(60); }
     @include mobile { padding-block: rem(40); }
 }
 
+
 .results__inner {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: rem(280) 1fr;
     align-items: center;
@@ -246,4 +250,18 @@
     color: var(--muted);
     line-height: 1.6;
     margin: 0;
+}
+
+.results__decor-img {
+    position: absolute;
+    bottom: rem(-30);
+    left: rem(-60);
+    width: rem(340) !important;
+    max-width: rem(340) !important;
+    height: auto;
+    opacity: 0.75;
+    pointer-events: none;
+    z-index: 0;
+
+    @include mobile { display: none; }
 }
