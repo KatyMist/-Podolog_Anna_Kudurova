@@ -64,6 +64,7 @@
     @include tablet { gap: rem(12); }
 
     @include mobile {
+        padding-inline: rem(16);
         text-align: center;
         align-items: center;
     }
@@ -93,7 +94,7 @@
     background-color: var(--accent);
     border-radius: rem(2);
 
-    @include mobile { display: none; }
+    @include tablet { display: none; }
 }
 
 .help__desc {

@@ -7,8 +7,8 @@ export default class Cursor {
 
     initMove() {
         document.addEventListener('mousemove', (e) => {
-            this.cursor.style.left = `${e.clientX}px`;
-            this.cursor.style.top = `${e.clientY}px`;
+            const size = 12;
+            this.cursor.style.transform = `translate(${e.clientX - size / 2}px, ${e.clientY - size / 2}px)`;
         });
     }
 
