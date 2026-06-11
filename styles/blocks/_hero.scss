@@ -13,7 +13,7 @@
     }
 
     @include mobile {
-        padding-block: rem(40) rem(32);
+        padding-block: rem(24) rem(20);
     }
 }
 
@@ -41,6 +41,7 @@
     @include tablet {
         align-items: center;
         order: 1; // контент идёт первым
+        
     }
 }
 
@@ -77,13 +78,13 @@
     }
 }
 
-.hero__desc {
+.hero__desc { 
     font-size: rem(18);
     color: var(--muted);
     line-height: 1.6;
 
-    @include mobile {
-        font-size: rem(16);
+    @include tablet {
+        display: none;
     }
 }
 
@@ -107,6 +108,10 @@
     @include hover {
         background-color: rgba(255, 255, 255, 0.9);
         border-color: var(--accent);
+    }
+
+    @include tablet {
+        display: none;
     }
 }
 
@@ -136,7 +141,7 @@
     @include tablet {
         aspect-ratio: 3 / 4;
         max-height: rem(940);
-        max-width: rem(360); // ограничиваем максимальную ширину
+        max-width: rem(460); // ограничиваем максимальную ширину
         width: 100%;
         margin-inline: auto;
         order: 2;
@@ -171,11 +176,8 @@
         margin-top: rem(24);
     }
 
-    @include mobile {
-        grid-template-columns: repeat(3, 1fr); // три в ряд
-        width: 100%;
-        margin-top: rem(16);
-        gap: rem(8);
+    @include tablet {
+        display: none;
     }
 }
 

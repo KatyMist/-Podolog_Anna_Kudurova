@@ -1,6 +1,4 @@
-// ═══════════════════════════════════════════════════════════
-// Cookies Banner - красивый баннер согласия
-// ═══════════════════════════════════════════════════════════
+// Cookies Banner - баннер согласия
 
 class CookiesBanner {
     constructor() {
@@ -13,7 +11,6 @@ class CookiesBanner {
         if (this.getCookie(this.cookieName)) {
             return;
         }
-
         this.createBanner();
         this.attachEvents();
     }
@@ -27,13 +24,11 @@ class CookiesBanner {
                 <div class="cookies-banner__icon">
                     <img src="./icons/cookie.svg" alt="Cookie" width="32" height="32">
                 </div>
-
                 <div class="cookies-banner__content">
                     <p class="cookies-banner__text">
                         Мы используем <a href="./privacy.html" class="cookies-banner__link">cookie-файлы</a> для корректной работы сайта и анализа посещаемости
                     </p>
                 </div>
-
                 <div class="cookies-banner__actions">
                     <button id="cookies-accept-btn" class="cookies-banner__btn">
                         Согласен
@@ -50,7 +45,6 @@ class CookiesBanner {
     attachEvents() {
         const acceptBtn = document.getElementById('cookies-accept-btn');
         const closeBtn = document.getElementById('cookies-close-btn');
-        const moreBtn = document.getElementById('cookies-more-btn');
 
         if (acceptBtn) {
             acceptBtn.addEventListener('click', () => this.acceptCookies());
@@ -58,12 +52,6 @@ class CookiesBanner {
 
         if (closeBtn) {
             closeBtn.addEventListener('click', () => this.closeBanner());
-        }
-
-        if (moreBtn) {
-            moreBtn.addEventListener('click', () => {
-                window.location.href = './privacy.html';
-            });
         }
     }
 
@@ -84,7 +72,7 @@ class CookiesBanner {
         const date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         const expires = 'expires=' + date.toUTCString();
-        document.cookie = `${name}=${value};${expires};path=/;SameSite=Lax`;
+        document.cookie = `${name}=${value};${expires};path=/;SameSite=Lax;Secure`;
     }
 
     getCookie(name) {

@@ -6,8 +6,12 @@
     padding-block: rem(80);
     
 
-    @include tablet { 
-        padding-block: rem(32); 
+    @include tablet {
+        padding-block: rem(24);
+    }
+
+    @include mobile {
+        padding-block: rem(16);
     }
 
 }
@@ -16,10 +20,13 @@
  
 .why__top {
     margin-bottom: rem(10);
+    
  
     @include tablet {
         margin-bottom: rem(40);
     }
+
+
 }
  
 .why__title {
@@ -31,11 +38,14 @@
 
     @include tablet {
         font-size: rem(28);
-        margin-bottom: rem(24);
+        margin-bottom: rem(16);
+        padding-bottom: rem(16);
+        border-bottom: 1px solid var(--border);
     }
- 
+
     @include mobile {
-        margin-bottom: rem(32);
+        margin-bottom: rem(16);
+        padding-bottom: rem(16);
     }
 }
  
@@ -46,11 +56,7 @@
     border-bottom: 1px solid var(--border);
 
     @include tablet {
-        gap: rem(1);
-    }
-
-    @include mobile {
-        grid-template-columns: 1fr; // одна колонка вместо трёх
+        grid-template-columns: 1fr;
         border-top: none;
     }
 }
@@ -61,32 +67,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: rem(16);
-    padding: rem(40) rem(32);
-    background-color: transparent;
     text-align: center;
 
-    &:not(:last-child) {
-        border-right: 1px solid var(--border);
-
-        @include mobile {
-            border-right: none;
-            border-bottom: 1px solid var(--border);
-        }
-    }
-
     @include tablet {
-        padding: rem(24) rem(16);
-        gap: rem(10);
-    }
-
-    @include mobile {
-        display: flex;
-        flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: rem(16) rem(12);
-        gap: rem(6);
     }
 }
  
@@ -112,7 +97,7 @@
     color: var(--text);
 
     @include tablet {
-        font-size: rem(13);
+        font-size: rem(18);
     }
 
     @include mobile {
@@ -125,6 +110,10 @@
     font-size: rem(15);
     color: var(--muted);
     line-height: 1.6;
+
+    @include tablet {
+        font-size: rem(15);
+    }
  
     @include mobile {
         font-size: rem(13);
