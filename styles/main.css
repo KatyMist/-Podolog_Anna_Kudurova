@@ -2379,7 +2379,7 @@ body {
 }
 
 .help {
-  padding-block: 5rem;
+  padding-block: 3rem;
   position: relative;
   overflow: hidden;
 }
@@ -2412,12 +2412,12 @@ body {
 }
 @media (width <= 63.99875rem) {
   .help {
-    padding-block: 2rem;
+    padding-block: 1.5rem;
   }
 }
 @media (width <= 47.99875rem) {
   .help {
-    padding-block: 2rem;
+    padding-block: 1.5rem;
   }
 }
 
@@ -2506,7 +2506,7 @@ body {
   font-weight: 500;
   color: var(--accent);
   text-decoration: none;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
   transition: gap var(--transition);
 }
 @media (any-hover: hover) {
@@ -2581,13 +2581,13 @@ body {
 
 .help__card-image {
   width: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 2/3;
   overflow: hidden;
   position: relative;
 }
 @media (width <= 63.99875rem) {
   .help__card-image {
-    aspect-ratio: 2/3;
+    aspect-ratio: 3/4;
   }
 }
 .help__card-image img {

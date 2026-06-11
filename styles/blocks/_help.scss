@@ -3,7 +3,7 @@
 // ─── Help ──────────────────────────────────────────────────
 
 .help {
-    padding-block: rem(80);
+    padding-block: rem(48); 
     position: relative;
     overflow: hidden;
 
@@ -33,8 +33,8 @@
         }
     }
 
-    @include tablet { padding-block: rem(32); }
-    @include mobile { padding-block: rem(32); }
+    @include tablet { padding-block: rem(24); }
+    @include mobile { padding-block: rem(24); }
 }
 
 .help__inner {
@@ -112,7 +112,7 @@
     font-weight: 500;
     color: var(--accent);
     text-decoration: none;
-    margin-top: rem(8);
+    margin-top: rem(4);
     transition: gap var(--transition);
 
     @include hover { gap: rem(14); }
@@ -179,11 +179,11 @@
 
 .help__card-image {
     width: 100%;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 2 / 3; 
     overflow: hidden;
     position: relative;
 
-    @include tablet { aspect-ratio: 2 / 3; }
+    @include tablet { aspect-ratio: 3 / 4; }
 
     img {
         width: 100%;
