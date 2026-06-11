@@ -67,14 +67,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: rem(16);
+    padding: rem(40) rem(32);
+    background-color: transparent;
     text-align: center;
+
+    &:not(:last-child) {
+        border-right: 1px solid var(--border);
+
+        @include tablet {
+            border-right: none;
+            border-bottom: 1px solid var(--border);
+        }
+
+        @include mobile {
+            border-right: none;
+            border-bottom: 1px solid var(--border);
+        }
+    }
 
     @include tablet {
         align-items: center;
         text-align: center;
+        padding: rem(14) rem(16);
+        gap: rem(10);
+    }
+
+    @include mobile {
+        padding: rem(16) rem(12);
+        gap: rem(6);
     }
 }
- 
+
 .why__icon {
     flex-shrink: 0;
     color: var(--accent);
