@@ -213,11 +213,10 @@
 
 .cases-category__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: rem(24);
 
     @include tablet {
-        grid-template-columns: 1fr;
         gap: rem(16);
     }
 }
@@ -255,9 +254,9 @@
 
 .case-item {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: rem(0);
-    align-items: stretch;
+    align-items: start;
     margin-bottom: rem(24);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
@@ -289,9 +288,6 @@
 }
 
 .case-item__image-wrapper {
-    position: relative;
-    overflow: hidden;
-    background: var(--surface-2, #f5f5f4);
     aspect-ratio: 4 / 3;
 
     @include tablet {
