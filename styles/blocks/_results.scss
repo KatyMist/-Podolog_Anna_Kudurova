@@ -7,8 +7,8 @@
     overflow: hidden;
     padding-block: rem(80);
 
-    @include tablet { padding-block: rem(60); }
-    @include mobile { padding-block: rem(40); }
+    @include tablet { padding-block: rem(40); }
+    @include mobile { padding-block: rem(24); }
 }
 
 
@@ -21,13 +21,12 @@
     gap: rem(48);
 
     @include tablet {
-        grid-template-columns: rem(220) 1fr;
-        gap: rem(32);
+        grid-template-columns: rem(280) 1fr;
     }
 
     @include mobile {
         grid-template-columns: 1fr;
-        gap: rem(24);
+        gap: rem(16);
     }
 }
 
@@ -38,10 +37,8 @@
     flex-direction: column;
     gap: rem(16);
 
-    @include mobile {
-        text-align: center;
-        align-items: center;
-    }
+    @include tablet { gap: rem(8); }
+    @include mobile { gap: rem(8); }
 }
 
 .results__label {
@@ -78,6 +75,9 @@
     @include hover {
         gap: rem(14);
     }
+
+    @include tablet { margin-top: rem(4); }
+    @include mobile { margin-top: rem(4); }
 }
 
 // ─── Scroll wrap ───────────────────────────────────────────
@@ -100,8 +100,7 @@
     );
 
     @include mobile {
-        mask-image: none;
-        -webkit-mask-image: none;
+        width: 100%;
     }
 }
 
@@ -115,6 +114,10 @@
     scrollbar-width: none;
 
     &::-webkit-scrollbar { display: none; }
+
+    @include tablet {
+        padding-inline: rem(0);
+    }
 }
 
 // ─── Card ──────────────────────────────────────────────────
@@ -138,8 +141,10 @@
         transform: translateY(rem(-4));
     }
 
-    @include tablet { width: rem(190); }
-    @include mobile { width: rem(170); }
+    @include tablet { width: rem(320); }
+    @include mobile {
+        width: 80vw;
+    }
 }
 
 .results__card-before,
