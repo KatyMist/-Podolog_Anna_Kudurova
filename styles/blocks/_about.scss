@@ -243,15 +243,25 @@
         line-height: 1;
     }
 
+    @include tablet {
+        flex-direction: column;
+        text-align: center;
+    }
+
     img {
         width: rem(32) !important;
         height: rem(32) !important;
         flex-shrink: 0;
+
+        @include tablet {
+            display: none;
+        }
     }
 
     @include hover {
         box-shadow: var(--shadow-blue);
     }
+
 
     @include mobile {
         white-space: normal;
@@ -333,6 +343,10 @@
         font-weight: 500;
         color: var(--text);
         margin-bottom: rem(12);
+
+        @include tablet {
+            text-align: center;
+        }
     }
 
     p {
@@ -340,6 +354,10 @@
         color: var(--muted);
         line-height: 1.6;
         margin-bottom: rem(8);
+
+        @include tablet {
+            text-align: center;
+        }
 
         &:last-child { margin-bottom: 0; }
     }
@@ -369,6 +387,8 @@
     justify-content: center;
     font-size: rem(20);
     color: var(--accent);
+
+
 }
  
 // ─── Pro ───────────────────────────────────────────────────
