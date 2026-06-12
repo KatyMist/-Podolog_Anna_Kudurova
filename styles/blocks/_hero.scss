@@ -4,17 +4,9 @@
 
 .hero {
     padding-block: rem(80) rem(60);
-    background-image:
-        radial-gradient(ellipse 120% 100% at 5% 5%, rgba(45, 125, 210, 0.18) 0%, transparent 60%),
-        radial-gradient(ellipse 80% 60% at 95% 95%, rgba(45, 125, 210, 0.12) 0%, transparent 55%);
 
-    @include tablet {
-        padding-block: rem(60) rem(40);
-    }
-
-    @include mobile {
-        padding-block: rem(24) rem(20);
-    }
+    @include tablet { padding-block: rem(60) rem(40); }
+    @include mobile { padding-block: rem(24) rem(20); }
 }
 
 .hero__inner {
@@ -187,7 +179,7 @@
     align-items: center;
     gap: rem(12);
     padding: rem(28) rem(24);
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(12px);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);

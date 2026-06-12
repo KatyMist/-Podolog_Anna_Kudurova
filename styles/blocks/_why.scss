@@ -4,16 +4,10 @@
  
 .why {
     padding-block: rem(80);
-    
+    background: transparent;
 
-    @include tablet {
-        padding-block: rem(24);
-    }
-
-    @include mobile {
-        padding-block: rem(16);
-    }
-
+    @include tablet { padding-block: rem(24); }
+    @include mobile { padding-block: rem(16); }
 }
 
 // ─── Top ───────────────────────────────────────────────────
@@ -52,8 +46,8 @@
 .why__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 
     @include tablet {
         grid-template-columns: 1fr;
