@@ -5,10 +5,32 @@
 .results {
     position: relative;
     overflow: hidden;
-    padding-block: rem(80);
+    padding-block: rem(60); 
 
-    @include tablet { padding-block: rem(40); }
-    @include mobile { padding-block: rem(24); }
+    &::before {
+        content: '';
+        position: absolute;
+        left: rem(-80);
+        top: 0;
+        bottom: 0;
+        width: rem(500);
+        background-image: url('../images/F3.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    @include tablet {
+        &::before { display: none; }
+        padding-block: rem(30);
+    }
+    
+    @include mobile {
+        &::before { display: none; }
+        padding-block: rem(18);
+    }
 }
 
 

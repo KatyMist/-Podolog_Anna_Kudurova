@@ -3,7 +3,7 @@
 // Help
 
 .help {
-    padding-block: rem(48); 
+    padding-block: rem(40);  
     position: relative;
     overflow: hidden;
 
@@ -33,8 +33,8 @@
         }
     }
 
-    @include tablet { padding-block: rem(24); }
-    @include mobile { padding-block: rem(24); }
+    @include tablet { padding-block: rem(20); } 
+    @include mobile { padding-block: rem(20); } 
 }
 
 .help__inner {

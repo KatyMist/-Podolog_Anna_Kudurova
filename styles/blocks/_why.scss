@@ -3,11 +3,11 @@
 // Why 
  
 .why {
-    padding-block: rem(80);
+    padding-block: rem(60); 
     background: transparent;
 
-    @include tablet { padding-block: rem(24); }
-    @include mobile { padding-block: rem(16); }
+    @include tablet { padding-block: rem(18); }  
+    @include mobile { padding-block: rem(12); } 
 }
 
 // Top

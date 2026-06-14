@@ -3,10 +3,10 @@
 // Hero
 
 .hero {
-    padding-block: rem(80) rem(60);
+    padding-block: rem(80) rem(40);  
 
-    @include tablet { padding-block: rem(60) rem(40); }
-    @include mobile { padding-block: rem(24) rem(20); }
+    @include tablet { padding-block: rem(60) rem(32); }  
+    @include mobile { padding-block: rem(24) rem(16); }  
 }
 
 .hero__inner {

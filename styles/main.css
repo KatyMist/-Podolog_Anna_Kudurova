@@ -764,16 +764,16 @@ button {
 }
 
 .hero {
-  padding-block: 5rem 3.75rem;
+  padding-block: 5rem 2.5rem;
 }
 @media (width <= 63.99875rem) {
   .hero {
-    padding-block: 3.75rem 2.5rem;
+    padding-block: 3.75rem 2rem;
   }
 }
 @media (width <= 47.99875rem) {
   .hero {
-    padding-block: 1.5rem 1.25rem;
+    padding-block: 1.5rem 1rem;
   }
 }
 
@@ -1041,17 +1041,17 @@ button {
 }
 
 .why {
-  padding-block: 5rem;
+  padding-block: 3.75rem;
   background: transparent;
 }
 @media (width <= 63.99875rem) {
   .why {
-    padding-block: 1.5rem;
+    padding-block: 1.125rem;
   }
 }
 @media (width <= 47.99875rem) {
   .why {
-    padding-block: 1rem;
+    padding-block: 0.75rem;
   }
 }
 
@@ -2464,7 +2464,7 @@ button {
 }
 
 .help {
-  padding-block: 3rem;
+  padding-block: 2.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -2497,12 +2497,12 @@ button {
 }
 @media (width <= 63.99875rem) {
   .help {
-    padding-block: 1.5rem;
+    padding-block: 1.25rem;
   }
 }
 @media (width <= 47.99875rem) {
   .help {
-    padding-block: 1.5rem;
+    padding-block: 1.25rem;
   }
 }
 
@@ -3591,16 +3591,36 @@ button {
 .results {
   position: relative;
   overflow: hidden;
-  padding-block: 5rem;
+  padding-block: 3.75rem;
+}
+.results::before {
+  content: "";
+  position: absolute;
+  left: -5rem;
+  top: 0;
+  bottom: 0;
+  width: 31.25rem;
+  background-image: url("../images/F3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  z-index: 0;
+  pointer-events: none;
 }
 @media (width <= 63.99875rem) {
+  .results::before {
+    display: none;
+  }
   .results {
-    padding-block: 2.5rem;
+    padding-block: 1.875rem;
   }
 }
 @media (width <= 47.99875rem) {
+  .results::before {
+    display: none;
+  }
   .results {
-    padding-block: 1.5rem;
+    padding-block: 1.125rem;
   }
 }
 
