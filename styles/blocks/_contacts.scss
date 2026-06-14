@@ -1,6 +1,6 @@
 @use '../helpers/index' as *;
 
-// ─── Contacts ──────────────────────────────────────────────
+// Contacts
 
 .contacts {
     padding-block: rem(80);
@@ -24,7 +24,7 @@
     }
 }
 
-// ─── Content ───────────────────────────────────────────────
+// Content 
 
 .contacts__content {
     position: relative;
@@ -45,7 +45,7 @@
     margin-bottom: rem(32);
 }
 
-// ─── List ──────────────────────────────────────────────────
+// List
 
 .contacts__list {
     display: flex;
@@ -53,7 +53,7 @@
     gap: rem(8);
 }
 
-// ─── Item ──────────────────────────────────────────────────
+// Item 
 
 .contacts__item {
     display: flex;
@@ -126,12 +126,11 @@
     line-height: 1;
 }
 
-
-// ─── Map ───────────────────────────────────────────────────
+// Map
 
 .contacts__map {
-    position: static; // убираем sticky
-    height: 100%; // растягивается по высоте левой колонки
+    position: static; 
+    height: 100%; 
     min-height: rem(480);
     border-radius: var(--radius-md);
     overflow: hidden;

@@ -1,6 +1,6 @@
 @use '../helpers/index' as *;
 
-// ─── Results ───────────────────────────────────────────────
+// Results 
 
 .results {
     position: relative;
@@ -30,7 +30,7 @@
     }
 }
 
-// ─── Content ───────────────────────────────────────────────
+// Content
 
 .results__content {
     display: flex;
@@ -84,7 +84,7 @@
     @include mobile { margin-top: rem(4); }
 }
 
-// ─── Scroll wrap ───────────────────────────────────────────
+// Scroll wrap
 
 .results__scroll-wrap {
     overflow: hidden;
@@ -124,7 +124,7 @@
     }
 }
 
-// ─── Card ──────────────────────────────────────────────────
+// Card
 
 .results__card {
     flex-shrink: 0;
@@ -173,7 +173,7 @@
     transform: scale(1.03);
 }
 
-// ─── Tag До / После ────────────────────────────────────────
+// Tag До / После
 
 .results__card-tag {
     position: absolute;
@@ -196,7 +196,7 @@
     }
 }
 
-// ─── Grid (новая сетка вместо скролла) ─────────────────────
+// Grid (новая сетка вместо скролла)
 
 .results__grid {
     display: grid;

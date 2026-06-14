@@ -49,7 +49,7 @@ export default class Header {
         const innerRect = document.querySelector('.header__inner').getBoundingClientRect();
         const linkRect  = activeLink.getBoundingClientRect();
 
-        this.line.style.setProperty('--line-width',  `${linkRect.left  - innerRect.left}px`);
+        this.line.style.setProperty('--line-left',  `${linkRect.left - innerRect.left}px`);
         this.line.style.setProperty('--line-width', `${linkRect.width}px`);
     }
 

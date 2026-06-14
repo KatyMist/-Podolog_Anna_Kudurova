@@ -33,7 +33,7 @@
 .header__logo {
     // img наследует размер через width/height в HTML
     flex-shrink: 0;
-    margin-right: auto; // прижимает nav и btn вправо
+    margin-right: auto; 
  
     @include hover {
         opacity: 0.8;
@@ -43,7 +43,6 @@
 // Nav
  
 .header__nav {
-    // убрать position: absolute и translate
     flex: 1;
     display: flex;
     justify-content: center;
@@ -92,10 +91,9 @@
     font-weight: 400;
     color: var(--muted);
     text-decoration: none;
-    padding-bottom: rem(22); // тянется до полоски
+    padding-bottom: rem(22); 
     transition: color var(--transition);
  
-    // полоска под ссылкой (часть общей линии)
     &::after {
         content: '';
         position: absolute;

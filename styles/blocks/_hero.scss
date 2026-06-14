@@ -1,6 +1,6 @@
 @use '../helpers/index' as *;
 
-// ─── Hero ──────────────────────────────────────────────────
+// Hero
 
 .hero {
     padding-block: rem(80) rem(60);
@@ -22,7 +22,7 @@
     }
 }
 
-// ─── Content ───────────────────────────────────────────────
+// Content
 
 .hero__content {
     display: flex;
@@ -32,7 +32,7 @@
 
     @include tablet {
         align-items: center;
-        order: 1; // контент идёт первым
+        order: 1;
         
     }
 }
@@ -80,7 +80,7 @@
     }
 }
 
-// ─── Кнопка "Узнать больше" ────────────────────────────────
+// Кнопка "Узнать больше" 
 
 .hero__more {
     display: inline-flex;
@@ -112,7 +112,7 @@
     color: var(--accent-light);
 }
 
-// ─── Image placeholder ─────────────────────────────────────
+// Image placeholder
 
 .hero__image {
     aspect-ratio: 4 / 5;
@@ -149,7 +149,7 @@
     }
 }
 
-// ─── Cards ─────────────────────────────────────────────────
+// Cards 
 
 .hero__cards {
     @include container;

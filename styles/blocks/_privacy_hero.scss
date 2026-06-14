@@ -1,6 +1,6 @@
 @use '../helpers/index' as *;
 
-// ─── Privacy Hero ──────────────────────────────────────────
+// Privacy Hero
 
 .privacy__hero {
     display: grid;
@@ -66,7 +66,7 @@
     @include tablet { order: -1; }
 }
 
-// ─── Privacy Content ───────────────────────────────────────
+// Privacy Content
 
 .privacy__content {
     display: grid;

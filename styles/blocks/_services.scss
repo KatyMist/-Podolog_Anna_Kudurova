@@ -1,6 +1,6 @@
 @use '../helpers/index' as *;
 
-// ─── Services ──────────────────────────────────────────────
+// Services 
 
 .services {
     padding-block: rem(80);
@@ -9,7 +9,7 @@
     @include mobile { padding-block: rem(40); }
 }
 
-// ─── Header ────────────────────────────────────────────────
+// Header 
 
 .services__header {
     display: grid;
@@ -70,7 +70,7 @@
     @include tablet { aspect-ratio: 16 / 9; }
 }
 
-// ─── Category list ─────────────────────────────────────────
+// Category list 
 
 .services__list {
     display: flex;
@@ -79,7 +79,7 @@
     margin-bottom: rem(64);
 }
 
-// ─── Category ──────────────────────────────────────────────
+// Category 
 
 .services__category {
     border: 1px solid var(--border);
@@ -172,7 +172,7 @@
     }
 }
 
-// ─── Items ─────────────────────────────────────────────────
+// Items
 
 .services__items {
     display: none;
@@ -291,8 +291,6 @@
         }
     }
 }
-
-
 
 // ─── Education section ─────────────────────────────────────
 

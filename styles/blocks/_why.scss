@@ -1,6 +1,6 @@
 @use '../helpers/index' as *;
  
-// ─── Why ───────────────────────────────────────────────────
+// Why 
  
 .why {
     padding-block: rem(80);
@@ -10,7 +10,7 @@
     @include mobile { padding-block: rem(16); }
 }
 
-// ─── Top ───────────────────────────────────────────────────
+// Top
  
 .why__top {
     margin-bottom: rem(10);
@@ -55,7 +55,7 @@
     }
 }
  
-// ─── Item ──────────────────────────────────────────────────
+// Item
  
 .why__item {
     display: flex;

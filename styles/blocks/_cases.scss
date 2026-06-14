@@ -1,6 +1,6 @@
 @use '../helpers/index' as *;
 
-// ─── Cases Section ─────────────────────────────────────────
+// Cases Section
 
 .cases {
     padding-block: rem(80);
@@ -9,7 +9,7 @@
     @include mobile { padding-block: rem(40); }
 }
 
-// ─── Cases Header (Hero) ────────────────────────────────────
+// Cases Header (Hero)
 
 .cases-hero {
     display: grid;
@@ -73,7 +73,7 @@
     @include tablet { aspect-ratio: 16 / 9; }
 }
 
-// ─── Cases Stats ────────────────────────────────────────────
+// Cases Stats
 
 .cases-stats {
     padding-block: rem(40);
@@ -183,7 +183,7 @@
     }
 }
 
-// ─── Cases List ─────────────────────────────────────────────
+// Cases List
 
 .cases-list {
     padding-block: rem(40);
@@ -197,7 +197,7 @@
     }
 }
 
-// ─── Cases Category ─────────────────────────────────────────
+// Cases Category
 
 .cases-category {
     margin-bottom: rem(80);
@@ -250,7 +250,7 @@
     border-radius: rem(2);
 }
 
-// ─── Case Item ──────────────────────────────────────────────
+// Case Item
 
 .case-item {
     display: grid;
@@ -463,7 +463,7 @@
     }
 }
 
-// ─── Cases CTA ──────────────────────────────────────────────
+// Cases CTA 
 
 .cases-cta {
     padding-block: rem(60);
@@ -533,7 +533,6 @@
         width: 100%;
     }
 }
-
 
 .case-item__divider {
     position: absolute;

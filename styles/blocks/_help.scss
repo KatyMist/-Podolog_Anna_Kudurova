@@ -1,6 +1,6 @@
 @use '../helpers/index' as *;
 
-// ─── Help ──────────────────────────────────────────────────
+// Help
 
 .help {
     padding-block: rem(48); 
@@ -54,7 +54,7 @@
     }
 }
 
-// ─── Content ───────────────────────────────────────────────
+// Content
 
 .help__content {
     display: flex;
@@ -117,7 +117,7 @@
     @include hover { gap: rem(14); }
 }
 
-// ─── Scroll wrap ───────────────────────────────────────────
+// Scroll wrap
 
 .help__scroll-wrap {
     overflow: hidden;
@@ -167,7 +167,7 @@
     }
 }
 
-// ─── Card ──────────────────────────────────────────────────
+// Card 
 
 .help__card {
     flex-shrink: 0;

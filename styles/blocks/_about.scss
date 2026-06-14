@@ -1,6 +1,6 @@
 @use '../helpers/index' as *;
  
-// ─── Hero ──────────────────────────────────────────────────
+// Hero 
  
 .about-hero {
     padding-block: rem(80) rem(60);
@@ -189,7 +189,7 @@
     line-height: 1.7;
 }
  
-// ─── Trust ─────────────────────────────────────────────────
+// Trust
  
 .about-trust {
     padding-block: rem(80);
@@ -268,7 +268,7 @@
     }
 }
  
-// ─── Teaching ──────────────────────────────────────────────
+// Teaching
  
 .about-teaching {
     padding-block: rem(80);
@@ -387,11 +387,9 @@
     justify-content: center;
     font-size: rem(20);
     color: var(--accent);
-
-
 }
  
-// ─── Pro ───────────────────────────────────────────────────
+// Pro
  
 .about-pro {
     padding-block: rem(80);
@@ -457,7 +455,7 @@
     @include tablet { order: -1; }
 }
  
-// ─── Approach ──────────────────────────────────────────────
+// Approach
  
 .about-approach {
     padding-block: rem(48);

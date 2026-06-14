@@ -1,0 +1,26 @@
+{
+  "name": "podology",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass styles/main.scss styles/main.css",
+    "sass:watch": "sass --watch styles:styles",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KatyMist/-Podolog_Anna_Kudurova.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KatyMist/-Podolog_Anna_Kudurova/issues"
+  },
+  "homepage": "https://github.com/KatyMist/-Podolog_Anna_Kudurova#readme",
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}
