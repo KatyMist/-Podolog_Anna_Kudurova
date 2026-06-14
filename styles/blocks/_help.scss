@@ -34,7 +34,7 @@
     }
 
     @include tablet { padding-block: rem(20); } 
-    @include mobile { padding-block: rem(20); } 
+    @include mobile { padding-block: rem(18); }
 }
 
 .help__inner {
