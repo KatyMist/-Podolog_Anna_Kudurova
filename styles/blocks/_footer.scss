@@ -140,6 +140,13 @@
     gap: rem(8);
     margin-top: rem(8);
 }
+
+.footer__icon {
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.65);
+    width: rem(16);
+    height: rem(16);
+}
  
 .footer__social {
     width: rem(36);
