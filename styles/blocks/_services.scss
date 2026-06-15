@@ -275,13 +275,18 @@
     svg { flex-shrink: 0; }
 }
 
-[data-category="podology"] .services__items { //МОДИФИКАТОР 3 ячейки в ПОДОЛОГИИ
+[data-category="podology"] .services__items {
     .services__item {
-        flex: 1 1 calc(33.333% - rem(12)); // три в ряд
+        flex: 1 1 calc(33.333% - rem(12)); // 3 в ряд на десктопе
         max-width: calc(33.333% - rem(12));
-
+        
+        @media (width <= 768px) and (width > 425px) {
+            flex: 1 1 calc(50% - rem(8)); // 2 в ряд на 425-768px
+            max-width: calc(50% - rem(8));
+        }
+        
         @include tablet {
-            flex: 1 1 calc(50% - rem(8));
+            flex: 1 1 calc(50% - rem(8)); // 2 в ряд на tablet
             max-width: calc(50% - rem(8));
         }
 

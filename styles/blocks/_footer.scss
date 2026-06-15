@@ -26,9 +26,22 @@
     }
 
     @include mobile {
-        grid-template-columns: 1fr;
-        gap: rem(16);
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(8);
+    }
+}
+
+.footer__brand {
+    @include mobile {
+        grid-column: 1 / -1;
+    }
+}
+
+.footer__contacts {
+    @include mobile {
+        grid-column: 1 / -1;
     }
 }
  
@@ -46,6 +59,7 @@
         justify-content: center;
         text-align: center;
         width: 100%;
+        gap: rem(8);
     }
 }
  
@@ -69,20 +83,18 @@
     }
 }
  
-.footer__brand-text { //Школа — студия подологии и здоровой эстетики Анны Кудуровой
+.footer__brand-text {
     font-size: rem(12);
     color: var(--text);
     line-height: 1.5;
     text-transform: uppercase;
     letter-spacing: 0.04em;
 
-    @include tablet {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: rem(20);
-    }
-
     @include mobile {
-        text-align: center;
+        word-spacing: normal;
+        line-height: 1.5;
+        max-width: rem(260);
+        margin-inline: auto;
     }
 }
 
@@ -121,24 +133,43 @@
     color: var(--accent-light);
     text-decoration: none;
     transition: opacity var(--transition);
+    line-height: 1.4;
 
     @include hover { opacity: 0.8; }
 
     @include tablet { font-size: rem(12); }
+
+    @include mobile {
+        font-size: rem(14);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @include mobile-s {
+        font-size: rem(13);
+    }
 }
  
-.footer__schedule { //Режим работы 
+.footer__schedule {
     font-size: rem(13);
     color: var(--text);
+    line-height: 1.6;
 
     @include tablet { font-size: rem(10); }
+
+    @include mobile {
+        word-spacing: normal;
+        line-height: 1.5;
+        max-width: rem(260);
+        margin-inline: auto;
+    }
 }
  
 .footer__socials {
     display: flex;
     align-items: center;
     gap: rem(8);
-    margin-top: rem(8);
+    margin-top: rem(4);
 }
 
 .footer__icon {
@@ -169,6 +200,14 @@
 }
  
 //БЛОК 3: КНОПКА
+
+// Переиспользуемые стили для кнопок footer
+$footer-btn-hover-bg: rgba(95, 163, 232, 0.12);
+$footer-btn-hover-border: #5fa3e8;
+$footer-btn-hover-shadow: 0 0 18px rgba(95, 163, 232, 0.35);
+$footer-btn-padding: rem(14) rem(22);
+$footer-btn-padding-tablet: rem(8) rem(12);
+$footer-btn-padding-mobile-s: rem(6) rem(8);
  
 .footer__btn {
     display: inline-flex;
@@ -320,6 +359,7 @@
     }
 }
 
+
 // НИЖНИЙ ФУТЕР
  
 .footer__bottom {
@@ -342,31 +382,46 @@
     align-items: start;
  
     @include tablet {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: rem(12);
+        gap: rem(20);
     }
 
     @include mobile {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: rem(12);
+        grid-template-columns: 1fr;
+        gap: rem(8);
+        justify-items: center;
         text-align: center;
     }
 }
- 
-.footer__bottom-left {
+
+// Унифицированный класс для всех bottom колонок
+.footer__bottom-left,
+.footer__bottom-center,
+.footer__bottom-right {
     display: flex;
     flex-direction: column;
     padding-top: rem(8);
     align-items: flex-start;
- 
-    @include tablet {
-        align-items: flex-start;
-    }
 
     @include mobile {
-        align-items: flex-start;
-        text-align: left;
+        align-items: center;
+        text-align: center;
+        width: 100%;
     }
+}
+
+// Переопределение для center и right
+.footer__bottom-center {
+    align-items: center;
+    margin-top: rem(30);
+
+    @include mobile {
+        align-items: center;
+        margin-top: 0;
+    }
+}
+
+.footer__bottom-right {
+    align-items: flex-end;
 }
  
 .footer__copyright {
@@ -378,7 +433,7 @@
     @include tablet { font-size: rem(8); }
 
     @include mobile {
-        text-align: left;
+        text-align: center;
     }
 }
  
@@ -390,16 +445,8 @@
     @include tablet { font-size: rem(8); }
 
     @include mobile {
-        text-align: left;
+        text-align: center;
     }
-}
- 
-.footer__bottom-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: rem(30);
 }
  
 .footer__ai-note {
@@ -412,17 +459,6 @@
     max-width: none;
 
     @include tablet { font-size: rem(8); }
-}
- 
-.footer__bottom-right {
-    display: flex;
-    flex-direction: column;
-    padding-top: rem(8);
-    align-items: flex-end;
- 
-    @include mobile {
-        align-items: flex-end;
-    }
 }
  
 .footer__policy {
@@ -449,6 +485,14 @@
         justify-content: center;
         font-size: rem(8); 
     }
+
+    @include mobile {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: rem(320);
+        margin: 0 auto;
+    }
 }
  
 .footer__yandex {
@@ -461,5 +505,11 @@
     @include tablet {
         text-align: center;
         font-size: rem(8);
+    }
+
+    @include mobile {
+        max-width: rem(320);
+        margin: 0 auto;
+        text-align: center;
     }
 }

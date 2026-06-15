@@ -1,6 +1,13 @@
 export default class Cursor {
     constructor() {
+        // Не инициализировать cursor на сенсорных устройствах
+        if (!window.matchMedia('(pointer: fine)').matches) {
+            return;
+        }
+
         this.cursor = document.getElementById('cursor');
+        if (!this.cursor) return; // Подстраховка, если элемента нет
+
         this.initMove();
         this.initHover();
     }
