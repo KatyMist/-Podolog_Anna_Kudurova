@@ -34,7 +34,7 @@
     }
 
     @include tablet { padding-block: rem(20); } 
-    @include mobile { padding-block: rem(18); }
+    @include mobile { padding-block: rem(12); }
 }
 
 .help__inner {
@@ -51,6 +51,7 @@
 
      @include mobile {
         grid-template-columns: 1fr;
+        gap: rem(12);
     }
 }
 
@@ -64,9 +65,10 @@
     @include tablet { gap: rem(12); }
 
     @include mobile {
-        padding-inline: rem(16);
+        padding-inline: rem(12);
         text-align: center;
         align-items: center;
+        gap: rem(10);
     }
 }
 
@@ -86,6 +88,7 @@
     line-height: 1.15;
 
     @include tablet { font-size: rem(28); }
+    @include mobile { font-size: rem(24); }
 }
 
 .help__accent-line {
@@ -101,6 +104,11 @@
     font-size: rem(15);
     color: var(--muted);
     line-height: 1.7;
+
+    @include mobile {
+        font-size: rem(14);
+        line-height: 1.5;
+    }
 }
 
 .help__link {
@@ -115,6 +123,11 @@
     transition: gap var(--transition);
 
     @include hover { gap: rem(14); }
+
+    @include mobile {
+        font-size: rem(14);
+        margin-top: rem(2);
+    }
 }
 
 // Scroll wrap
@@ -142,6 +155,7 @@
 
     @include mobile {
         width: 100%;
+        padding-inline: 0;
     }
 }
 
@@ -163,7 +177,9 @@
     @include mobile {
         flex-direction: column;
         overflow-x: visible;
-        padding-inline: 0;
+        padding-inline: rem(12);
+        padding-block: rem(4);
+        gap: rem(12);
     }
 }
 
@@ -235,6 +251,10 @@
     padding: rem(16) rem(18);
     background-color: rgba(255, 255, 255, 0.95);
     border-top: 1px solid var(--border);
+
+    @include mobile {
+        padding: rem(12) rem(14);
+    }
 }
 
 .help__card-title {
@@ -258,12 +278,11 @@
     transition: background-color var(--transition);
 
     @include mobile {
-        width: rem(26);
-        height: rem(26);
+        width: rem(24);
+        height: rem(24);
     }
 }
 
 .help__card:hover .help__card-btn {
     background-color: var(--accent-light);
 }
-

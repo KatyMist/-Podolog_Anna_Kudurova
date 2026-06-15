@@ -39,6 +39,9 @@ class CaseImageToggle {
 
         const divider = document.createElement('div');
         divider.className = 'case-item__divider';
+        divider.setAttribute('role', 'slider');
+        divider.setAttribute('aria-label', 'Слайдер до/после');
+        divider.setAttribute('tabindex', '0');
         divider.innerHTML = `
             <div class="case-item__divider-line"></div>
             <div class="case-item__divider-handle">
@@ -58,12 +61,29 @@ class CaseImageToggle {
             divider.style.left = `${percent}%`;
         };
 
+        // Мышь и тач
         divider.addEventListener('mousedown', (e) => { isDragging = true; e.preventDefault(); });
         document.addEventListener('mouseup', () => { isDragging = false; });
         document.addEventListener('mousemove', (e) => { if (isDragging) updatePosition(e.clientX); });
         divider.addEventListener('touchstart', (e) => { isDragging = true; e.preventDefault(); });
         document.addEventListener('touchend', () => { isDragging = false; });
         document.addEventListener('touchmove', (e) => { if (isDragging) updatePosition(e.touches[0].clientX); });
+
+        // Клавиатура
+        divider.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                e.preventDefault();
+                const rect = wrapper.getBoundingClientRect();
+                const currentPercent = (divider.offsetLeft / wrapper.offsetWidth) * 100;
+                const step = 2; // 2% за нажатие
+                const newPercent = e.key === 'ArrowRight' 
+                    ? Math.min(currentPercent + step, 98)
+                    : Math.max(currentPercent - step, 2);
+                
+                const newX = rect.left + (newPercent / 100) * rect.width;
+                updatePosition(newX);
+            }
+        });
     }
 
     // ─── Галерея фото ─────────────────────────────────────

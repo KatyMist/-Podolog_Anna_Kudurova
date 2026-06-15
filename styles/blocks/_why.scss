@@ -20,7 +20,9 @@
         margin-bottom: rem(40);
     }
 
-
+    @include mobile {
+        margin-bottom: rem(0);
+    }
 }
  
 .why__title {
@@ -37,8 +39,9 @@
     }
 
     @include mobile {
-        margin-bottom: rem(16);
-        padding-bottom: rem(16);
+        font-size: rem(24);
+        margin-bottom: rem(12);
+        padding-bottom: rem(12);
     }
 }
  
@@ -55,7 +58,11 @@
 
     @include mobile {
         grid-template-columns: 1fr;
-        gap: rem(16);
+        gap: rem(12);
+        border: none;
+        justify-items: center;
+        max-width: rem(300);
+        margin-inline: auto;
     }
 }
  
@@ -73,6 +80,10 @@
         border-right: 1px solid var(--border);
 
         @include tablet {
+            border: none;
+        }
+
+        @include mobile {
             border: none;
         }
     }
@@ -94,6 +105,16 @@
 
         gap: rem(12);
     }
+
+    @include mobile {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: rem(12);
+        padding: rem(14) rem(12);
+        gap: rem(8);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        width: 100%;
+        max-width: rem(280);
+    }
 }
 
 .why__icon {
@@ -114,6 +135,18 @@
         background: rgba(61, 132, 255, 0.08);
         padding: rem(14);
     }
+
+    @include mobile {
+        width: rem(40);
+        height: rem(40);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-inline: auto;
+        border-radius: 50%;
+        background: rgba(61, 132, 255, 0.08);
+        padding: rem(10);
+    }
 }
  
 .why__item-title {
@@ -127,7 +160,8 @@
     }
 
     @include mobile {
-        font-size: rem(20);
+        font-size: rem(16);
+        line-height: 1.3;
     }
 }
  
@@ -141,6 +175,7 @@
     }
 
     @include mobile {
-        font-size: rem(15);
+        font-size: rem(13);
+        line-height: 1.4;
     }
 }
