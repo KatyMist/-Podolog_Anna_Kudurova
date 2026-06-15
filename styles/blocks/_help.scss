@@ -175,11 +175,11 @@
     }
 
     @include mobile {
-        flex-direction: column;
-        overflow-x: visible;
+        flex-direction: row;
+        overflow-x: auto;
         padding-inline: rem(12);
         padding-block: rem(4);
-        gap: rem(12);
+        gap: rem(8);
     }
 }
 
@@ -203,7 +203,8 @@
 
     @include tablet { width: rem(300); }
     @include mobile {
-        width: 100%;
+        width: rem(220);
+        margin-inline: auto;
     }
 }
 
@@ -236,7 +237,7 @@
     }
 
     @include mobile {
-        aspect-ratio: 3 / 2;
+        aspect-ratio: 4 / 3; 
     }
 }
 
@@ -253,7 +254,7 @@
     border-top: 1px solid var(--border);
 
     @include mobile {
-        padding: rem(12) rem(14);
+        padding: rem(8) rem(12);
     }
 }
 
@@ -262,7 +263,7 @@
     font-weight: 500;
     color: var(--text);
 
-    @include mobile { font-size: rem(14); }
+    @include mobile { font-size: rem(13); }
 }
 
 .help__card-btn {
@@ -278,8 +279,8 @@
     transition: background-color var(--transition);
 
     @include mobile {
-        width: rem(24);
-        height: rem(24);
+        width: rem(20);
+        height: rem(20);
     }
 }
 
