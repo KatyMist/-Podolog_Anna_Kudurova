@@ -200,14 +200,14 @@
 // Cases Category
 
 .cases-category {
-    margin-bottom: rem(80);
+    margin-bottom: rem(40);
 
     @include tablet {
-        margin-bottom: rem(64);
+        margin-bottom: rem(32);
     }
 
     @include mobile {
-        margin-bottom: rem(48);
+        margin-bottom: rem(24);
     }
 }
 
@@ -470,7 +470,7 @@
     background: linear-gradient(135deg, rgba(45, 125, 210, 0.04) 0%, rgba(45, 125, 210, 0.01) 100%);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    margin-top: rem(60);
+    margin-top: rem(30);
 
     @include tablet {
         padding-block: rem(48);
