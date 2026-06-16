@@ -4,7 +4,7 @@
 
 .results {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     padding-block: rem(60); 
 
     &::before {
