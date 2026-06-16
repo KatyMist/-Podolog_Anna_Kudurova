@@ -1,5 +1,14 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf
+Crawl-delay: 1
 
-Sitemap: https://kudurovapodolog.ru/sitemap.xml
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+Sitemap: https://podology-school.ru/sitemap.xml

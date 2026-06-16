@@ -10,30 +10,6 @@ new services();
 new cases();
 new cookies();
 
-// Плавный переход между страницами
-document.querySelectorAll('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    
-    // только внутренние ссылки на другие страницы
-    if (
-        href &&
-        !href.startsWith('#') &&
-        !href.startsWith('http') &&
-        !href.startsWith('tel') &&
-        !href.startsWith('mailto') &&
-        !link.hasAttribute('target')
-    ) {
-        link.addEventListener('click', e => {
-            e.preventDefault();
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.3s ease';
-            setTimeout(() => {
-                window.location.href = href;
-            }, 300);
-        });
-    }
-});
-
 // Preloader
 const preloader = document.getElementById('preloader');
 const bar = document.getElementById('preloaderBar');

@@ -8,6 +8,7 @@ export default class Header {
         this.initBurger();
         this.initLine();
         this.initResize();
+        this.initScroll();  // Метод для закрытия меню на скролл
     }
 
     initBurger() {
@@ -49,14 +50,39 @@ export default class Header {
         const innerRect = document.querySelector('.header__inner').getBoundingClientRect();
         const linkRect  = activeLink.getBoundingClientRect();
 
-        this.line.style.setProperty('--line-left',  `${linkRect.left - innerRect.left}px`);
+        // Первая переменная отвечает за позицию (слева), вторая — за ширину
+        this.line.style.setProperty('--line-left',  `${linkRect.left - innerRect.left}px`); 
         this.line.style.setProperty('--line-width', `${linkRect.width}px`);
     }
 
+    // Дебаунс
+    debounce(func, delay) {
+        let timeoutId;
+        return function (...args) {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => func.apply(this, args), delay);
+        };
+    }
+
+    // Дебаунс для resize
     initResize() {
-        window.addEventListener('resize', () => {
-            const current = document.querySelector('.header__nav-link.is-active');
-            this.updateLine(current);
+        window.addEventListener('resize', 
+            this.debounce(() => {
+                const current = document.querySelector('.header__nav-link.is-active');
+                this.updateLine(current);
+            }, 200)
+        );
+    }
+
+    // Закрытие меню на скролл
+    initScroll() {
+        window.addEventListener('scroll', () => {
+            if (this.nav && this.nav.classList.contains('is-open')) {
+                this.nav.classList.remove('is-open');
+                this.burger?.setAttribute('aria-expanded', 'false');
+                this.burger?.setAttribute('aria-label', 'Открыть меню');
+                document.body.style.overflow = '';
+            }
         });
     }
 }
