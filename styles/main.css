@@ -1769,6 +1769,7 @@ button {
 @media (width <= 47.99875rem) {
   .about-approach {
     padding-block: 1.75rem;
+    border-bottom: none;
   }
 }
 
@@ -3071,14 +3072,18 @@ button {
   line-height: 1;
   flex-shrink: 0;
 }
+@media (width <= 47.99875rem) {
+  .footer__logo {
+    display: none;
+  }
+}
 
 .footer__brand .header__logo {
   margin-right: 0;
 }
 @media (width <= 47.99875rem) {
   .footer__brand .header__logo {
-    margin-right: 0;
-    align-self: center;
+    display: none;
   }
 }
 

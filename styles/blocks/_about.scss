@@ -465,7 +465,10 @@
     overflow: hidden;
 
     @include tablet { padding-block: rem(36); }
-    @include mobile { padding-block: rem(28); }
+    @include mobile { 
+        padding-block: rem(28);
+        border-bottom: none;
+    }
 }
 
 .about-approach__decor-img {

@@ -72,14 +72,17 @@
     letter-spacing: 0.05em;
     line-height: 1;
     flex-shrink: 0;
+
+    @include mobile {
+        display: none;
+    }
 }
 
 .footer__brand .header__logo {
     margin-right: 0;
 
     @include mobile {
-        margin-right: 0;
-        align-self: center;
+        display: none;
     }
 }
  
