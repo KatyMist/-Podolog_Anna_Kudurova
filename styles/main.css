@@ -2756,7 +2756,13 @@ button {
 }
 @media (width <= 47.99875rem) {
   .help__card {
-    width: 13.75rem;
+    width: 18.75rem;
+    margin-inline: auto;
+  }
+}
+@media (width <= 30.06125rem) {
+  .help__card {
+    width: 15.625rem;
     margin-inline: auto;
   }
 }

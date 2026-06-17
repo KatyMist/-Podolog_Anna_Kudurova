@@ -203,7 +203,12 @@
 
     @include tablet { width: rem(300); }
     @include mobile {
-        width: rem(220);
+        width: rem(300);
+        margin-inline: auto;
+    }
+
+    @include mobile-s {
+        width: rem(250);
         margin-inline: auto;
     }
 }

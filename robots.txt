@@ -11,4 +11,4 @@ Disallow: /
 User-agent: SemrushBot
 Disallow: /
 
-Sitemap: https://podology-school.ru/sitemap.xml
+Sitemap: https://annakudurova.ru/sitemap.xml
