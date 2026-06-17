@@ -22,7 +22,7 @@
 
     @include tablet {
         grid-template-columns: auto 1fr auto auto;
-        gap: rem(12);
+        gap: rem(8);
     }
 
     @include mobile {
@@ -93,6 +93,10 @@
     text-transform: uppercase;
     letter-spacing: 0.04em;
 
+    @include tablet { 
+        font-size: rem(9);
+    }
+
     @include mobile {
         word-spacing: normal;
         line-height: 1.5;
@@ -140,7 +144,7 @@
 
     @include hover { opacity: 0.8; }
 
-    @include tablet { font-size: rem(12); }
+    @include tablet { font-size: rem(10); }
 
     @include mobile {
         font-size: rem(14);
@@ -158,7 +162,7 @@
     color: var(--text);
     line-height: 1.6;
 
-    @include tablet { font-size: rem(10); }
+    @include tablet { font-size: rem(8); }
 
     @include mobile {
         word-spacing: normal;
@@ -213,11 +217,12 @@ $footer-btn-padding-tablet: rem(8) rem(12);
 $footer-btn-padding-mobile-s: rem(6) rem(8);
  
 .footer__btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: rem(10);
+    justify-content: center;
+    gap: rem(4);
     padding: rem(14) rem(22);
-    background-color: var(--transition);
+    background-color: rgba(255, 255, 255, 0);
     border: 1px solid var(--accent-light);
     border-radius: 100px;
     color: var(--accent-light);
@@ -225,7 +230,6 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     font-weight: 500;
     text-decoration: none;
     transition: background-color var(--transition), border-color var(--transition), box-shadow var(--transition), transform var(--transition);
-    white-space: nowrap;
 
     @include hover {
         color: var(--accent-light);
@@ -236,8 +240,15 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     }
 
     @include tablet {
-        font-size: rem(11);
-        padding: rem(8) rem(12);
+        font-size: rem(9);
+        padding: rem(6) rem(10);
+        gap: rem(2);
+        height: rem(35);
+
+        img {
+            width: rem(20);
+            height: rem(20);
+        }
     }
 
     @include mobile {
@@ -258,6 +269,8 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
 .footer__dev {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: rem(4);
     text-decoration: none;
     padding: rem(14) rem(22);
@@ -270,6 +283,13 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
         border-color: #5fa3e8;
         box-shadow: 0 0 18px rgba(95, 163, 232, 0.35);
         transform: translateY(-2px);
+    }
+
+    @include tablet {
+        padding: rem(6) rem(10);
+        gap: rem(2);
+        font-size: rem(9);
+        height: rem(35);
     }
 
     @include mobile {
@@ -290,7 +310,10 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
         color: var(--accent-light);
     }
 
-    @include tablet { font-size: rem(10); }
+    @include tablet { 
+        font-size: rem(7);
+        line-height: 1;
+    }
 }
 
 .footer__dev-skills {
@@ -299,7 +322,10 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     color: var(--accent-light);
     letter-spacing: 0.04em;
 
-    @include tablet { font-size: rem(9); }
+    @include tablet { 
+        font-size: rem(6);
+        line-height: 1;
+    }
 }
  
 .footer__dev-role {
@@ -311,6 +337,12 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     font-size: rem(11);
     color: var(--accent-light);
     margin-top: rem(2);
+
+    @include tablet {
+        font-size: rem(6);
+        margin-top: rem(1);
+        display: none;
+    }
 }
 
 .footer__dev-link {
@@ -319,6 +351,12 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     color: var(--accent-light);
     margin-top: rem(4);
     font-weight: 500;
+
+    @include tablet {
+        font-size: rem(6);
+        margin-top: rem(1);
+        display: none;
+    }
 }
  
 .footer__dev-btn {
