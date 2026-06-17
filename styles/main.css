@@ -1118,7 +1118,7 @@ button {
 @media (width <= 30.06125rem) {
   .why__items {
     grid-template-columns: 1fr;
-    max-width: 17.5rem;
+    max-width: 21.875rem;
     margin-inline: auto;
   }
 }
