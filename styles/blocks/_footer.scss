@@ -32,10 +32,8 @@
     }
 
     @include mobile-s {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: rem(8);
+         grid-template-columns: auto auto;  
+        justify-content: center;            
     }
 }
 
@@ -43,10 +41,18 @@
     @include mobile {
         grid-column: 1 / -1;
     }
+
+    @include mobile-s {
+        grid-column: 1 / -1;
+    }
 }
 
 .footer__contacts {
     @include mobile {
+        grid-column: 1 / -1;
+    }
+
+    @include mobile-s {
         grid-column: 1 / -1;
     }
 }
@@ -300,9 +306,10 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     }
 
     @include mobile-s {
-        width: auto; 
-        justify-content: center;
-        padding: rem(6) rem(8);
+        width: auto;              
+        height: rem(28);          
+        padding: rem(6) rem(12);  
+        font-size: rem(7);
     }
 }
  
@@ -349,9 +356,10 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     }
 
     @include mobile-s {
-        width: auto; 
-        justify-content: center;
-        padding: rem(6) rem(8);
+        width: auto;              
+        height: rem(28);          
+        padding: rem(6) rem(12);  
+        font-size: rem(7); 
     }
 }
  
@@ -536,6 +544,7 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     @include mobile {
         align-items: stretch;
     }
+    
 }
  
 .footer__copyright {

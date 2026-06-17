@@ -3044,10 +3044,8 @@ button {
 }
 @media (width <= 30.06125rem) {
   .footer__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    grid-template-columns: auto auto;
+    justify-content: center;
   }
 }
 
@@ -3056,8 +3054,18 @@ button {
     grid-column: 1/-1;
   }
 }
+@media (width <= 30.06125rem) {
+  .footer__brand {
+    grid-column: 1/-1;
+  }
+}
 
 @media (width <= 47.99875rem) {
+  .footer__contacts {
+    grid-column: 1/-1;
+  }
+}
+@media (width <= 30.06125rem) {
   .footer__contacts {
     grid-column: 1/-1;
   }
@@ -3338,8 +3346,9 @@ button {
 @media (width <= 30.06125rem) {
   .footer__btn {
     width: auto;
-    justify-content: center;
-    padding: 0.375rem 0.5rem;
+    height: 1.75rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.4375rem;
   }
 }
 
@@ -3394,8 +3403,9 @@ button {
 @media (width <= 30.06125rem) {
   .footer__dev {
     width: auto;
-    justify-content: center;
-    padding: 0.375rem 0.5rem;
+    height: 1.75rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.4375rem;
   }
 }
 
