@@ -248,6 +248,13 @@
         text-align: center;
     }
 
+    @include mobile {
+        flex-direction: column;
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
     img {
         width: rem(32) !important;
         height: rem(32) !important;
@@ -260,11 +267,6 @@
 
     @include hover {
         box-shadow: var(--shadow-blue);
-    }
-
-
-    @include mobile {
-        white-space: normal;
     }
 }
  

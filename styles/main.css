@@ -1522,6 +1522,15 @@ button {
     text-align: center;
   }
 }
+@media (width <= 47.99875rem) {
+  .about-trust__item {
+    flex-direction: column;
+    text-align: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
 .about-trust__item img {
   width: 2rem !important;
   height: 2rem !important;
@@ -1540,11 +1549,6 @@ button {
 @media (any-hover: none) {
   .about-trust__item:active {
     box-shadow: var(--shadow-blue);
-  }
-}
-@media (width <= 47.99875rem) {
-  .about-trust__item {
-    white-space: normal;
   }
 }
 
