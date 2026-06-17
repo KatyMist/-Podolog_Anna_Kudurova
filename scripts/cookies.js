@@ -3,12 +3,14 @@
 class CookiesBanner {
     constructor() {
         this.cookieName = 'cookies-accepted';
+        this.sessionHiddenFlag = 'cookies-banner-hidden-session';
         this.cookieDays = 365;
         this.init();
     }
 
     init() {
-        if (this.getCookie(this.cookieName)) {
+        // Проверяем: либо приняты куки на 365 дней, либо баннер закрыт в этой сессии
+        if (this.getCookie(this.cookieName) || sessionStorage.getItem(this.sessionHiddenFlag)) {
             return;
         }
         this.createBanner();
@@ -61,6 +63,9 @@ class CookiesBanner {
     }
 
     closeBanner() {
+        // Сохраняем флаг в sessionStorage для скрытия на сессию
+        sessionStorage.setItem(this.sessionHiddenFlag, 'true');
+        
         const banner = document.getElementById('cookies-banner');
         if (banner) {
             banner.classList.add('cookies-banner--hidden');

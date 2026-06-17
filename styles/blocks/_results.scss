@@ -271,6 +271,7 @@
     display: flex;
     flex-direction: column;
     gap: rem(4);
+    flex: 1;  
 
     @include mobile {
         padding: rem(8) rem(10);
@@ -305,14 +306,14 @@
     font-size: rem(13);
     color: var(--accent);
     font-weight: 500;
-    margin-top: rem(6);
+    margin-top: auto;  
     display: inline-flex;
     align-items: center;
     gap: rem(4);
 
     @include mobile {
         font-size: rem(10);
-        margin-top: rem(2);
+        margin-top: auto;  // ← и сюда
     }
 }
 

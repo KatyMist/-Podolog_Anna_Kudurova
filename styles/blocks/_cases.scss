@@ -491,40 +491,21 @@
 // Cases CTA 
 
 .cases-cta {
-    padding-block: rem(60);
+    padding-block: rem(20);
     background: linear-gradient(135deg, rgba(45, 125, 210, 0.04) 0%, rgba(45, 125, 210, 0.01) 100%);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    margin-top: rem(30);
+    margin-top: rem(20);
 
     @include tablet {
-        padding-block: rem(48);
-        margin-top: rem(48);
+        padding-block: rem(16);
+        margin-top: rem(16);
     }
 
     @include mobile {
-        padding-block: rem(36);
-        margin-top: rem(36);
+        padding-block: rem(12);
+        margin-top: rem(12);
     }
-
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: rem(30);
-
-        @include tablet {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: rem(32);
-        }
-    }
-}
-
-.cases-cta {
-    padding-block: rem(24);
-    margin-top: rem(60);
 
     .container {
         display: flex;

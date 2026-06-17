@@ -205,6 +205,7 @@ button {
     pointer-events: none;
     z-index: 9999;
     transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+    opacity: 1;  
 }
 
 .cursor--hover {
