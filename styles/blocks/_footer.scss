@@ -26,6 +26,12 @@
     }
 
     @include mobile {
+        grid-template-columns: repeat(4, auto);
+        justify-content: center;
+        gap: rem(6);
+    }
+
+    @include mobile-s {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -52,6 +58,10 @@
     align-items: flex-start;
     gap: rem(16);
     flex-wrap: wrap;
+
+    @include tablet {
+        align-items: center;
+    }
 
     @include mobile {
         flex-direction: column;
@@ -98,6 +108,10 @@
     }
 
     @include mobile {
+        font-size: rem(8);
+    }
+
+    @include mobile-s {
         word-spacing: normal;
         line-height: 1.5;
         max-width: rem(260);
@@ -116,6 +130,10 @@
 .footer__brand-content {
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+        justify-content: center;
+    }
 }
  
 //БЛОК 2: КОНТАКТЫ
@@ -124,6 +142,11 @@
     display: flex;
     flex-direction: column;
     gap: rem(0);
+
+     @include tablet {
+        align-items: center;
+        text-align: center;
+    }
 
     @include mobile {
         align-items: center;
@@ -144,16 +167,20 @@
 
     @include hover { opacity: 0.8; }
 
-    @include tablet { font-size: rem(10); }
+    @include tablet {
+        display: flex;
+        font-size: rem(10); 
+        line-height: 1.2;
+    }
 
     @include mobile {
-        font-size: rem(14);
-        flex-wrap: wrap;
-        justify-content: center;
+        font-size: rem(10);
     }
 
     @include mobile-s {
         font-size: rem(13);
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
  
@@ -162,9 +189,16 @@
     color: var(--text);
     line-height: 1.6;
 
-    @include tablet { font-size: rem(8); }
+    @include tablet { 
+        font-size: rem(8); 
+        line-height: 1.3;
+    }
 
     @include mobile {
+        font-size: rem(8);
+    }
+
+    @include mobile-s {
         word-spacing: normal;
         line-height: 1.5;
         max-width: rem(260);
@@ -252,9 +286,17 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     }
 
     @include mobile {
-        width: auto; 
+        width: rem(140);
+        height: rem(32);
+
+        padding: 0 rem(10);
+        font-size: rem(8);
+
+        display: flex;
+        justify-self: center;
+        margin-inline: auto;
+        align-items: center;
         justify-content: center;
-        padding: rem(8) rem(12);
     }
 
     @include mobile-s {
@@ -293,9 +335,23 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     }
 
     @include mobile {
+        width: rem(140);
+        height: rem(32);
+
+        padding: 0 rem(10);
+        font-size: rem(8);
+
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    @include mobile-s {
         width: auto; 
         justify-content: center;
-        padding: rem(8) rem(12);
+        padding: rem(6) rem(8);
     }
 }
  
@@ -314,6 +370,10 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
         font-size: rem(7);
         line-height: 1;
     }
+
+    @include mobile {
+        font-size: rem(7);
+    }
 }
 
 .footer__dev-skills {
@@ -325,6 +385,10 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     @include tablet { 
         font-size: rem(6);
         line-height: 1;
+    }
+
+    @include mobile {
+        font-size: rem(6);
     }
 }
  
@@ -427,10 +491,14 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     }
 
     @include mobile {
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(12);
+        align-items: start;
+    }
+
+    @include mobile-s {
         grid-template-columns: 1fr;
         gap: rem(8);
-        justify-items: center;
-        text-align: center;
     }
 }
 
@@ -446,7 +514,9 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     @include mobile {
         align-items: center;
         text-align: center;
+        justify-content: flex-start;
         width: 100%;
+        padding-top: 0;
     }
 }
 
@@ -456,13 +526,16 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     margin-top: rem(30);
 
     @include mobile {
-        align-items: center;
         margin-top: 0;
     }
 }
 
 .footer__bottom-right {
     align-items: flex-end;
+
+    @include mobile {
+        align-items: stretch;
+    }
 }
  
 .footer__copyright {
@@ -473,7 +546,13 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
 
     @include tablet { font-size: rem(8); }
 
-    @include mobile {
+    @include mobile { 
+        font-size: rem(7);
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    @include mobile-s {
         text-align: center;
     }
 }
@@ -485,7 +564,13 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
 
     @include tablet { font-size: rem(8); }
 
-    @include mobile {
+    @include mobile { 
+        font-size: rem(7);
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    @include mobile-s {
         text-align: center;
     }
 }
@@ -500,6 +585,11 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     max-width: none;
 
     @include tablet { font-size: rem(8); }
+    @include mobile {
+        font-size: rem(7);
+        line-height: 1.3;
+        text-align: center;
+    }
 }
  
 .footer__policy {
@@ -511,11 +601,15 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     text-decoration: none;
     transition: opacity var(--transition);
  
-    svg {
+    img {
         flex-shrink: 0;
         color: rgba(255, 255, 255, 0.65);
         width: rem(16);
         height: rem(16);
+
+        @include mobile {
+            display: none !important;
+        }
     }
  
     @include hover {
@@ -528,11 +622,18 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
     }
 
     @include mobile {
-        display: flex;
-        justify-content: center;
+        display: block;
+        max-width: rem(320);
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    @include mobile-s {
+        display: block;
         width: 100%;
         max-width: rem(320);
         margin: 0 auto;
+        text-align: center;
     }
 }
  
@@ -548,7 +649,9 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
         font-size: rem(8);
     }
 
-    @include mobile {
+    @include mobile { font-size: rem(7); }
+
+    @include mobile-s {
         max-width: rem(320);
         margin: 0 auto;
         text-align: center;
