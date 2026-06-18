@@ -1475,6 +1475,7 @@ button {
   background-color: var(--accent);
   border-radius: 0.125rem;
   margin: 0 auto 3rem;
+  align-items: center;
 }
 
 .about-trust__grid {
@@ -1482,10 +1483,18 @@ button {
   flex-wrap: wrap;
   gap: 0.75rem;
   justify-content: center;
+  align-items: center;
+}
+@media (width <= 63.99875rem) {
+  .about-trust__grid {
+    justify-content: center;
+    align-items: center;
+  }
 }
 @media (width <= 47.99875rem) {
   .about-trust__grid {
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -1509,15 +1518,18 @@ button {
   .about-trust__item {
     flex-direction: column;
     text-align: center;
+    white-space: normal;
+    width: 100%;
   }
 }
 @media (width <= 47.99875rem) {
   .about-trust__item {
     flex-direction: column;
     text-align: center;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 0 auto;
+    white-space: normal;
+    width: 100%;
+    max-width: 20rem;
+    padding: 0.625rem 0.875rem;
   }
 }
 .about-trust__item img {
@@ -3890,31 +3902,14 @@ button {
   padding-block: 3.75rem;
 }
 .results::before {
-  content: "";
-  position: absolute;
-  left: -5rem;
-  top: 0;
-  bottom: 0;
-  width: 31.25rem;
-  background-image: url("../images/F3.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-  z-index: 0;
-  pointer-events: none;
+  display: none;
 }
 @media (width <= 63.99875rem) {
-  .results::before {
-    display: none;
-  }
   .results {
     padding-block: 1.875rem;
   }
 }
 @media (width <= 47.99875rem) {
-  .results::before {
-    display: none;
-  }
   .results {
     padding-block: 0.75rem;
   }
@@ -3944,6 +3939,8 @@ button {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
+  z-index: 2;
 }
 @media (width <= 63.99875rem) {
   .results__content {
@@ -4258,24 +4255,30 @@ button {
 
 .results__decor-img {
   position: absolute;
-  bottom: -3.75rem;
-  left: -4.375rem;
-  width: 25rem;
-  max-width: 18.75rem;
+  bottom: 3.75rem;
+  left: -12.5rem;
+  width: 26.25rem;
+  max-width: 21.875rem;
   height: auto;
-  opacity: 0.75;
+  opacity: 0.9;
   pointer-events: none;
   z-index: 0;
 }
 @media (width <= 90.06125rem) {
   .results__decor-img {
-    left: -3.75rem;
-    bottom: -6.25rem;
-    width: 14.375rem !important;
-    max-width: 14.375rem !important;
+    left: -11.25rem;
+    bottom: 5rem;
+    width: 28.125rem;
+    max-width: 23.75rem;
+    opacity: 0.75;
   }
 }
 @media (width <= 63.99875rem) {
+  .results__decor-img {
+    display: none;
+  }
+}
+@media (width <= 47.99875rem) {
   .results__decor-img {
     display: none;
   }

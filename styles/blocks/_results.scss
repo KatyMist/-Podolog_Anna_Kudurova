@@ -8,27 +8,14 @@
     padding-block: rem(60); 
 
     &::before {
-        content: '';
-        position: absolute;
-        left: rem(-80);
-        top: 0;
-        bottom: 0;
-        width: rem(500);
-        background-image: url('../images/F3.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: left center;
-        z-index: 0;
-        pointer-events: none;
+        display: none; 
     }
-
+    
     @include tablet {
-        &::before { display: none; }
         padding-block: rem(30);
     }
     
     @include mobile {
-        &::before { display: none; }
         padding-block: rem(12);
     }
 }
@@ -58,6 +45,8 @@
     display: flex;
     flex-direction: column;
     gap: rem(16);
+    position: relative; 
+    z-index: 2; 
 
     @include tablet { gap: rem(8); }
     @include mobile {
@@ -338,28 +327,35 @@
     width: auto;
     flex-shrink: unset;
     display: flex;
-    flex-direction: row; // фото слева, текст справа
+    flex-direction: row; 
     text-decoration: none;
     scroll-snap-align: unset;
 }
 
 .results__decor-img {
     position: absolute;
-    bottom: rem(-60);
-    left: rem(-70);
-    width: rem(400);
-    max-width: rem(300);
+    bottom: rem(60);
+    left: rem(-200);
+    width: rem(420); 
+    max-width: rem(350); 
     height: auto;
-    opacity: 0.75;
+    opacity: 0.9; //  ЧУТЬ ПРОЗРАЧНЕЕ (было 0.85)
     pointer-events: none;
     z-index: 0;
 
     @include laptop {
-        left: rem(-60);
-        bottom: rem(-100);
-        width: rem(230) !important;
-        max-width: rem(230) !important;
+        left: rem(-180);
+        bottom: rem(80);
+        width: rem(450);
+        max-width: rem(380);
+        opacity: 0.75;
     }
 
-    @include tablet { display: none; }
+    @include tablet { 
+        display: none;
+    }
+
+    @include mobile { 
+        display: none;
+    }
 }

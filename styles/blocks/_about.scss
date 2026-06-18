@@ -213,6 +213,7 @@
     background-color: var(--accent);
     border-radius: rem(2);
     margin: 0 auto rem(48);
+    align-items: center;
 }
  
 .about-trust__grid {
@@ -220,9 +221,16 @@
     flex-wrap: wrap;
     gap: rem(12);
     justify-content: center;
+    align-items: center; 
+
+    @include tablet {
+        justify-content: center;
+        align-items: center;
+    }
 
     @include mobile {
         flex-direction: column;
+        align-items: center; 
     }
 }
  
@@ -234,7 +242,7 @@
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(8px);
     border: 1px solid var(--border);
-    border-radius: 100px; // таблетка
+    border-radius: 100px;
     white-space: nowrap;
 
     p {
@@ -246,13 +254,17 @@
     @include tablet {
         flex-direction: column;
         text-align: center;
+        white-space: normal; 
+        width: 100%;
     }
 
     @include mobile {
         flex-direction: column;
         text-align: center;
-        width: fit-content;
-        margin: 0 auto;
+        white-space: normal; 
+        width: 100%;
+        max-width: rem(320); 
+        padding: rem(10) rem(14); 
     }
 
     img {
@@ -269,6 +281,7 @@
         box-shadow: var(--shadow-blue);
     }
 }
+
  
 // Teaching
  
