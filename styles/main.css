@@ -4268,7 +4268,7 @@ button {
   height: auto;
   opacity: 0.9;
   pointer-events: none;
-  z-index: 0;
+  z-index: 2;
 }
 @media (width <= 90.06125rem) {
   .results__decor-img {

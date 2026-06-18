@@ -341,7 +341,7 @@
     height: auto;
     opacity: 0.9; //  ЧУТЬ ПРОЗРАЧНЕЕ (было 0.85)
     pointer-events: none;
-    z-index: 0;
+    z-index: 2;
 
     @include laptop {
         left: rem(-180);
