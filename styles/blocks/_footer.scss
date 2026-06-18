@@ -79,6 +79,14 @@
     }
 }
 
+.footer__brand-logo {
+    margin-right: 0;
+    
+    @include mobile {
+        display: none;
+    }
+}
+
 
 .footer__brand .header__logo {
     margin-right: 0;

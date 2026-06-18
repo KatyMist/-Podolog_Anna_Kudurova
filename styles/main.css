@@ -3082,6 +3082,15 @@ button {
   }
 }
 
+.footer__brand-logo {
+  margin-right: 0;
+}
+@media (width <= 47.99875rem) {
+  .footer__brand-logo {
+    display: none;
+  }
+}
+
 .footer__brand .header__logo {
   margin-right: 0;
 }
