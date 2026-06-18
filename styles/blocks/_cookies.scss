@@ -34,7 +34,7 @@
     @include mobile-s {
         padding: rem(8) rem(10);
         max-width: calc(100% - rem(16));
-        overflow: hidden;
+        overflow: visible;
     }
 }
  

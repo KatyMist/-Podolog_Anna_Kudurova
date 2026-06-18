@@ -565,6 +565,13 @@ $footer-btn-padding-mobile-s: rem(6) rem(8);
         text-align: center;
     }
 }
+
+.footer__copyright--warning {
+    font-weight: 600; 
+    color: #063bd9; 
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
  
 .footer__rights {
     font-size: rem(11);

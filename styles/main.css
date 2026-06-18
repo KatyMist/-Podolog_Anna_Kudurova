@@ -221,7 +221,7 @@ svg * {
   --surface: #f4f7fd;
   --surface-2: #e8eef8;
   --text: #0f1e35;
-  --muted: #6b7a90;
+  --muted: #4a5a75;
   --accent: #2d7dd2;
   --accent-light: #5fa3e8;
   --accent-soft: rgba(45, 125, 210, 0.12);
@@ -433,8 +433,8 @@ button {
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
-  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
   opacity: 1;
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.2s ease;
 }
 
 .cursor--hover {
@@ -3634,6 +3634,13 @@ button {
   }
 }
 
+.footer__copyright--warning {
+  font-weight: 600;
+  color: #063bd9;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .footer__rights {
   font-size: 0.6875rem;
   color: var(--muted);
@@ -5110,7 +5117,7 @@ button {
   .cookies-banner {
     padding: 0.5rem 0.625rem;
     max-width: calc(100% - 1rem);
-    overflow: hidden;
+    overflow: visible;
   }
 }
 
