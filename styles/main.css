@@ -314,9 +314,12 @@ body {
     transform: translateY(0);
   }
 }
-a,
+a {
+  transition: color 0.4s ease, text-decoration-color 0.4s ease;
+}
+
 button {
-  transition: background-color var(--transition), color var(--transition), box-shadow var(--transition), transform 0.3s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
 }
 
 img {
@@ -324,13 +327,13 @@ img {
 }
 
 svg {
-  transition: transform 0.3s ease, color var(--transition);
+  transition: transform 0.4s ease, color 0.4s ease;
 }
 
 input,
 textarea,
 select {
-  transition: border-color var(--transition), box-shadow var(--transition), background-color 0.2s ease;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
 }
 
 .fade-in {
@@ -407,16 +410,6 @@ label {
   cursor: pointer;
 }
 
-a,
-button,
-label,
-input,
-textarea,
-select,
-svg * {
-  transition-duration: var(--transition-duration);
-}
-
 :focus-visible {
   outline: 0.125rem dashed var(--color-powdery);
   outline-offset: 0.25rem;
@@ -440,6 +433,8 @@ video {
 
 svg * {
   transition-property: fill, stroke;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
 }
 
 input,
