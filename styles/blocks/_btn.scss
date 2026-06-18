@@ -4,7 +4,7 @@
     display: inline-flex;
     align-items: center;
     gap: rem(8);
-    padding: rem(14) rem(28);
+    padding: rem(14) rem(28); 
     background-color: var(--accent);
     color: #fff;
     border-radius: 100px;
@@ -16,7 +16,10 @@
     transition: background-color var(--transition);
 
     @include hover {
-        background-color: var(--accent-light);
+        background-color: var(--accent); // ✅ ОСТАВИТЬ ТОТ ЖЕ ЦВЕТ
+        color: #fff;
+        box-shadow: 0 0 24px rgb(95, 163, 232); // ✅ ДОБАВИТЬ СВЕЧЕНИЕ
+        transform: translateY(-2px); // ✅ ПОДНЯТЬ НА 2px
     }
 
     @include tablet {

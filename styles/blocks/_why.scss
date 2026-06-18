@@ -14,15 +14,6 @@
  
 .why__top {
     margin-bottom: rem(10);
-    
- 
-    @include tablet {
-        margin-bottom: rem(40);
-    }
-
-    @include mobile {
-        margin-bottom: rem(0);
-    }
 }
  
 .why__title {
