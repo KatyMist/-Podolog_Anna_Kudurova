@@ -78,21 +78,7 @@
         gap: rem(8);
     }
 }
- 
-.footer__logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: rem(36);
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    line-height: 1;
-    flex-shrink: 0;
 
-    @include mobile {
-        display: none;
-    }
-}
 
 .footer__brand .header__logo {
     margin-right: 0;
