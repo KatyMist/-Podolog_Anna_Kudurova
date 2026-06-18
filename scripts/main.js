@@ -31,3 +31,21 @@ if (preloader) {
         percent.textContent = Math.floor(progress) + '%';
     }, 100);
 }
+
+//  Intersection Observer для fade-in
+const observerOptions = {
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('img, .results__card, .about-teaching__card').forEach(el => {
+    observer.observe(el);
+});
