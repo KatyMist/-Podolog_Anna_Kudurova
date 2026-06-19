@@ -387,8 +387,9 @@ label {
 }
 
 :focus-visible {
-  outline: 0.125rem dashed var(--color-powdery);
-  outline-offset: 0.25rem;
+  outline: 0.1875rem solid var(--accent);
+  outline-offset: 0.125rem;
+  box-shadow: 0 0 0 0.25rem rgba(45, 125, 210, 0.2);
   transition-duration: 0s !important;
 }
 

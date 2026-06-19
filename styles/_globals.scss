@@ -161,8 +161,9 @@ label {
 
 // ФОКУС (Accessibility)
 :focus-visible {
-    outline: rem(2) dashed var(--color-powdery);
-    outline-offset: rem(4);
+    outline: rem(3) solid var(--accent); // Толще и ярче
+    outline-offset: rem(2);
+    box-shadow: 0 0 0 rem(4) rgba(45, 125, 210, 0.2); // Добавить свечение
     transition-duration: 0s !important;
 }
 
