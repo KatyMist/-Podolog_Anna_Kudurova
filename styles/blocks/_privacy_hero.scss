@@ -16,7 +16,15 @@
     }
 
     @include mobile {
+        grid-template-columns: 1fr;
+        gap: rem(20);
         padding-block: rem(32) rem(24);
+    }
+
+    @include mobile-s {
+        grid-template-columns: 1fr;
+        gap: rem(16);
+        padding-block: rem(24) rem(16);
     }
 }
 
@@ -64,6 +72,10 @@
     }
 
     @include tablet { order: -1; }
+    
+    @include mobile { order: -1; }
+    
+    @include mobile-s { order: -1; }
 }
 
 // Privacy Content
