@@ -5456,7 +5456,7 @@ button {
 @media (width <= 30.06125rem) {
   .privacy__hero-image {
     order: -1;
-    aspect-ratio: 16/10;
+    aspect-ratio: 1/1;
   }
 }
 
@@ -5544,6 +5544,12 @@ button {
   font-weight: 500;
   color: var(--text);
   margin: 0;
+}
+@media (width <= 30.06125rem) {
+  .privacy__section-title {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
 }
 
 .privacy__section-text {
