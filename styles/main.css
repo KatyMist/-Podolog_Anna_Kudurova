@@ -321,6 +321,11 @@ select {
 main {
   flex-grow: 1;
 }
+@media (width <= 30.06125rem) {
+  main {
+    padding-top: 3.75rem !important;
+  }
+}
 
 h1,
 .h1 {
@@ -506,8 +511,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  column-gap: 2rem;
   height: 5rem;
 }
 .header__inner::after {
@@ -569,8 +573,7 @@ button {
 .header__nav-list {
   display: flex;
   align-items: center;
-  -moz-column-gap: 2.5rem;
-       column-gap: 2.5rem;
+  column-gap: 2.5rem;
 }
 @media (width <= 63.99875rem) {
   .header__nav-list {
@@ -913,10 +916,8 @@ button {
 .hero__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center 20%;
-     object-position: center 20%;
+  object-fit: cover;
+  object-position: center 20%;
 }
 @media (width <= 63.99875rem) {
   .hero__image {
@@ -1321,10 +1322,8 @@ button {
 .about-hero__image {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center 60%;
-     object-position: center 60%;
+  object-fit: cover;
+  object-position: center 60%;
   border-radius: var(--radius-md);
   display: block;
 }
@@ -1758,8 +1757,7 @@ button {
 .about-pro__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (width <= 63.99875rem) {
   .about-pro__image {
@@ -2001,10 +1999,8 @@ button {
 .services__header-image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center 15%;
-     object-position: center 15%;
+  object-fit: cover;
+  object-position: center 15%;
 }
 @media (width <= 63.99875rem) {
   .services__header-image {
@@ -2168,10 +2164,8 @@ button {
 .services__item-image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   transition: transform var(--transition);
 }
 
@@ -2362,10 +2356,8 @@ button {
 .edu__card-image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center top;
-     object-position: center top;
+  object-fit: cover;
+  object-position: center top;
   display: block;
 }
 @media (width <= 63.99875rem) {
@@ -2383,8 +2375,7 @@ button {
   }
   .edu__card-image img {
     height: auto;
-    -o-object-fit: unset;
-       object-fit: unset;
+    object-fit: unset;
   }
 }
 
@@ -2793,10 +2784,8 @@ button {
 .help__card-image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   transition: transform var(--transition);
 }
 .help__card-image::after {
@@ -3885,8 +3874,7 @@ button {
 .preloader__logo-img {
   width: 7.5rem;
   height: 7.5rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin-bottom: 0.5rem;
 }
 
@@ -4129,8 +4117,7 @@ button {
 .results__card-after img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform var(--transition);
 }
 @media (width <= 47.99875rem) {
@@ -4468,10 +4455,8 @@ button {
 .cases-hero__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center 15%;
-     object-position: center 15%;
+  object-fit: cover;
+  object-position: center 15%;
 }
 @media (width <= 63.99875rem) {
   .cases-hero__image {
@@ -4719,8 +4704,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   opacity: 0;
   transition: opacity var(--transition);
 }
@@ -4976,9 +4960,7 @@ button {
   transform: translateX(-50%);
   z-index: 10;
   cursor: ew-resize;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .case-item__divider-line {
@@ -5068,7 +5050,6 @@ button {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  width: -moz-fit-content;
   width: fit-content;
   max-width: calc(100% - 3rem);
   background: rgba(255, 255, 255, 0.95);
@@ -5390,7 +5371,17 @@ button {
 }
 @media (width <= 47.99875rem) {
   .privacy__hero {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
     padding-block: 2rem 1.5rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .privacy__hero {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-block: 2.5rem 1rem;
+    padding-top: 3.75rem; /* ← НОВОЕ! для меню */
   }
 }
 
@@ -5410,6 +5401,13 @@ button {
   margin-bottom: 1.25rem;
   text-transform: uppercase;
 }
+@media (width <= 30.06125rem) {
+  .privacy__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+}
 
 .privacy__intro {
   font-size: 1rem;
@@ -5417,6 +5415,14 @@ button {
   line-height: 1.7;
   margin-bottom: 1rem;
   max-width: 32.5rem;
+}
+@media (width <= 30.06125rem) {
+  .privacy__intro {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    max-width: 100%;
+  }
 }
 
 .privacy__date {
@@ -5433,14 +5439,23 @@ button {
 .privacy__hero-image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center 20%;
-     object-position: center 20%;
+  object-fit: cover;
+  object-position: center 20%;
 }
 @media (width <= 63.99875rem) {
   .privacy__hero-image {
     order: -1;
+  }
+}
+@media (width <= 47.99875rem) {
+  .privacy__hero-image {
+    order: -1;
+  }
+}
+@media (width <= 30.06125rem) {
+  .privacy__hero-image {
+    order: -1;
+    aspect-ratio: 16/10;
   }
 }
 
@@ -5549,4 +5564,6 @@ button {
 }
 .privacy__list li:last-child {
   margin-bottom: 0;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
