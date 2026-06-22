@@ -43,6 +43,11 @@
     line-height: 1.1;
     margin-bottom: rem(20);
     text-transform: uppercase;
+
+    @include mobile-s {
+        font-size: rem(24);
+        margin-bottom: rem(12);
+    }
 }
 
 .privacy__intro {
@@ -51,6 +56,13 @@
     line-height: 1.7;
     margin-bottom: rem(16);
     max-width: rem(520);
+
+    @include mobile-s {
+        font-size: rem(14);
+        line-height: 1.6;
+        margin-bottom: rem(12);
+        max-width: 100%;
+    }
 }
 
 .privacy__date {
@@ -72,10 +84,11 @@
     }
 
     @include tablet { order: -1; }
-    
     @include mobile { order: -1; }
-    
-    @include mobile-s { order: -1; }
+    @include mobile-s { 
+        order: -1;
+        aspect-ratio: 16 / 9;
+    }
 }
 
 // Privacy Content
