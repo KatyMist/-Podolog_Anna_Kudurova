@@ -91,10 +91,7 @@
 
     @include tablet { order: -1; }
     @include mobile { order: -1; }
-    @include mobile-s { 
-        order: -1;
-        aspect-ratio: 1 / 1; 
-    }
+    @include mobile-s { display: none;}
 }
 
 // Privacy Content

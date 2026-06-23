@@ -5486,8 +5486,7 @@ button {
 }
 @media (width <= 30.06125rem) {
   .privacy__hero-image {
-    order: -1;
-    aspect-ratio: 1/1;
+    display: none;
   }
 }
 
