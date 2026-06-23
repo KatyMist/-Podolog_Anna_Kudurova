@@ -96,7 +96,7 @@ main {
     flex-grow: 1;
 
     @include mobile-s {
-        padding-top: rem(60);
+        padding-top: rem(60) !important;
     }
 }
 
