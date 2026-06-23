@@ -24,9 +24,9 @@
     @include mobile-s {
         grid-template-columns: 1fr;
         gap: rem(12);
-        padding-block: rem(40) rem(16);
-        padding-top: rem(60);
-        padding-inline: rem(12); /* ← ДОБАВИЛ */
+        padding-top: 0;
+        padding-bottom: rem(16);
+        padding-inline: rem(12);
     }
 }
 
