@@ -1,13 +1,11 @@
 <div align="center">
 
-[Русский](README.md) · **English**
+# Подолог Анна Кудурова — сайт-визитка
 
-# Podologist Anna Kudurova — Business Card Website
+**Школа-студия подологии и здоровой эстетики · Ульяновск**
 
-**School & Studio of Podology and Healthy Aesthetics · Ulyanovsk, Russia**
-
-[![Website](https://img.shields.io/badge/website-annakudurova.ru-2f7bd8?style=for-the-badge)](https://annakudurova.ru/)
-[![Portfolio](https://img.shields.io/badge/author-Ekaterina_Tumanova-1b2a4a?style=for-the-badge)](https://katymist.github.io/Portfolio/)
+[![Сайт](https://img.shields.io/badge/сайт-annakudurova.ru-2f7bd8?style=for-the-badge)](https://annakudurova.ru/)
+[![Портфолио](https://img.shields.io/badge/автор-Екатерина_Туманова-1b2a4a?style=for-the-badge)](https://katymist.github.io/Portfolio/)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat-square&logo=sass&logoColor=white)
@@ -17,7 +15,7 @@
 <br>
 
 <a href="https://annakudurova.ru/">
-  <img src="https://github.com/user-attachments/assets/59f941ab-b08f-426e-847b-b357e848c2cc" alt="Home page on desktop and smartphone" width="100%">
+  <img src="https://github.com/user-attachments/assets/59f941ab-b08f-426e-847b-b357e848c2cc" alt="Главная страница сайта на десктопе и смартфоне" width="100%">
 </a>
 
 </div>
@@ -25,142 +23,142 @@
 <br>
 
 > [!NOTE]
-> **About the project.** This website was built as a learning project on a pro bono basis: for me, it was hands-on practice with a real client and a real task; for the studio, it is a ready-made website at no development cost.
-> All photos, texts and materials about the studio belong to Anna Kudurova. The markup and scripts are my own learning work.
+> **О проекте.** Сайт создан как учебный проект на безвозмездной основе: для меня это практика на реальной задаче с живым заказчиком, для студии — готовый сайт без оплаты разработки.
+> Фотографии, тексты и материалы о работе студии принадлежат Анне Кудуровой. Код вёрстки и скриптов — моя учебная работа.
 
 ---
 
-## Contents
+## Содержание
 
-- [About](#about)
-- [Screenshots](#screenshots)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Running Locally](#running-locally)
-- [Author](#author)
+- [О сайте](#о-сайте)
+- [Скриншоты](#скриншоты)
+- [Возможности](#возможности)
+- [Технологии](#технологии)
+- [Структура проекта](#структура-проекта)
+- [Запуск локально](#запуск-локально)
+- [Автор](#автор)
 
-## About
+## О сайте
 
-A multi-page business card website for a private podologist and instructor. Its goal is to introduce the specialist, present her services and real treatment results, and guide visitors to book an appointment.
+Многостраничный сайт-визитка для частного подолога и инструктора. Задача — рассказать о специалисте, показать услуги и реальные результаты работы и привести клиента к записи.
 
-> The website itself is in Russian.
-
-| Page | Content |
+| Страница | Что на ней |
 |---|---|
-| [Home](https://annakudurova.ru/) | Hero section, key benefits, service areas, before/after examples |
-| [About](https://annakudurova.ru/about.html) | The specialist's story, teaching, professional activities |
-| [Services](https://annakudurova.ru/services.html) | Podology, pedicure, manicure, training — in expandable sections |
-| [Cases](https://annakudurova.ru/cases.html) | Real cases: problem → solution → result, before/after slider |
-| [Contacts](https://annakudurova.ru/contacts.html) | Messengers, phone, address, working hours, map |
-| Privacy Policy, 404 | Service pages |
+| [Главная](https://annakudurova.ru/) | Первый экран, преимущества, направления услуг, примеры «до / после» |
+| [О себе](https://annakudurova.ru/about.html) | История специалиста, преподавание, профессиональная деятельность |
+| [Услуги](https://annakudurova.ru/services.html) | Подология, педикюр, маникюр, обучение — раскрывающимися блоками |
+| [Кейсы](https://annakudurova.ru/cases.html) | Реальные случаи: проблема → решение → результат, слайдер «до / после» |
+| [Контакты](https://annakudurova.ru/contacts.html) | Мессенджеры, телефон, адрес, часы работы, карта |
+| Политика конфиденциальности, 404 | Служебные страницы |
 
-## Screenshots
+## Скриншоты
 
 <details open>
-<summary><b>Home</b></summary>
+<summary><b>Главная</b></summary>
 <br>
-<img src="https://github.com/user-attachments/assets/c5a5ece0-4bd1-4b46-9a65-eb8dbe173981" alt="Home page" width="100%">
+<img src="https://github.com/user-attachments/assets/c5a5ece0-4bd1-4b46-9a65-eb8dbe173981" alt="Главная страница" width="100%">
+<img src="https://github.com/user-attachments/assets/76c5db0c-fda8-45cb-867f-725351179ac4" alt="Главная страница" width="100%">
+<img src="docs/screenshots/results.jpg" alt="Блоки услуг и результатов до и после" width="100%">
 </details>
 
 <details>
-<summary><b>About</b></summary>
+<summary><b>О себе</b></summary>
 <br>
-<img src="https://github.com/user-attachments/assets/ca5e65f5-28f5-416e-9268-fdcf40d92ef0" alt="About page" width="100%">
+<img src="docs/screenshots/about.jpg" alt="Страница О себе" width="100%">
 </details>
 
 <details>
-<summary><b>Services</b></summary>
+<summary><b>Услуги</b></summary>
 <br>
-<img src="https://github.com/user-attachments/assets/c7d8e370-5d76-4ff0-a8f9-f84f0282e17e" alt="Services page with an expanded category" width="100%">
+<img src="docs/screenshots/services.jpg" alt="Страница услуг с раскрытой категорией" width="100%">
 </details>
 
 <details>
-<summary><b>Cases</b> (medical before/after photos)</summary>
+<summary><b>Кейсы</b> (медицинские фото до / после)</summary>
 <br>
-<img src="https://github.com/user-attachments/assets/f5fa639e-2b90-4cde-a801-85ce71017756" alt="Cases page with before/after slider" width="100%">
+<img src="docs/screenshots/cases.jpg" alt="Страница кейсов со слайдером до и после" width="100%">
 </details>
 
 <details>
-<summary><b>404 Page</b></summary>
+<summary><b>Страница 404</b></summary>
 <br>
-<img src="https://github.com/user-attachments/assets/57dc8ff0-e7e7-4195-826b-1055be18696d" alt="404 page" width="100%">
+<img src="docs/screenshots/404.jpg" alt="Страница 404" width="100%">
 </details>
 
-### Mobile Version
+### Мобильная версия
 
-<img src="https://github.com/user-attachments/assets/b8206fa9-0235-4e7b-93e9-5033bfa685a3" alt="Mobile version: home, menu, cases, about" width="100%">
+<img src="docs/screenshots/mobile.jpg" alt="Мобильная версия: главная, меню, кейсы, о себе" width="100%">
 
-## Features
+## Возможности
 
-- **Responsive layout** — from smartphones to wide screens, burger menu on mobile
-- **Before/after slider** — compare photos by dragging the divider, plus a gallery for multi-photo cases
-- **Services accordion** — with direct links to a category (`services.html?category=podology`)
-- **Preloader** with a progress indicator
-- **Custom cursor** — only on devices with a mouse, disabled on touch screens
-- **Cookie banner** — consent is remembered for a year, dismissal for the session
-- **SEO** — meta tags, Open Graph, Schema.org `LocalBusiness` markup, `sitemap.xml`, `robots.txt`, canonical URLs
-- **Accessibility** — `aria` attributes on the menu and interactive elements, `alt` text on images
-- **Analytics** — Yandex.Metrica, privacy policy page
-- **Custom domain** via GitHub Pages
+- **Адаптивная вёрстка** — от смартфона до широкого монитора, бургер-меню на мобильных
+- **Слайдер «до / после»** — сравнение фото перетаскиванием разделителя, плюс галерея для кейсов с несколькими снимками
+- **Аккордеон услуг** — с прямыми ссылками на категорию (`services.html?category=podology`)
+- **Прелоадер** с индикатором загрузки
+- **Кастомный курсор** — только на устройствах с мышью, на тач-экранах отключается
+- **Баннер cookies** — согласие запоминается на год, закрытие — на сессию
+- **SEO** — мета-теги, Open Graph, разметка Schema.org `LocalBusiness`, `sitemap.xml`, `robots.txt`, canonical
+- **Доступность** — `aria`-атрибуты у меню и интерактивных элементов, `alt` у изображений
+- **Аналитика** — Яндекс.Метрика, страница политики конфиденциальности
+- **Собственный домен** через GitHub Pages
 
-## Tech Stack
+## Технологии
 
 | | |
 |---|---|
-| Markup | HTML5, semantic tags |
-| Styles | SCSS (Dart Sass): variables, mixins, media helpers, BEM blocks |
-| Scripts | Vanilla JavaScript, ES modules, no frameworks |
-| Fonts | Cormorant Garamond (self-hosted, `woff2`) |
-| Hosting | GitHub Pages + `annakudurova.ru` domain |
+| Разметка | HTML5, семантические теги |
+| Стили | SCSS (Dart Sass): переменные, миксины, медиа-хелперы, блоки по БЭМ |
+| Скрипты | Vanilla JavaScript, ES-модули, без фреймворков |
+| Шрифты | Cormorant Garamond (локально, `woff2`) |
+| Хостинг | GitHub Pages + домен `annakudurova.ru` |
 
-## Project Structure
+## Структура проекта
 
 ```text
-├── index.html            # Home
-├── about.html            # About
-├── services.html         # Services
-├── cases.html            # Cases
-├── contacts.html         # Contacts
-├── privacy.html          # Privacy Policy
+├── index.html            # Главная
+├── about.html            # О себе
+├── services.html         # Услуги
+├── cases.html            # Кейсы
+├── contacts.html         # Контакты
+├── privacy.html          # Политика конфиденциальности
 ├── 404.html
 ├── styles/
-│   ├── main.scss         # Entry point
+│   ├── main.scss         # Точка входа
 │   ├── _variables.scss
-│   ├── helpers/          # Mixins, functions, breakpoints
-│   └── blocks/           # Block styles (header, hero, cases, ...)
+│   ├── helpers/          # Миксины, функции, брейкпоинты
+│   └── blocks/           # Стили блоков (header, hero, cases, ...)
 ├── scripts/
-│   ├── main.js           # Initialization + preloader
-│   ├── header.js         # Menu and burger
-│   ├── services.js       # Services accordion
-│   ├── cases.js          # Before/after slider and gallery
-│   ├── cookies.js        # Cookie banner
-│   └── cursor.js         # Custom cursor
+│   ├── main.js           # Инициализация + прелоадер
+│   ├── header.js         # Меню и бургер
+│   ├── services.js       # Аккордеон услуг
+│   ├── cases.js          # Слайдер до/после и галерея
+│   ├── cookies.js        # Баннер cookies
+│   └── cursor.js         # Кастомный курсор
 ├── images/  icons/  fonts/
 └── sitemap.xml  robots.txt  CNAME
 ```
 
-## Running Locally
+## Запуск локально
 
 ```bash
 git clone https://github.com/KatyMist/-Podolog_Anna_Kudurova.git
 cd -- -Podolog_Anna_Kudurova
 npm install
 
-# compile styles
-npm run sass          # once
-npm run sass:watch    # watch for changes
+# компиляция стилей
+npm run sass          # один раз
+npm run sass:watch    # с отслеживанием изменений
 
-# local server (the project uses absolute paths, so open it via a server, not as a file)
+# локальный сервер (пути в проекте абсолютные, поэтому нужен сервер, а не открытие файла)
 npx serve .
 ```
 
-## Author
+## Автор
 
-**Ekaterina Tumanova** — Frontend Developer & Designer
+**Екатерина Туманова** — Frontend Developer & Designer
 
-[Portfolio](https://katymist.github.io/Portfolio/) · [GitHub](https://github.com/KatyMist)
+[Портфолио](https://katymist.github.io/Portfolio/) · [GitHub](https://github.com/KatyMist)
 
 <div align="center">
-<sub>A learning project built pro bono · © Anna Kudurova — photos and materials</sub>
+<sub>Учебный проект, выполненный на безвозмездной основе · © Анна Кудурова — фото и материалы</sub>
 </div>
