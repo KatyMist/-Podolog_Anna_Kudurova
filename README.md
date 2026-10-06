@@ -8,16 +8,7 @@
 
 <a href="https://annakudurova.ru/"><img src="https://img.shields.io/badge/ОТКРЫТЬ_САЙТ-ANNAKUDUROVA.RU-2f7bd8?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=1b2a4a" alt="Открыть сайт"></a>
 
-<br><br>
-
 <img src="https://skillicons.dev/icons?i=html,sass,js,github" alt="HTML, Sass, JavaScript, GitHub">
-
-<br><br>
-
-<img src="https://img.shields.io/badge/RU-Русский-2f7bd8?labelColor=1b2a4a" alt="Русский">
-<img src="https://img.shields.io/badge/EN-English-2f7bd8?labelColor=1b2a4a" alt="English">
-
-<br>
 
 <a href="https://annakudurova.ru/">
   <img src="https://github.com/user-attachments/assets/59f941ab-b08f-426e-847b-b357e848c2cc" alt="Home page on desktop and smartphone" width="100%">
