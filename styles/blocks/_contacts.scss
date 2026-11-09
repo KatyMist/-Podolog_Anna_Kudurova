@@ -8,7 +8,30 @@
     overflow: hidden;
 
     @include tablet { padding-block: rem(60); }
-    @include mobile { padding-block: rem(40); }
+    @include mobile { padding-block: rem(24) rem(40); }
+}
+
+main:has(> .contacts) + .footer {
+    padding-block-start: clamp(1.5rem, 4vw, 3.5rem);
+    background: linear-gradient(180deg, #eef4fb, #e3eef9);
+
+    .footer__inner {
+        row-gap: 1.25rem;
+    }
+
+    .footer__bottom {
+        margin-block-start: clamp(1.5rem, 3vw, 2.5rem);
+    }
+
+    .footer__bottom-content {
+        border-block-start: 1px solid var(--border);
+        padding-block-start: 1rem;
+        row-gap: .875rem;
+    }
+
+    .footer__bottom-center {
+        margin-block-start: 0;
+    }
 }
 
 .contacts__inner {
@@ -30,27 +53,17 @@
     position: relative;
 }
 
-.contacts__title {
-    @include fluid-text(56, 36);
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    color: var(--text);
-    margin-bottom: rem(12);
-}
-
-.contacts__desc {
-    font-size: rem(16);
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: rem(32);
+.contacts__intro {
+    margin-bottom: clamp(1.25rem, 3vw, 2rem);
 }
 
 // List
 
 .contacts__list {
-    display: flex;
-    flex-direction: column;
-    gap: rem(8);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    max-width: 33rem;
+    gap: rem(10);
 }
 
 // Item 
@@ -58,17 +71,16 @@
 .contacts__item {
     display: flex;
     align-items: center;
-    gap: rem(16);
-    padding: rem(16) rem(20);
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(8px);
+    gap: rem(8);
+    padding: rem(10) rem(14);
+    background-color: rgba(255, 255, 255, 0.26);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     text-decoration: none;
     transition: box-shadow var(--transition), background-color var(--transition);
 
     @include hover {
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.65);
         box-shadow: var(--shadow-blue);
     }
 
@@ -77,29 +89,15 @@
 
         @include hover {
             box-shadow: none;
-            background-color: rgba(255, 255, 255, 0.6);
+            background-color: rgba(255, 255, 255, 0.26);
         }
-    }
-}
-
-.contacts__item-icon {
-    width: rem(44);
-    height: rem(44);
-    border-radius: 50%;
-    background-color: var(--accent-soft);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-
-    img {
-        width: rem(40);
-        height: rem(40);
     }
 }
 
 .contacts__item-info {
     flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
     display: flex;
     flex-direction: column;
     gap: rem(2);
@@ -117,13 +115,6 @@
     font-size: rem(15);
     color: var(--text);
     line-height: 1.4;
-}
-
-.contacts__item-arrow {
-    font-size: rem(20);
-    color: var(--muted);
-    flex-shrink: 0;
-    line-height: 1;
 }
 
 // Map

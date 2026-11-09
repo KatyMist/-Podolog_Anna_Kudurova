@@ -1,0 +1,113 @@
+.home-page {
+    overflow-x: clip;
+}
+
+.home-intro {
+    min-height: calc(100vh - 5rem);
+    min-height: calc(100svh - 5rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    place-items: center;
+    padding-block: 2rem;
+    text-align: center;
+}
+
+.home-intro__label {
+    max-width: 42rem;
+    margin-inline: auto;
+    font-size: clamp(.875rem, 1.5vw, 1.125rem);
+    text-wrap: balance;
+}
+
+.home-school-name {
+    display: block;
+    color: #215e9d;
+    font-size: 1.15em;
+    line-height: 1.2;
+    letter-spacing: .055em;
+}
+
+.home-intro__title {
+    margin: clamp(1.5rem, 4.5vw, 3.5rem) 0 0;
+    font-family: var(--font-family-base);
+    font-size: clamp(1.625rem, 6.8vw, 5.75rem);
+    font-weight: 500;
+    line-height: 1.04;
+    text-transform: uppercase;
+    text-wrap: balance;
+}
+
+.home-intro__title .home-title-accent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(.5rem, 2.4vw, 2rem);
+    margin-top: .08em;
+    color: #215e9d;
+    font-size: 1.42em;
+    line-height: 1;
+    letter-spacing: .025em;
+    white-space: nowrap;
+}
+
+.home-intro__title .home-title-accent::before,
+.home-intro__title .home-title-accent::after {
+    content: '';
+    flex: 0 1 clamp(.75rem, 7vw, 6rem);
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent));
+}
+
+.home-intro__title .home-title-accent::after {
+    transform: scaleX(-1);
+}
+
+.home-intro__studio,
+.home-intro__lead {
+    display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .home-intro__studio,
+    .home-school-name,
+    .home-intro__lead,
+    .home-title-accent {
+        animation: home-intro-reveal .95s cubic-bezier(.22, .7, .28, 1) both;
+    }
+
+    .home-intro__studio { animation-delay: .1s; }
+    .home-school-name { animation-delay: .25s; }
+    .home-intro__lead { animation-delay: .48s; }
+    .home-title-accent { animation-delay: .68s; }
+
+    .home-intro__title .home-title-accent::before,
+    .home-intro__title .home-title-accent::after {
+        animation: home-intro-lines .85s ease-out .95s both;
+    }
+}
+
+@keyframes home-intro-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(.42em);
+        clip-path: inset(85% -.15em -.2em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        clip-path: inset(-.2em -.15em -.2em);
+    }
+}
+
+@keyframes home-intro-lines {
+    from {
+        opacity: 0;
+        scale: .2 1;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}

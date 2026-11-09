@@ -1,63 +1,53 @@
+const interactive = 'a, button, label, .hero__card, input, textarea, select, [role="button"]';
+const editable = 'input:not([type="button"]):not([type="submit"]), textarea, [contenteditable="true"]';
+
 export default class Cursor {
     constructor() {
-        // Не инициализировать cursor на сенсорных устройствах
-        if (!window.matchMedia('(pointer: fine)').matches) {
-            return;
-        }
-
         this.cursor = document.getElementById('cursor');
         if (!this.cursor) return;
 
-        // ✅ КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ: Скрыть браузерный курсор на всём документе
-        document.body.style.cursor = 'none';
+        this.desktop = matchMedia('(min-width: 1024px) and (hover: hover) and (pointer: fine)');
+        this.touch = matchMedia('(any-pointer: coarse)');
+        this.frame = null;
 
-        this.initMove();
-        this.initHover();
-        this.initVisibility(); // НОВОЕ: контролировать видимость кастомного курсора
+        document.addEventListener('pointermove', event => this.move(event), { passive: true });
+        document.documentElement.addEventListener('pointerleave', () => this.hide());
+        document.addEventListener('pointercancel', () => this.hide());
+        window.addEventListener('blur', () => this.hide());
+        this.desktop.addEventListener('change', () => this.hide());
+        this.touch.addEventListener('change', () => this.hide());
     }
 
-    initMove() {
-        document.addEventListener('mousemove', (e) => {
-            const size = 12;
-            this.cursor.style.opacity = '1'; // Показать при движении
-            this.cursor.style.transform = `translate(${e.clientX - size / 2}px, ${e.clientY - size / 2}px)`;
-        });
-    }
+    move(event) {
+        if (!this.desktop.matches || this.touch.matches || event.pointerType !== 'mouse') {
+            this.hide();
+            return;
+        }
 
-    initHover() {
-        // Расширенный список элементов для hover
-        const targets = document.querySelectorAll('a, button, label, .hero__card, input, textarea, select, [role="button"]');
+        this.position = event;
+        if (this.frame !== null) return;
 
-        targets.forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                this.cursor.classList.add('cursor--hover');
-            });
-            el.addEventListener('mouseleave', () => {
-                this.cursor.classList.remove('cursor--hover');
-            });
-        });
-    }
+        this.frame = requestAnimationFrame(() => {
+            this.frame = null;
+            const { clientX, clientY, target } = this.position;
 
-    // Контроль видимости курсора в разных ситуациях
-    initVisibility() {
-        // Скрыть курсор, когда мышь уходит за пределы окна браузера
-        document.addEventListener('mouseleave', () => {
-            this.cursor.style.opacity = '0';
-        });
-
-        document.addEventListener('mouseenter', () => {
-            this.cursor.style.opacity = '1';
-        });
-
-        // Скрыть при фокусе на текстовом поле (для удобства ввода)
-        document.addEventListener('focusin', (e) => {
-            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
-                this.cursor.style.opacity = '0';
+            if (target.closest(editable)) {
+                this.hide();
+                return;
             }
-        });
 
-        document.addEventListener('focusout', () => {
-            this.cursor.style.opacity = '1';
+            this.cursor.style.transform = `translate3d(${clientX}px, ${clientY}px, 0)`;
+            this.cursor.classList.toggle('cursor--hover', Boolean(target.closest(interactive)));
+            document.body.classList.add('has-custom-cursor');
         });
+    }
+
+    hide() {
+        if (this.frame !== null) {
+            cancelAnimationFrame(this.frame);
+            this.frame = null;
+        }
+
+        document.body.classList.remove('has-custom-cursor');
     }
 }

@@ -6,175 +6,37 @@
     padding-block: rem(80);
 
     @include tablet { padding-block: rem(60); }
-    @include mobile { padding-block: rem(40); }
-}
-
-// Cases Header (Hero)
-
-.cases-hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: end;
-    gap: rem(40);
-    margin-bottom: rem(60);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-
-    @include tablet {
-        grid-template-columns: 1fr;
-        margin-bottom: rem(40);
-    }
-}
-
-.cases-hero__content {
-    padding: rem(48) rem(40) rem(48) 0;
-
-    @include tablet { padding: rem(32) 0 0; }
-}
-
-.cases-hero__title {
-    @include fluid-text(56, 36);
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    color: var(--text);
-    margin-bottom: rem(12);
-}
-
-.cases-hero__title::after {
-    content: '';
-    display: block;
-    width: rem(40);
-    height: rem(2);
-    background-color: var(--accent);
-    border-radius: rem(2);
-    margin-bottom: rem(20);
-    margin-top: rem(0);
-}
-
-.cases-hero__description {
-    font-size: rem(16);
-    color: var(--muted);
-    line-height: 1.6;
-    margin: 0;
-}
-
-.cases-hero__image {
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    aspect-ratio: 16 / 7;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center 15%;
-    }
-
-    @include tablet { aspect-ratio: 16 / 9; }
+    @include mobile { padding-block: rem(24) rem(40); }
 }
 
 // Cases Stats
 
 .cases-stats {
-    padding-block: rem(40);
-    background: linear-gradient(135deg, rgba(45, 125, 210, 0.03) 0%, rgba(45, 125, 210, 0.01) 100%);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    margin-bottom: rem(60);
-
-    @include tablet {
-        padding-block: rem(32);
-        margin-bottom: rem(40);
-    }
-
-    @include mobile {
-        padding-block: rem(24);
-        margin-bottom: rem(32);
-    }
-
-    @include mobile {
-        padding-block: rem(14);
-        margin-bottom: rem(22);
-    }
-}
-
-.cases-stats__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: rem(48);
-    justify-items: center;
-
-    @include tablet {
-        grid-template-columns: repeat(3, 1fr);
-        gap: rem(24);
-        justify-items: center;
-    }
-
-    @include mobile {
-        gap: rem(15);
-    }
-
+    grid-template-columns: repeat(3, minmax(0, max-content));
+    gap: clamp(.75rem, 3vw, 2rem);
+    margin-top: clamp(1rem, 2vw, 1.5rem);
 }
 
 .cases-stats__item {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    gap: rem(8);
-    justify-content: center;
-
-    @include mobile {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-.cases-stats__icon {
-    @include mobile {
-        display: flex; 
-        width: rem(32);
-        height: rem(32);
-    }
-}
-
-.cases-stats__content {
-    display: flex;
-    flex-direction: column;
-    gap: rem(4);
-    text-align: center;
-
-    @include tablet {
-        text-align: center;
-    }
+    display: grid;
+    align-content: start;
+    gap: .25rem;
 }
 
 .cases-stats__number {
-    @include fluid-text(40, 28);
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-family-base);
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
     font-weight: 500;
     color: var(--text);
     line-height: 1;
-
-    @include mobile {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    @include mobile-s {
-        font-size: 14px;
-        text-align: center;
-    }
 }
 
 .cases-stats__label {
-    font-size: rem(14);
+    font-size: clamp(.75rem, 1.5vw, .875rem);
     color: var(--muted);
-    line-height: 1.4;
-
-    @include mobile {
-        font-size: 14px;
-        text-align: center;
-    }
+    line-height: 1.2;
+    text-wrap: balance;
 }
 
 // Cases List
@@ -202,16 +64,6 @@
 
     @include mobile {
         margin-bottom: rem(24);
-    }
-}
-
-.cases-category__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: rem(24);
-
-    @include tablet {
-        gap: rem(16);
     }
 }
 
@@ -247,36 +99,68 @@
 
 // Case Item
 
+.case-card {
+    background: transparent;
+}
+
+.case-card__cover {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: .7rem;
+}
+
+.case-card__title {
+    margin: .2rem 0 0;
+    text-wrap: balance;
+}
+
+.case-card__description {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.45;
+}
+
+.case-card__more {
+    justify-self: start;
+    min-height: 2.75rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
 .case-item {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: rem(0);
-    align-items: start;
-    margin-bottom: rem(24);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(8px);
-    overflow: hidden;
-    transition: box-shadow var(--transition);
-
-    @include hover {
-        box-shadow: var(--shadow-blue);
-    }
-
-    @include tablet {
-        grid-template-columns: 1fr 1.2fr;
-        margin-bottom: rem(16);
-    }
+    width: min(44rem, calc(100% - 2rem));
+    max-height: calc(100dvh - 2rem);
+    padding: 0;
+    overflow-y: auto;
+    scroll-behavior: auto;
 
     @include mobile {
-        grid-template-columns: 1fr;
-        margin-bottom: rem(12);
+        position: fixed;
+        inset: 0;
+        max-height: calc(100dvh - max(1rem, env(safe-area-inset-top)) - max(1rem, env(safe-area-inset-bottom)));
     }
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    color: var(--text);
+    overscroll-behavior: contain;
 
-    &:last-child {
-        margin-bottom: 0;
+    &::backdrop {
+        background: rgba(17, 33, 54, .42);
     }
+}
+
+.case-item__actions {
+    position: sticky;
+    top: 0;
+    z-index: 25;
+    display: flex;
+    justify-content: flex-end;
+    padding: .5rem 1rem;
+    background: var(--surface);
 }
 
 .case-item__images {
@@ -422,22 +306,13 @@
 }
 
 .case-item__label-text {
-    font-size: rem(14);
-    color: var(--text);
-    line-height: 1.6;
     margin: 0;
-
-    @include tablet {
-        font-size: rem(12);
-        line-height: 1.5;
-    }
-
-    @include mobile {
-        font-size: rem(13);
-    }
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.6;
 
     strong {
-        color: var(--text);
+        color: #215e9d;
         font-weight: 600;
     }
 }
@@ -469,16 +344,11 @@
     display: flex;
     align-items: center;
     gap: rem(6);
-    font-size: rem(12);
+    font-size: .875rem;
     color: var(--muted);
 
-    @include tablet {
-        font-size: rem(10);
-    }
-
-    svg {
+    img {
         flex-shrink: 0;
-        color: var(--accent);
     }
 }
 
@@ -542,6 +412,7 @@
     transform: translateX(-50%);
     z-index: 10;
     cursor: ew-resize;
+    touch-action: pan-y;
     user-select: none;
 }
 

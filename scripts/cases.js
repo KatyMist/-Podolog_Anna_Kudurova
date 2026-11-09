@@ -3,6 +3,7 @@
 class CaseImageToggle {
     constructor() {
         this.init();
+        this.initCaseDetails();
     }
 
     init() {
@@ -15,6 +16,27 @@ class CaseImageToggle {
 
         const galleries = document.querySelectorAll('.case-item__slides');
         galleries.forEach(slides => this.initGallery(slides));
+    }
+
+    initCaseDetails() {
+        const carousel = document.getElementById('cases-carousel');
+        if (!carousel) return;
+
+        carousel.querySelectorAll('.case-card').forEach(card => {
+            const button = card.querySelector('.case-card__more');
+            const dialog = card.querySelector('dialog');
+            button.addEventListener('click', () => dialog.showModal());
+        });
+
+        const openLinkedCase = () => {
+            const card = document.getElementById(location.hash.slice(1));
+            if (!card?.classList.contains('case-card')) return;
+            card.scrollIntoView({ block: 'nearest', inline: 'start' });
+            card.querySelector('.case-card__more').click();
+        };
+
+        window.addEventListener('hashchange', openLinkedCase);
+        openLinkedCase();
     }
 
     // ─── Слайдер до/после ─────────────────────────────────
@@ -51,8 +73,6 @@ class CaseImageToggle {
         wrapper.appendChild(divider);
         divider.style.left = '50%';
 
-        let isDragging = false;
-
         const updatePosition = (x) => {
             const rect = wrapper.getBoundingClientRect();
             let percent = ((x - rect.left) / rect.width) * 100;
@@ -61,13 +81,17 @@ class CaseImageToggle {
             divider.style.left = `${percent}%`;
         };
 
-        // Мышь и тач
-        divider.addEventListener('mousedown', (e) => { isDragging = true; e.preventDefault(); });
-        document.addEventListener('mouseup', () => { isDragging = false; });
-        document.addEventListener('mousemove', (e) => { if (isDragging) updatePosition(e.clientX); });
-        divider.addEventListener('touchstart', (e) => { isDragging = true; e.preventDefault(); });
-        document.addEventListener('touchend', () => { isDragging = false; });
-        document.addEventListener('touchmove', (e) => { if (isDragging) updatePosition(e.touches[0].clientX); });
+        divider.addEventListener('pointerdown', event => {
+            if (event.isPrimary && event.button === 0) {
+                divider.setPointerCapture(event.pointerId);
+            }
+        });
+
+        divider.addEventListener('pointermove', event => {
+            if (divider.hasPointerCapture(event.pointerId)) {
+                updatePosition(event.clientX);
+            }
+        });
 
         // Клавиатура
         divider.addEventListener('keydown', (e) => {

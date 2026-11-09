@@ -1,10 +1,20 @@
 @use '../helpers/index' as *;
+@use './btn' as button;
  
 .header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: var(--bg);
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-color: rgba(250, 252, 255, .88);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+    }
 }
  
 .header__inner {
@@ -16,6 +26,10 @@
     justify-content: space-between;
     column-gap: rem(32);
     height: rem(80);
+
+    @include mobile {
+        column-gap: rem(12);
+    }
 
     &::after {
         content: '';
@@ -51,25 +65,28 @@
         @include hide;
 
         position: fixed;
-        inset: rem(72) 0 0 0;
-        background-color: var(--bg);
-        padding: rem(24) rem(20);
-        transition: opacity var(--transition), visibility var(--transition);
+        inset: rem(80) 0 0;
+        padding: clamp(1rem, 5dvh, 3rem) max(1.25rem, var(--container-padding-x))
+            max(1.25rem, env(safe-area-inset-bottom));
+        background: linear-gradient(180deg, #fafcff, #edf4fc);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        transform: translateY(-.375rem);
+        transition: opacity var(--transition), visibility var(--transition), transform var(--transition);
 
         &.is-open {
             @include show;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
         }
     }
 }
 
-.header__btn {
-    flex-shrink: 0;
-    margin-left: auto;
-
-    @include mobile {
-        display: none;
-    }
-}
  
 .header__nav-list {
     display: flex;
@@ -78,8 +95,13 @@
 
     @include tablet {
         flex-direction: column;
-        align-items: flex-start;
-        row-gap: 0;
+        align-items: stretch;
+        width: 100%;
+        max-width: 32rem;
+
+        li + li {
+            border-top: 1px solid var(--border);
+        }
     }
 }
  
@@ -122,9 +144,18 @@
     @include tablet {
         display: block;
         width: 100%;
-        font-size: rem(18);
-        padding: rem(16) 0;
-        border-bottom: 1px solid var(--border);
+        font-size: rem(23);
+        line-height: 1.2;
+        padding: .75rem .125rem;
+
+        &.is-active {
+            color: #215e9d;
+            font-weight: 600;
+        }
+
+        &:focus-visible {
+            outline-offset: -2px;
+        }
  
         &::after {
             display: none;
@@ -134,14 +165,20 @@
  
 // ─── CTA Button ───────────────────────────────────────────
  
-.header__btn {
+.header__btn.btn {
     flex-shrink: 0;
- 
+    justify-content: center;
+    min-height: rem(44);
+    padding: rem(8) rem(22);
+    font-size: rem(18);
+    @include button.outline;
+
     @include mobile {
-        display: none; // на мобиле кнопка уходит внутрь меню
+        padding-inline: rem(14);
+        font-size: rem(16);
     }
 }
- 
+
 // ─── Burger ───────────────────────────────────────────────
  
 .burger {
@@ -164,7 +201,7 @@
             height: rem(1.5);
             background-color: var(--text);
             border-radius: rem(2);
-            transition: width var(--transition), background-color var(--transition);
+            transition: width var(--transition), background-color var(--transition), transform var(--transition), opacity var(--transition);
  
             &:nth-child(1) { width: rem(18); }
             &:nth-child(2) { width: rem(12); }
@@ -185,7 +222,17 @@
             background-color: var(--accent);
             border-color: var(--accent);
  
-            span { background-color: #fff; }
+            span {
+                background-color: #fff;
+
+                &:nth-child(1) { transform: translateY(.40625rem) rotate(45deg); }
+                &:nth-child(2) { opacity: 0; }
+                &:nth-child(3) { transform: translateY(-.40625rem) rotate(-45deg); }
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            span { transition: none; }
         }
     }
 }

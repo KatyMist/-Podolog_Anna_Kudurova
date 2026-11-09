@@ -404,6 +404,33 @@
     color: var(--accent);
 }
  
+@media (prefers-reduced-motion: no-preference) {
+    .about-teaching__desc,
+    .about-teaching__card p:nth-child(2),
+    .about-hero__content > :nth-child(2),
+    .about-hero__content > :nth-child(4),
+    .about-pro__text:nth-of-type(odd),
+    .about-trust__item:nth-child(3n + 2),
+    .about-approach__left > :nth-child(2),
+    .about-approach__right > :nth-child(2) {
+        transition-delay: .18s;
+    }
+
+    .about-teaching__card p:nth-child(3),
+    .about-hero__content > :nth-child(3),
+    .about-hero__content > :nth-child(5),
+    .about-trust__item:nth-child(3n),
+    .about-approach__left > :nth-child(3),
+    .about-approach__right > :nth-child(3) {
+        transition-delay: .36s;
+    }
+
+    .about-teaching__card p:nth-child(4),
+    .about-approach__footer {
+        transition-delay: .54s;
+    }
+}
+
 // Pro
  
 .about-pro {
@@ -474,6 +501,7 @@
  
 .about-approach {
     padding-block: rem(48);
+    margin-block-end: clamp(1rem, 3vw, 1.75rem);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     position: relative;

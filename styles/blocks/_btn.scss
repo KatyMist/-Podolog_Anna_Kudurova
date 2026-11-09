@@ -1,5 +1,23 @@
 @use '../helpers/index' as *;
 
+$outline-color: #215e9d;
+
+@mixin outline($background: rgba(235, 244, 255, .55)) {
+    border: 1px solid rgba($outline-color, .38);
+    border-radius: rem(10);
+    background: $background;
+    color: $outline-color;
+    transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+
+    @include hover {
+        border-color: $outline-color;
+        background-color: $outline-color;
+        color: #fff;
+        box-shadow: none;
+        transform: none;
+    }
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -30,20 +48,5 @@
     @include mobile {
         padding: rem(10) rem(16);
         font-size: rem(14);
-    }
-}
-
-.btn__arrow {
-    width: rem(26);
-    height: rem(26);
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    @include flex-center;
-    font-size: rem(13);
-
-    @include tablet {
-        width: rem(22);
-        height: rem(22);
-        font-size: rem(11);
     }
 }

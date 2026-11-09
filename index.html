@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Подолог Анна Кудурова в Ульяновске | Подология и лечение стоп</title>
+    <title>Подолог в Ульяновске — Анна Кудурова | Подология и педикюр</title>
 
     <!-- Open Graph теги для соцсетей -->
-    <meta name="description" content="Школа — студия подологии Анны Кудуровой. Лечение вросших ногтей, онихомикоза, грибков. Консультация подолога, педикюр, обучение специалистов.">
-    <meta property="og:title" content="Школа — студия подологии Анны Кудуровой">
-    <meta property="og:description" content="Профессиональное лечение проблем стоп: вросшие ногти, грибок, мозоли. Опытный подолог в Ульяновске.">
+    <meta name="description" content="Анна Кудурова, подолог в Ульяновске. Консультации, подологический уход за стопами и ногтями, педикюр и обучение. Приём по записи на ул. Азовской, 64.">
+    <meta property="og:title" content="Подолог в Ульяновске — Анна Кудурова">
+    <meta property="og:description" content="Консультации подолога Анны Кудуровой, уход за стопами и ногтями, педикюр и обучение в Ульяновске.">
     <meta property="og:image" content="/images/Main.jpg">
     
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
     <link rel="canonical" href="https://annakudurova.ru/">
     
     <script src="./scripts/main.js" type="module" defer></script>
@@ -23,9 +24,9 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Школа-студия подологии и здоровой эстетики Анны Кудуровой",
-        "description": "Профессиональная подология, педикюр, маникюр и обучение специалистов",
-        "telephone": "+7(995)335-78-08",
-        "url": "https://annakudurova.ru",
+        "description": "Студия подолога Анны Кудуровой в Ульяновске: подология, педикюр, маникюр и обучение специалистов",
+        "telephone": "+79953357808",
+        "url": "https://annakudurova.ru/",
         "image": "https://annakudurova.ru/images/Main.jpg",
         "address": {
             "@type": "PostalAddress",
@@ -106,20 +107,7 @@
 
 
 
-<body>
-    <!-- Секция "экран загрузки" -->
-    <div class="preloader" id="preloader">
-        <div class="preloader__inner">
-            <img src="./icons/AK.svg" alt="АК" class="preloader__logo-img" width="120" height="120">
-            <p class="preloader__school">Школа подологии и здоровой эстетики<br>Анны Кудуровой</p>
-            <p class="preloader__dots">Подолог · Инструктор · Спикер</p>
-            <div class="preloader__bar-wrap">
-                <div class="preloader__bar" id="preloaderBar"></div>
-            </div>
-            <span class="preloader__percent" id="preloaderPercent">0%</span>
-        </div>
-    </div>
-
+<body class="home-page">
     <div class="cursor" id="cursor"></div>
     
     <header class="header"> 
@@ -140,7 +128,6 @@
     
             <a href="https://vk.com/im?sel=708439222" class="header__btn btn" target="_blank" rel="noopener noreferrer">
                 Записаться
-                <span class="btn__arrow" aria-hidden="true">→</span>
             </a>
     
             <button
@@ -158,82 +145,37 @@
 
     </header>
  
-        <section class="hero">
-            <div class="hero__inner container">
-        
-                <div class="hero__content">
-                    <p class="hero__label">
-                        Школа — студия подологии и здоровой эстетики<br>
-                        Анны Кудуровой
-                    </p>
-                    
-                    <h1 class="hero__title">
-                        Всё начинается<br>
-                        со стоп
-                    </h1>
-        
-                    <p class="hero__desc">Работаем со сложными случаями</p>
-        
-                    <a href="#services" class="hero__more">
-                        Узнать больше
-                        <span class="hero__more-icon" aria-hidden="true">↓</span>
-                    </a>
-                </div>
-        
-                <div class="hero__image">
-                    <img src="./images/Main.jpg" alt="Анна Кудурова — подолог">
-                </div>
-        
-        
-            </div>
-        
-            <div class="hero__cards container">
-                <div class="hero__card"> <!-- цвет svg #5fa3e8 -->
-                    <span class="hero__card-icon" aria-hidden="true">
-                        <img src="./icons/foot.svg" alt="Индивидуальный подход" width="38" height="38" fill="none">
-                    </span>
-                    <p class="hero__card-text">Индивидуальный подход</p>
-                </div>
-                <div class="hero__card"> 
-                    <span class="hero__card-icon" aria-hidden="true">
-                        <img src="./icons/shield.svg" alt="Работа с первопричиной" width="38" height="38" fill="none">
-                    </span>
-                    <p class="hero__card-text">Работаем с первопричиной</p>
-                </div>
-                <div class="hero__card">
-                    <span class="hero__card-icon" aria-hidden="true">
-                        <img src="./icons/stylishly.svg" alt="Безопасность и стерильность" width="38" height="38" fill="none">
-
-                    </span>
-                    <p class="hero__card-text">Безопасность и стерильность</p>
-                </div>
+        <section class="home-intro" aria-labelledby="home-title">
+            <div class="home-intro__content container">
+                <p class="hero__label home-intro__label">
+                    <span class="home-intro__studio">Школа — студия подологии и здоровой эстетики</span>
+                    <span class="home-school-name">Анны Кудуровой</span>
+                </p>
+                <h1 class="home-intro__title" id="home-title">
+                    <span class="home-intro__lead">Всё начинается</span>
+                    <span class="home-title-accent">со стоп</span>
+                </h1>
             </div>
         </section>
 
-        <section class="why">
-            <!-- Верхний блок -->
-            <div class="why__top">
-                <div class="why__container container">
-                    <h2 class="why__title">Почему выбирают меня</h2>
-        
-                    <div class="why__items">
-                        <div class="why__item">
-                            <img class="why__icon" src="./icons/cap.svg" alt="Опыт и квалификация" width="48" height="48">
-                            <h3 class="why__item-title">Опыт и квалификация</h3>
-                            <p class="why__item-desc">Регулярно повышаю уровень знаний и работаю по современным методикам</p>
-                        </div>
-        
-                        <div class="why__item">
-                            <img class="why__icon" src="./icons/glass.svg" alt="Внимательное изучение вашего случая" width="48" height="48">
-                            <h3 class="why__item-title">Индивидуальный подход</h3>
-                            <p class="why__item-desc">Каждая процедура под ваши особенности</p>
-                        </div>
-        
-                        <div class="why__item">
-                            <img class="why__icon" src="./icons/heart.svg" alt="Комфорт и забота" width="48" height="48">
-                            <h3 class="why__item-title">Комфорт</h3>
-                            <p class="why__item-desc">Без боли, спешки и дискомфорта</p>
-                        </div>
+        <section class="why" aria-labelledby="why-title">
+            <div class="why__container container">
+                <h2 class="why__title" id="why-title"><span>Почему выбирают меня</span></h2>
+
+                <div class="why__items">
+                    <div class="why__item">
+                        <h3 class="why__item-title"><span>Опыт и квалификация</span></h3>
+                        <p class="why__item-desc"><span>Регулярно повышаю уровень знаний и&nbsp;работаю по современным методикам</span></p>
+                    </div>
+
+                    <div class="why__item">
+                        <h3 class="why__item-title"><span>Индивидуальный подход</span></h3>
+                        <p class="why__item-desc"><span>Каждая процедура под ваши особенности</span></p>
+                    </div>
+
+                    <div class="why__item">
+                        <h3 class="why__item-title"><span>Комфорт</span></h3>
+                        <p class="why__item-desc"><span>Без боли, спешки и дискомфорта</span></p>
                     </div>
                 </div>
             </div>
@@ -243,80 +185,56 @@
         <section class="help" id="services">
             <div class="help__inner container">
 
-                <!-- Левая часть -->
                 <div class="help__content">
-                    <p class="help__label">Услуги</p>
-                    <h2 class="help__title">Чем я могу<br>вам помочь</h2>
-                    <div class="help__accent-line"></div>
-                    <p class="help__desc">Комплексный уход за стопами и ногтями для вашего комфорта и здоровья.</p>
-                    <a href="./services.html" class="help__link">
-                        Все услуги
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
+                    <div>
+                        <p class="help__label">Услуги</p>
+                        <h2 class="help__title">Чем я могу вам помочь</h2>
+                    </div>
                 </div>
 
-                <!-- Правая часть — скролл лента -->
-                <div class="help__scroll-wrap">
-                    <div class="help__scroll">
+                <div class="help__scroll-wrap" data-carousel>
+                    <div class="help__scroll" id="services-carousel" role="region" aria-label="Направления услуг" tabindex="0">
 
                         <a href="./services.html?category=podology" class="help__card" data-category="podology">
+                            <span class="help__card-number" aria-hidden="true">01 / 04</span>
+                            <span class="help__card-title">Подология</span>
                             <div class="help__card-image">
-                                <img src="./images/services/17.jpg" alt="Подология">
+                                <img src="./images/services/17.jpg" alt="" loading="lazy">
                             </div>
-                            <div class="help__card-footer">
-                                <span class="help__card-title">Подология</span>
-                                <span class="help__card-btn" aria-hidden="true">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                        <path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
-                            </div>
+                            <span class="help__card-footer">Подробнее</span>
                         </a>
 
                         <a href="./services.html?category=pedicure" class="help__card" data-category="pedicure">
+                            <span class="help__card-number" aria-hidden="true">02 / 04</span>
+                            <span class="help__card-title">Педикюр</span>
                             <div class="help__card-image">
-                                <img src="./images/services/5.1.jpg" alt="Педикюр">
+                                <img src="./images/services/5.1.jpg" alt="" loading="lazy">
                             </div>
-                            <div class="help__card-footer">
-                                <span class="help__card-title">Педикюр</span>
-                                <span class="help__card-btn" aria-hidden="true">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                        <path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
-                            </div>
+                            <span class="help__card-footer">Подробнее</span>
                         </a>
 
                         <a href="./services.html?category=manicure" class="help__card" data-category="manicure">
+                            <span class="help__card-number" aria-hidden="true">03 / 04</span>
+                            <span class="help__card-title">Маникюр</span>
                             <div class="help__card-image">
-                                <img src="./images/services/manicure.jpg" alt="Маникюр">
+                                <img src="./images/services/manicure.jpg" alt="" loading="lazy">
                             </div>
-                            <div class="help__card-footer">
-                                <span class="help__card-title">Маникюр</span>
-                                <span class="help__card-btn" aria-hidden="true">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                        <path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
-                            </div>
+                            <span class="help__card-footer">Подробнее</span>
                         </a>
 
                         <a href="./services.html?category=education" class="help__card" data-category="education">
+                            <span class="help__card-number" aria-hidden="true">04 / 04</span>
+                            <span class="help__card-title">Обучение</span>
                             <div class="help__card-image">
-                                <img src="./images/services/Promotion.jpg" alt="Обучение">
+                                <img src="./images/services/Promotion.jpg" alt="" loading="lazy">
                             </div>
-                            <div class="help__card-footer">
-                                <span class="help__card-title">Обучение</span>
-                                <span class="help__card-btn" aria-hidden="true">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                        <path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
-                            </div>
+                            <span class="help__card-footer">Подробнее</span>
                         </a>
 
+                    </div>
+                    <div class="help__controls" hidden>
+                        <button type="button" aria-controls="services-carousel" data-carousel-step="-1">Назад</button>
+                        <button type="button" aria-controls="services-carousel" data-carousel-step="1">Далее</button>
                     </div>
                 </div>
 
@@ -324,202 +242,211 @@
         </section>
 
         <!-- Секция "Результаты" -->
-        <section class="results" id="cases">
-            <div class="results__inner container">
-                <img src="./images/F3.png" alt="" class="results__decor-img">
+        <section class="help results" id="cases" aria-labelledby="results-title">
+            <div class="help__inner container">
                 
-                <!-- Левая часть -->
-                <div class="results__content">
-                    <p class="results__label">Результаты клиентов</p>
-                    <h2 class="results__title">Реальные изменения</br> до и после</h2>
+                <div class="help__content">
+                    <img src="./images/F3.png" alt="" class="results__decor-img" loading="lazy">
+                    <p class="help__label">Результаты клиентов</p>
+                    <h2 class="help__title" id="results-title">Реальные изменения до и после</h2>
                     <p class="results__desc">Посмотрите, каких результатов мы добиваемся вместе с нашими клиентами.</p>
                     <a href="./cases.html" class="results__link">
                         Смотреть все кейсы
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
                     </a>
                 </div>
 
-                <!-- Правая часть — скролл лента -->
-                <div class="results__scroll-wrap">
-                    <div class="results__scroll">
+                <div class="help__scroll-wrap" data-carousel>
+                    <div class="help__scroll" id="results-carousel" role="region" aria-label="Кейсы до и после" tabindex="0">
 
-                        <a href="./cases.html#first-case" class="results__card">
-                            <div class="results__card-images">
+                        <a href="./cases.html#first-case" class="help__card results__card">
+                            <span class="help__card-number" aria-hidden="true">01 / 10</span>
+                            <div class="results__card-info">
+                                <p class="help__card-title">Обработка стопы после применения пластыря "салипод"</p>
+                            </div>
+                            <div class="help__card-image results__card-images">
                                 <div class="results__card-before">
-                                    <img src="./images/cases/Foot_1.png" alt="До: стопа с проблемой после применения пластыря салипод">
+                                    <img loading="lazy" src="./images/cases/Foot_1.png" alt="До: стопа с проблемой после применения пластыря салипод">
                                     <span class="results__card-tag results__card-tag--before">До</span>
                                 </div>
                                 <div class="results__card-after">
-                                    <img src="./images/cases/Foot_2.png" alt="После: обработанная стопа без проблем">
+                                    <img loading="lazy" src="./images/cases/Foot_2.png" alt="После: обработанная стопа без проблем">
                                     <span class="results__card-tag results__card-tag--after">После</span>
                                 </div>
                             </div>
-                            <div class="results__card-info">
-                                <p class="results__card-title">Обработка стопы после применения пластыря "салипод"</p>
-                                <span class="results__card-link">Подробнее →</span>
-                            </div>
+                            <span class="help__card-footer">Подробнее</span>
                         </a>
 
-                        <a href="./cases.html#second-case" class="results__card">
-                            <div class="results__card-images">
+                        <a href="./cases.html#second-case" class="help__card results__card">
+                            <span class="help__card-number" aria-hidden="true">02 / 10</span>
+                            <div class="results__card-info">
+                                <p class="help__card-title">Грибковая инфекция ногтевой пластины</p>
+                            </div>
+                            <div class="help__card-image results__card-images">
                                 <div class="results__card-before">
-                                    <img src="./images/cases/2.1.png" alt="До: ноготь с грибковой инфекцией">
+                                    <img loading="lazy" src="./images/cases/2.1.png" alt="До: ноготь с грибковой инфекцией">
                                     <span class="results__card-tag results__card-tag--before">До</span>
                                 </div>
                                 <div class="results__card-after">
-                                    <img src="./images/cases/2.6.png" alt="После: восстановленный здоровый ноготь">
+                                    <img loading="lazy" src="./images/cases/2.6.png" alt="После: восстановленный здоровый ноготь">
                                     <span class="results__card-tag results__card-tag--after">После</span>
                                 </div>
                             </div>
-                            <div class="results__card-info">
-                                <p class="results__card-title">Грибковая инфекция ногтевой пластины</p>
-                                <span class="results__card-link">Подробнее →</span>
-                            </div>
+                            <span class="help__card-footer">Подробнее</span>
                         </a>
 
-                        <a href="./cases.html#third-case" class="results__card">
-                            <div class="results__card-images">
+                        <a href="./cases.html#third-case" class="help__card results__card">
+                            <span class="help__card-number" aria-hidden="true">03 / 10</span>
+                            <div class="results__card-info">
+                                <p class="help__card-title">Обработка вросшего ногтя, коррекция ногтевой пластины</p>
+                            </div>
+                            <div class="help__card-image results__card-images">
                                 <div class="results__card-before">
-                                    <img src="./images/cases/3.1.png" alt="До: вросший ноготь с проблемой">
+                                    <img loading="lazy" src="./images/cases/3.1.png" alt="До: вросший ноготь с проблемой">
                                     <span class="results__card-tag results__card-tag--before">До</span>
                                 </div>
                                 <div class="results__card-after">
-                                    <img src="./images/cases/3.5.png" alt="После: откорректированный ноготь">
+                                    <img loading="lazy" src="./images/cases/3.5.png" alt="После: откорректированный ноготь">
                                     <span class="results__card-tag results__card-tag--after">После</span>
                                 </div>
                             </div>
-                            <div class="results__card-info">
-                                <p class="results__card-title">Обработка вросшего ногтя, коррекция ногтевой пластины</p>
-                                <span class="results__card-link">Подробнее →</span>
-                            </div>
+                            <span class="help__card-footer">Подробнее</span>
                         </a>
 
-                        <a href="./cases.html#fourth-case" class="results__card">
-                            <div class="results__card-images">
+                        <a href="./cases.html#fourth-case" class="help__card results__card">
+                            <span class="help__card-number" aria-hidden="true">04 / 10</span>
+                            <div class="results__card-info">
+                                <p class="help__card-title">Обработка вросшего ноготя и работа с деформацией ногтевой пластины</p>
+                            </div>
+                            <div class="help__card-image results__card-images">
                                 <div class="results__card-before">
-                                    <img src="./images/cases/4.1.png" alt="До: вросший и деформированный ноготь">
+                                    <img loading="lazy" src="./images/cases/4.1.png" alt="До: вросший и деформированный ноготь">
                                     <span class="results__card-tag results__card-tag--before">До</span>
                                 </div>
                                 <div class="results__card-after">
-                                    <img src="./images/cases/4.5.png" alt="После: выпрямленный ноготь после работы">
+                                    <img loading="lazy" src="./images/cases/4.5.png" alt="После: выпрямленный ноготь после работы">
                                     <span class="results__card-tag results__card-tag--after">После</span>
                                 </div>
                             </div>
-                            <div class="results__card-info">
-                                <p class="results__card-title">Обработка вросшего ноготя и работа с деформацией ногтевой пластины</p>
-                                <span class="results__card-link">Подробнее →</span>
-                            </div>
+                            <span class="help__card-footer">Подробнее</span>
                         </a>
 
-                        <a href="./cases.html#fifth-case" class="results__card">
-                            <div class="results__card-images">
-                                <div class="results__card-before">
-                                    <img src="./images/cases/5.1.png" alt="До: стержневая мозоль на стопе">
-                                    <span class="results__card-tag results__card-tag--before">До</span>
-                                </div>
-                                <div class="results__card-after">
-                                    <img src="./images/cases/5.3.png" alt="После: удаленная мозоль, здоровая кожа">
-                                    <span class="results__card-tag results__card-tag--after">После</span>
-                                </div>
-                            </div>
+                        <a href="./cases.html#fifth-case" class="help__card results__card">
+                            <span class="help__card-number" aria-hidden="true">05 / 10</span>
                             <div class="results__card-info">
-                                <p class="results__card-title">Обработка стержневой мозоли</p>
+                                <p class="help__card-title">Обработка стержневой мозоли</p>
                                 <p class="results__card-duration">Периодичность обращений: в среднем 1 раз в 3–4 месяца.</p>
-                                <span class="results__card-link">Подробнее →</span>
                             </div>
-                        </a>
-
-                        <a href="./cases.html#sixth-case" class="results__card">
-                            <div class="results__card-images">
+                            <div class="help__card-image results__card-images">
                                 <div class="results__card-before">
-                                    <img src="./images/cases/6.1.png" alt="До: травматический онихолизис ногтя">
+                                    <img loading="lazy" src="./images/cases/5.1.png" alt="До: стержневая мозоль на стопе">
                                     <span class="results__card-tag results__card-tag--before">До</span>
                                 </div>
                                 <div class="results__card-after">
-                                    <img src="./images/cases/6.4.png" alt="После: восстановленная ногтевая пластина">
+                                    <img loading="lazy" src="./images/cases/5.3.png" alt="После: удаленная мозоль, здоровая кожа">
                                     <span class="results__card-tag results__card-tag--after">После</span>
                                 </div>
                             </div>
+                            <span class="help__card-footer">Подробнее</span>
+                        </a>
+
+                        <a href="./cases.html#sixth-case" class="help__card results__card">
+                            <span class="help__card-number" aria-hidden="true">06 / 10</span>
                             <div class="results__card-info">
-                                <p class="results__card-title">Травматический онихолизис, восстановление</p>
+                                <p class="help__card-title">Травматический онихолизис, восстановление</p>
                                 <p class="results__card-duration">Срок восстановления: около 4 месяцев. Количество процедур: 4.</p>
-                                <span class="results__card-link">Подробнее →</span>
                             </div>
-                        </a>
-
-                        <a href="./cases.html#case-seven" class="results__card">
-                            <div class="results__card-images">
+                            <div class="help__card-image results__card-images">
                                 <div class="results__card-before">
-                                    <img src="./images/cases/7.1.png" alt="До: мозоли и гиперкератоз стопы">
+                                    <img loading="lazy" src="./images/cases/6.1.png" alt="До: травматический онихолизис ногтя">
                                     <span class="results__card-tag results__card-tag--before">До</span>
                                 </div>
                                 <div class="results__card-after">
-                                    <img src="./images/cases/7.9.png" alt="После: очищенная стопа без мозолей">
+                                    <img loading="lazy" src="./images/cases/6.4.png" alt="После: восстановленная ногтевая пластина">
                                     <span class="results__card-tag results__card-tag--after">После</span>
                                 </div>
                             </div>
+                            <span class="help__card-footer">Подробнее</span>
+                        </a>
+
+                        <a href="./cases.html#case-seven" class="help__card results__card">
+                            <span class="help__card-number" aria-hidden="true">07 / 10</span>
                             <div class="results__card-info">
-                                <p class="results__card-title">Обработка мозолей и гиперкератоза переднего отдела стопы</p>
+                                <p class="help__card-title">Обработка мозолей и гиперкератоза переднего отдела стопы</p>
                                 <p class="results__card-duration">Периодичность сопровождения: 1 раз в месяц.</p>
-                                <span class="results__card-link">Подробнее →</span>
                             </div>
-                        </a>
-
-                        <a href="./cases.html#case-eight" class="results__card">
-                            <div class="results__card-images">
+                            <div class="help__card-image results__card-images">
                                 <div class="results__card-before">
-                                    <img src="./images/cases/8.1.png" alt="До: деформированная ногтевая пластина">
+                                    <img loading="lazy" src="./images/cases/7.1.png" alt="До: мозоли и гиперкератоз стопы">
                                     <span class="results__card-tag results__card-tag--before">До</span>
                                 </div>
                                 <div class="results__card-after">
-                                    <img src="./images/cases/8.5.png" alt="После: восстановленный ноготь после 7 месяцев">
+                                    <img loading="lazy" src="./images/cases/7.9.png" alt="После: очищенная стопа без мозолей">
                                     <span class="results__card-tag results__card-tag--after">После</span>
                                 </div>
                             </div>
+                            <span class="help__card-footer">Подробнее</span>
+                        </a>
+
+                        <a href="./cases.html#case-eight" class="help__card results__card">
+                            <span class="help__card-number" aria-hidden="true">08 / 10</span>
                             <div class="results__card-info">
-                                <p class="results__card-title">Восстановление ногтевой пластины и подологическое сопровождение при деформации ногтя</p>
+                                <p class="help__card-title">Восстановление ногтевой пластины и подологическое сопровождение при деформации ногтя</p>
                                 <p class="results__card-duration">Срок восстановления: около 7 месяцев. Периодичность процедур: 1 раз в месяц.</p>
-                                <span class="results__card-link">Подробнее →</span>
                             </div>
-                        </a>
-
-                        <a href="./cases.html#ninth-case" class="results__card">
-                            <div class="results__card-images">
+                            <div class="help__card-image results__card-images">
                                 <div class="results__card-before">
-                                    <img src="./images/cases/9.1.png" alt="До: травматический онихолизис с отслойкой">
+                                    <img loading="lazy" src="./images/cases/8.1.png" alt="До: деформированная ногтевая пластина">
                                     <span class="results__card-tag results__card-tag--before">До</span>
                                 </div>
                                 <div class="results__card-after">
-                                    <img src="./images/cases/9.5.png" alt="После: протезированный ноготь">
+                                    <img loading="lazy" src="./images/cases/8.5.png" alt="После: восстановленный ноготь после 7 месяцев">
                                     <span class="results__card-tag results__card-tag--after">После</span>
                                 </div>
                             </div>
+                            <span class="help__card-footer">Подробнее</span>
+                        </a>
+
+                        <a href="./cases.html#ninth-case" class="help__card results__card">
+                            <span class="help__card-number" aria-hidden="true">09 / 10</span>
                             <div class="results__card-info">
-                                <p class="results__card-title">Протезирование ногтевой пластины при травматическом онихолизисе</p>
+                                <p class="help__card-title">Протезирование ногтевой пластины при травматическом онихолизисе</p>
                                 <p class="results__card-duration">Количество визитов: 2</p>
-                                <span class="results__card-link">Подробнее →</span>
                             </div>
-                        </a>
-
-                        <a href="./cases.html#tenth-case" class="results__card">
-                            <div class="results__card-images">
+                            <div class="help__card-image results__card-images">
                                 <div class="results__card-before">
-                                    <img src="./images/cases/10.3.png" alt="До: онихолизис с травматическим повреждением">
+                                    <img loading="lazy" src="./images/cases/9.1.png" alt="До: травматический онихолизис с отслойкой">
                                     <span class="results__card-tag results__card-tag--before">До</span>
                                 </div>
                                 <div class="results__card-after">
-                                    <img src="./images/cases/10.11.png" alt="После: протезированная ногтевая пластина">
+                                    <img loading="lazy" src="./images/cases/9.5.png" alt="После: протезированный ноготь">
                                     <span class="results__card-tag results__card-tag--after">После</span>
                                 </div>
                             </div>
-                            <div class="results__card-info">
-                                <p class="results__card-title">Протезирование ногтевой пластины при травматическом онихолизисе.</p>
-                                <span class="results__card-link">Подробнее →</span>
-                            </div>
+                            <span class="help__card-footer">Подробнее</span>
                         </a>
 
+                        <a href="./cases.html#tenth-case" class="help__card results__card">
+                            <span class="help__card-number" aria-hidden="true">10 / 10</span>
+                            <div class="results__card-info">
+                                <p class="help__card-title">Протезирование ногтевой пластины при травматическом онихолизисе.</p>
+                            </div>
+                            <div class="help__card-image results__card-images">
+                                <div class="results__card-before">
+                                    <img loading="lazy" src="./images/cases/10.3.png" alt="До: онихолизис с травматическим повреждением">
+                                    <span class="results__card-tag results__card-tag--before">До</span>
+                                </div>
+                                <div class="results__card-after">
+                                    <img loading="lazy" src="./images/cases/10.11.png" alt="После: протезированная ногтевая пластина">
+                                    <span class="results__card-tag results__card-tag--after">После</span>
+                                </div>
+                            </div>
+                            <span class="help__card-footer">Подробнее</span>
+                        </a>
+
+                    </div>
+                    <div class="help__controls" hidden>
+                        <button type="button" aria-controls="results-carousel" data-carousel-step="-1">Назад</button>
+                        <button type="button" aria-controls="results-carousel" data-carousel-step="1">Далее</button>
                     </div>
                 </div>
 
@@ -544,24 +471,19 @@
 
             <!-- Телефон и соцсети -->
             <div class="footer__contacts">
-                <a href="tel:+79041838568" class="footer__phone">
+                <a href="tel:+79953357808" class="footer__phone">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                         <path d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor"/>
                     </svg>
                     +7 (995) 335-78-08
                 </a>
                 <p class="footer__schedule">Ежедневно 10:00 — 20:00</p>
+                <a class="footer__schedule" href="./contacts.html">Ульяновск, ул. Азовская, 64</a>
 
                 <div class="footer__socials">
-                    <a href="https://vk.com/im?sel=708439222" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">
-                        <img src="./icons/contacts/vk.svg" alt="VK" width="20" height="20">
-                    </a>
-                    <a href="https://t.me/podolog_anna_kudurova_ul" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-                        <img src="./icons/contacts/telegram.svg" alt="Telegram" width="20" height="20">
-                    </a>
-                    <a href="https://max.ru/u/f9LHodD0cOKuqBhmrnhg5dCg-Mo-H_g73IvKzCMbZ4Sr70a2YdIQnEO0F1E" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="MAX">
-                        <img src="./icons/contacts/max.svg" alt="MAX" width="20" height="20">
-                    </a>
+                    <a href="https://vk.com/im?sel=708439222" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">ВК</a>
+                    <a href="https://t.me/podolog_anna_kudurova_ul" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="Telegram">Telegram</a>
+                    <a href="https://max.ru/u/f9LHodD0cOKuqBhmrnhg5dCg-Mo-H_g73IvKzCMbZ4Sr70a2YdIQnEO0F1E" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="MAX">MAX</a>
                 </div>
             </div>
 
@@ -576,7 +498,7 @@
             <a href="https://katymist.github.io/Portfolio/" class="footer__dev" target="_blank" rel="noopener noreferrer">
                 <div class="footer__dev-info">
                     <p class="footer__dev-name">Екатерина Туманова</p>
-                    <p class="footer__dev-skills">Frontend Developer & Designer</p>
+                    <p class="footer__dev-skills">Frontend Developer<br>&amp;&nbsp;Designer</p>
                 </div>
             </a>
 

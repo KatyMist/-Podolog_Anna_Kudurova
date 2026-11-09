@@ -1,294 +1,157 @@
 @use '../helpers/index' as *;
 
-// Help
-
 .help {
-    padding-block: rem(40);  
-    position: relative;
-    overflow: hidden;
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: rem(-20);
-        left: rem(-40);
-        width: rem(500);
-        height: rem(500);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        opacity: 0.25;
-        pointer-events: none;
-        z-index: 0;
-
-        @include tablet {
-            width: rem(300);
-            height: rem(300);
-            left: rem(-80);
-            bottom: rem(-60);
-        }
-
-        @include mobile {
-            display: none;
-        }
-    }
-
-    @include tablet { padding-block: rem(20); } 
-    @include mobile { padding-block: rem(12); }
+    padding-block: clamp(3rem, 7vw, 6rem);
 }
 
 .help__inner {
-    display: grid;
-    grid-template-columns: rem(280) 1fr;
-    align-items: center;
-    gap: rem(48);
-    position: relative;
-    z-index: 1;
-
-    @include tablet {
-        grid-template-columns: rem(280) 1fr;
-    }
-
-     @include mobile {
-        grid-template-columns: 1fr;
-        gap: rem(12);
-    }
+    max-width: 76rem;
 }
 
-// Content
-
 .help__content {
-    display: flex;
-    flex-direction: column;
-    gap: rem(16);
-
-    @include tablet { gap: rem(12); }
-
-    @include mobile {
-        padding-inline: rem(12);
-        text-align: center;
-        align-items: center;
-        gap: rem(10);
-    }
+    margin-bottom: clamp(1.75rem, 4vw, 3.25rem);
 }
 
 .help__label {
-    font-size: rem(12);
+    margin: 0 0 .65rem;
+    color: #215e9d;
+    font-size: .9rem;
     font-weight: 500;
-    letter-spacing: 0.1em;
+    letter-spacing: .12em;
     text-transform: uppercase;
-    color: var(--accent);
 }
 
 .help__title {
-    @include fluid-text(44, 28);
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
+    margin: 0;
     color: var(--text);
-    line-height: 1.15;
-
-    @include tablet { font-size: rem(28); }
-    @include mobile { font-size: rem(24); }
-}
-
-.help__accent-line {
-    width: rem(3);
-    height: rem(32);
-    background-color: var(--accent);
-    border-radius: rem(2);
-
-    @include tablet { display: none; }
-}
-
-.help__desc {
-    font-size: rem(15);
-    color: var(--muted);
-    line-height: 1.7;
-
-    @include mobile {
-        font-size: rem(14);
-        line-height: 1.5;
-    }
-}
-
-.help__link {
-    display: inline-flex;
-    align-items: center;
-    gap: rem(8);
-    font-size: rem(15);
+    font-size: clamp(2.6rem, 4.6vw, 4.5rem);
     font-weight: 500;
-    color: var(--accent);
-    text-decoration: none;
-    margin-top: rem(4);
-    transition: gap var(--transition);
-
-    @include hover { gap: rem(14); }
-
-    @include mobile {
-        font-size: rem(14);
-        margin-top: rem(2);
-    }
-}
-
-// Scroll wrap
-
-.help__scroll-wrap {
-    overflow: hidden;
-    mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        black 5%,
-        black 90%,
-        transparent 100%
-    );
-    -webkit-mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        black 5%,
-        black 90%,
-        transparent 100%
-    );
-
-    @include tablet {
-        padding-inline: rem(0);
-    }
-
-    @include mobile {
-        width: 100%;
-        padding-inline: 0;
-    }
+    line-height: 1.02;
 }
 
 .help__scroll {
     display: flex;
-    gap: rem(16);
+    --help-card-gap: clamp(1.25rem, 3vw, 2.5rem);
+    gap: var(--help-card-gap);
     overflow-x: auto;
-    padding-block: rem(8);
-    padding-inline: rem(20);
+    padding: .35rem .35rem 1rem;
+    scroll-padding-inline: .35rem;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(33, 94, 157, .28) transparent;
+}
 
-    &::-webkit-scrollbar { display: none; }
+.help__card {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    align-items: start;
+    gap: .55rem;
+    flex: 0 0 calc((100% - 2 * var(--help-card-gap)) / 3);
+    min-width: 0;
+    padding: clamp(.875rem, 1.7vw, 1.25rem);
+    border: 1px solid var(--border);
+    border-radius: 1.1rem;
+    background: var(--surface);
+    scroll-snap-align: start;
 
     @include tablet {
-        padding-inline: rem(0);
+        flex-basis: calc((100% - var(--help-card-gap)) / 2);
     }
 
     @include mobile {
-        flex-direction: row;
-        overflow-x: auto;
-        padding-inline: rem(12);
-        padding-block: rem(4);
-        gap: rem(8);
+        flex-basis: 100%;
+    }
+
+    @include hover {
+        .help__card-image img {
+            transform: scale(1.045);
+        }
+
+        .help__card-footer {
+            color: var(--text);
+        }
     }
 }
 
-// Card 
+.help__card-number {
+    color: var(--muted);
+    font-size: .875rem;
+    letter-spacing: .1em;
+}
 
-.help__card {
-    flex-shrink: 0;
-    width: rem(260);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 1px solid var(--border);
-    scroll-snap-align: start;
-    transition: box-shadow var(--transition), transform var(--transition);
-
-    @include hover {
-        box-shadow: var(--shadow-blue);
-        transform: translateY(rem(-4));
-    }
-
-    @include tablet { width: rem(300); }
-    @include mobile {
-        width: rem(300);
-        margin-inline: auto;
-    }
-
-    @include mobile-s {
-        width: rem(250);
-        margin-inline: auto;
-    }
+.help__card-title {
+    color: var(--text);
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    font-weight: 500;
+    line-height: 1.1;
 }
 
 .help__card-image {
-    width: 100%;
-    aspect-ratio: 2 / 3; 
+    aspect-ratio: 16 / 9;
     overflow: hidden;
-    position: relative;
-
-    @include tablet { aspect-ratio: 3 / 4; }
+    margin-block: .45rem .15rem;
+    border-radius: .65rem;
+    background-color: var(--surface);
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
         transition: transform var(--transition);
     }
-
-    &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-            to bottom,
-            transparent 50%,
-            rgba(15, 30, 53, 0.5) 100%
-        );
-        pointer-events: none;
-    }
-
-    @include mobile {
-        aspect-ratio: 4 / 3; 
-    }
-}
-
-.help__card:hover .help__card-image img {
-    transform: scale(1.04);
 }
 
 .help__card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: rem(16) rem(18);
-    background-color: rgba(255, 255, 255, 0.95);
+    display: block;
+    padding-top: .5rem;
     border-top: 1px solid var(--border);
-
-    @include mobile {
-        padding: rem(8) rem(12);
-    }
+    color: #215e9d;
+    font-size: 1rem;
+    transition: color var(--transition);
 }
 
-.help__card-title {
-    font-size: rem(17);
-    font-weight: 500;
-    color: var(--text);
-
-    @include mobile { font-size: rem(13); }
-}
-
-.help__card-btn {
-    width: rem(32);
-    height: rem(32);
-    border-radius: 50%;
-    background-color: var(--accent);
-    color: #fff;
+.help__controls {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: background-color var(--transition);
+    justify-content: flex-end;
+    gap: .6rem;
+    margin-top: .75rem;
 
-    @include mobile {
-        width: rem(20);
-        height: rem(20);
+    &[hidden] {
+        display: none;
+    }
+
+    button {
+        min-height: 2.75rem;
+        padding: .35rem 1rem;
+        border: 1px solid rgba(33, 94, 157, .32);
+        border-radius: .65rem;
+        background: transparent;
+        color: #215e9d;
+        font: inherit;
+        font-size: 1.0625rem;
+
+        &:enabled:hover {
+            border-color: #215e9d;
+            background: var(--accent-soft);
+        }
+
+        &:disabled {
+            opacity: .45;
+        }
     }
 }
 
-.help__card:hover .help__card-btn {
-    background-color: var(--accent-light);
+@media (prefers-reduced-motion: no-preference) {
+    .help__card--reveal {
+        opacity: 0;
+        transform: translateY(.75rem);
+        transition: opacity .8s ease, transform .8s ease-out;
+        transition-delay: var(--help-reveal-delay, 0ms);
+
+        &.fade-in,
+        &:focus-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }

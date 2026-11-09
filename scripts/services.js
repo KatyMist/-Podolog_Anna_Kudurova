@@ -1,50 +1,66 @@
 export default class Services {
     constructor() {
-        this.categories = document.querySelectorAll('.services__category');
-        if (!this.categories.length) return;
-        this.init();
+        document.querySelectorAll('.edu__card').forEach(card => this.initCourseCard(card));
+
+        const category = new URLSearchParams(window.location.search).get('category');
+        if (!category) return;
+
+        const target = document.querySelector(`.services__category[data-category="${CSS.escape(category)}"]`);
+        if (!target) return;
+
+        requestAnimationFrame(() => {
+            target.scrollIntoView({ block: 'start' });
+        });
     }
 
-    init() {
-        this.categories.forEach(category => {
-            const btn = category.querySelector('.services__category-btn');
-            const items = category.querySelector('.services__items');
+    initCourseCard(card) {
+        const front = card.querySelector('.edu__card-front');
+        const back = card.querySelector('.edu__card-back');
+        const open = front.querySelector('[data-course-open]');
+        const close = back.querySelector('[data-course-close]');
+        let openedByHover = false;
 
-            btn?.addEventListener('click', () => {
-                const isOpen = category.classList.contains('is-open');
+        const flip = (showDetails, moveFocus = false) => {
+            card.classList.toggle('is-flipped', showDetails);
+            front.inert = showDetails;
+            back.inert = !showDetails;
+            open.setAttribute('aria-expanded', String(showDetails));
+            if (moveFocus) {
+                const focusTarget = showDetails ? close : open;
+                focusTarget.focus({ preventScroll: true });
+            }
+        };
 
-                this.categories.forEach(c => {
-                    c.classList.remove('is-open');
-                    c.querySelector('.services__items')?.classList.remove('is-open');
-                    c.querySelector('.services__category-btn')?.setAttribute('aria-expanded', 'false');
-                });
+        back.inert = true;
+        open.hidden = false;
+        close.hidden = false;
+        card.classList.add('is-flippable');
 
-                if (!isOpen) {
-                    category.classList.add('is-open');
-                    items?.classList.add('is-open');
-                    btn.setAttribute('aria-expanded', 'true');
-                }
-            });
+        open.addEventListener('click', () => flip(true, true));
+
+        const closeDetails = () => {
+            openedByHover = false;
+            flip(false, true);
+        };
+
+        close.addEventListener('click', closeDetails);
+        back.addEventListener('keydown', event => {
+            if (event.key === 'Escape') closeDetails();
         });
 
-        // Раскрываем категорию из URL параметра
-        const params = new URLSearchParams(window.location.search);
-        const categoryParam = params.get('category');
+        card.addEventListener('pointerenter', event => {
+            if (event.pointerType !== 'mouse' || card.contains(document.activeElement) ||
+                card.classList.contains('is-flipped')) return;
 
-        if (categoryParam) {
-            const target = document.querySelector(`[data-category="${categoryParam}"]`);
-            if (target) {
-                const btn = target.querySelector('.services__category-btn');
-                const items = target.querySelector('.services__items');
-                target.classList.add('is-open');
-                items?.classList.add('is-open');
-                btn?.setAttribute('aria-expanded', 'true');
+            openedByHover = true;
+            flip(true);
+        });
 
-                setTimeout(() => {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
+        card.addEventListener('pointerleave', () => {
+            if (openedByHover && !back.contains(document.activeElement)) {
+                openedByHover = false;
+                flip(false);
             }
-        }
+        });
     }
 }
-

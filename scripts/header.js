@@ -12,21 +12,43 @@ export default class Header {
     }
 
     initBurger() {
-        this.burger?.addEventListener('click', () => {
-            const isOpen = this.nav.classList.toggle('is-open');
-            this.burger.setAttribute('aria-expanded', String(isOpen));
-            this.burger.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
-            document.body.style.overflow = isOpen ? 'hidden' : '';
+        if (!this.burger || !this.nav) return;
+
+        this.burger.addEventListener('click', event => {
+            const isOpen = !this.nav.classList.contains('is-open');
+            this.setMenuOpen(isOpen);
+
+            if (isOpen && event.detail === 0) {
+                this.links[0]?.focus({ preventScroll: true });
+            }
         });
 
         this.links.forEach(link => {
             link.addEventListener('click', () => {
-                this.nav.classList.remove('is-open');
-                this.burger?.setAttribute('aria-expanded', 'false');
-                this.burger?.setAttribute('aria-label', 'Открыть меню');
-                document.body.style.overflow = '';
+                if (this.nav.classList.contains('is-open')) this.setMenuOpen(false);
             });
         });
+
+        document.addEventListener('click', event => {
+            if (this.nav.classList.contains('is-open') &&
+                !this.nav.contains(event.target) && !this.burger.contains(event.target)) {
+                this.setMenuOpen(false);
+            }
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && this.nav.classList.contains('is-open')) {
+                this.setMenuOpen(false);
+                this.burger.focus();
+            }
+        });
+    }
+
+    setMenuOpen(isOpen) {
+        this.nav.classList.toggle('is-open', isOpen);
+        this.burger.setAttribute('aria-expanded', String(isOpen));
+        this.burger.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
     }
 
     initLine() {
@@ -68,6 +90,9 @@ export default class Header {
     initResize() {
         window.addEventListener('resize', 
             this.debounce(() => {
+                if (this.nav?.classList.contains('is-open') && getComputedStyle(this.burger).display === 'none') {
+                    this.setMenuOpen(false);
+                }
                 const current = document.querySelector('.header__nav-link.is-active');
                 this.updateLine(current);
             }, 200)
@@ -78,10 +103,7 @@ export default class Header {
     initScroll() {
         window.addEventListener('scroll', () => {
             if (this.nav && this.nav.classList.contains('is-open')) {
-                this.nav.classList.remove('is-open');
-                this.burger?.setAttribute('aria-expanded', 'false');
-                this.burger?.setAttribute('aria-label', 'Открыть меню');
-                document.body.style.overflow = '';
+                this.setMenuOpen(false);
             }
         });
     }

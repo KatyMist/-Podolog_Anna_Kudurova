@@ -12,7 +12,7 @@
     <meta property="og:image" content="/images/cases/Main4.png">
 
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
     <link rel="canonical" href="https://annakudurova.ru/cases.html">
 
     <script src="./scripts/main.js" type="module" defer></script>
@@ -77,7 +77,6 @@
             </nav>
             <a href="https://vk.com/im?sel=708439222" class="header__btn btn" target="_blank" rel="noopener noreferrer">
                 Записаться
-                <span class="btn__arrow" aria-hidden="true">→</span>
             </a>
             <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
                 <span></span><span></span><span></span>
@@ -86,862 +85,941 @@
     </header>
 
     <!-- Main content -->
-    <main class="main">
+    <main class="main page-with-intro">
         <!-- Cases section -->
         <section class="cases">
             <div class="container">
-                <div class="cases-hero">
-                    <div class="cases-hero__content">
-                        <h1 class="cases-hero__title">Кейсы</h1>
-                        <p class="cases-hero__description">Реальные результаты работы с разными проблемами стоп и ногтей.</br> Каждый случай — это индивидуальный подход и профессиональное решение.</p>
-                    </div>
-                    <div class="cases-hero__image">
-                        <img src="./images/cases.jpg" alt="Анна Кудурова" loading="lazy">
+                <div class="page-intro">
+                    <h1 class="page-intro__title">Кейсы</h1>
+                    <p class="page-intro__text">
+                        <span>Реальные результаты работы с разными проблемами стоп и ногтей.</span>
+                        <span>Каждый случай — это индивидуальный подход и профессиональное решение.</span>
+                    </p>
+                    <div class="cases-stats">
+                        <div class="cases-stats__item">
+                            <div class="cases-stats__number"><span data-count aria-hidden="true">5000+</span><span class="visually-hidden">5000+</span></div>
+                            <div class="cases-stats__label">консультаций</div>
+                        </div>
+                        <div class="cases-stats__item">
+                            <div class="cases-stats__number"><span data-count aria-hidden="true">3000+</span><span class="visually-hidden">3000+</span></div>
+                            <div class="cases-stats__label">решённых случаев</div>
+                        </div>
+                        <div class="cases-stats__item">
+                            <div class="cases-stats__number"><span data-count aria-hidden="true">6+</span><span class="visually-hidden">6+</span></div>
+                            <div class="cases-stats__label">лет практики</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Статистика -->
-            <section class="cases-stats">
-                <div class="container">
-                    <div class="cases-stats__grid">
-                        <div class="cases-stats__item">
-                            <div class="cases-stats__icon">
-                                <img src="./icons/People.svg" alt="Количество консультаций" width="46" height="46">
-                            </div>
-                            <div class="cases-stats__content">
-                                <div class="cases-stats__number">5000+</div>
-                                <div class="cases-stats__label">консультаций</div>
-                            </div>
-                        </div>
-                        <div class="cases-stats__item">
-                            <div class="cases-stats__icon">
-                                <span class="hero__card-icon" aria-hidden="true">
-                                    <img src="./icons/shield.svg" alt="" width="38" height="38" fill="none">
-                                </span>
-                            </div>
-                            <div class="cases-stats__content">
-                                <div class="cases-stats__number">3000+</div>
-                                <div class="cases-stats__label">решённых случаев</div>
-                            </div>
-                        </div>
-                        <div class="cases-stats__item">
-                            <div class="cases-stats__icon">
-                                <span class="hero__card-icon" aria-hidden="true">
-                                    <img src="./icons/stylishly.svg" alt="" width="38" height="38" fill="none">
-                                </span>
-                            </div>
-                            <div class="cases-stats__content">
-                                <div class="cases-stats__number">6+</div>
-                                <div class="cases-stats__label">лет практики</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <!-- Кейсы -->
             <section class="cases-list">
                 <div class="container">
-                    <div class="cases-category">
+                    <div class="cases-category" data-carousel>
                         <h2 class="cases-category__title">Подология</h2>
 
-                        <div class="cases-category__grid">
+                        <div class="help__scroll" id="cases-carousel" role="region" aria-label="Кейсы по подологии" tabindex="0">
 
                             <!-- Кейс 1 -->
-                            <article class="case-item" id="first-case">
-                                <div class="case-item__images">
-                                    <div class="case-item__image-wrapper">
-                                        <img src="./images/cases/Foot_1.png" alt="До" class="case-item__image case-item__image--active" loading="lazy">
-                                        <img src="./images/cases/Foot_2.png" alt="После" class="case-item__image" loading="lazy">
-                                        <button class="case-item__toggle" aria-label="Переключить">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6"/>
-                                            </svg>
-                                        </button>
-                                        <div class="case-item__labels">
-                                            <span class="case-item__label case-item__label--before">До</span>
-                                            <span class="case-item__label case-item__label--after">После</span>
+                            <article class="help__card case-card" id="first-case">
+                                <img class="case-card__cover" src="./images/cases/Foot_2.png" alt="" loading="lazy">
+                                <h3 class="case-card__title edu__card-title" id="first-case-preview">Обработка стопы после применения пластыря "салипод"</h3>
+                                <p class="case-card__description">Подологическая обработка участка гиперкератоза после применения пластыря.</p>
+                                <button class="case-card__more edu__flip-button" type="button" aria-haspopup="dialog" aria-labelledby="first-case-more first-case-preview" id="first-case-more">Подробнее</button>
+                                <dialog class="case-item" aria-labelledby="first-case-title">
+                                    <form class="case-item__actions" method="dialog">
+                                        <button class="case-card__more edu__flip-button" type="submit" autofocus>Закрыть</button>
+                                    </form>
+                                    <div class="case-item__images">
+                                        <div class="case-item__image-wrapper">
+                                            <img src="./images/cases/Foot_1.png" alt="До" class="case-item__image case-item__image--active" loading="lazy">
+                                            <img src="./images/cases/Foot_2.png" alt="После" class="case-item__image" loading="lazy">
+                                            <button class="case-item__toggle" aria-label="Переключить">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6"/>
+                                                </svg>
+                                            </button>
+                                            <div class="case-item__labels">
+                                                <span class="case-item__label case-item__label--before">До</span>
+                                                <span class="case-item__label case-item__label--after">После</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="case-item__content">
-                                    <h3 class="case-item__title">Обработка стопы после применения пластыря "салипод"</h3>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Проблема:</strong> Клиент обратился с выраженным локальным гиперкератозом на стопе. Ранее для решения проблемы самостоятельно использовался пластырь «Салипод», в результате чего роговой слой был травмирован и требовал грамотной обработки. </p>
+                                    <div class="case-item__content">
+                                        <h2 class="case-item__title" id="first-case-title">Обработка стопы после применения пластыря "салипод"</h2>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Проблема:</strong> Клиент обратился с выраженным локальным гиперкератозом на стопе. Ранее для решения проблемы самостоятельно использовался пластырь «Салипод», в результате чего роговой слой был травмирован и требовал грамотной обработки. </p>
+                                        </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Решение:</strong> Проведена подологическая обработка в технике пилинг-педикюра. Выполнено аккуратное удаление размягчённого гиперкератоза с сохранением физиологически необходимого защитного слоя кожи. После процедуры даны рекомендации по домашнему уходу, направленные на поддержание результата и профилактику повторного избыточного ороговения.</p>
+                                        </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Результат:</strong> Уже после первой процедуры удалось значительно уменьшить толщину гиперкератоза и улучшить состояние кожи. Стопа стала более комфортной, снизилась нагрузка на проблемный участок. Созданы условия для дальнейшего восстановления кожи и предупреждения повторного образования огрубевших участков.</p>
+                                        </div>
+                                        <div class="case-item__meta">
+                                            <span class="case-item__meta-item">
+                                                <img src="./icons/time.svg" alt="" width="20" height="20">
+                                                1 процедура
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Решение:</strong> Проведена подологическая обработка в технике пилинг-педикюра. Выполнено аккуратное удаление размягчённого гиперкератоза с сохранением физиологически необходимого защитного слоя кожи. После процедуры даны рекомендации по домашнему уходу, направленные на поддержание результата и профилактику повторного избыточного ороговения.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Результат:</strong> Уже после первой процедуры удалось значительно уменьшить толщину гиперкератоза и улучшить состояние кожи. Стопа стала более комфортной, снизилась нагрузка на проблемный участок. Созданы условия для дальнейшего восстановления кожи и предупреждения повторного образования огрубевших участков.</p>
-                                    </div>
-                                    <div class="case-item__meta">
-                                        <span class="case-item__meta-item">
-                                            <img src="./icons/time.svg" alt="" width="20" height="20">
-                                            1 процедура
-                                        </span>
-                                    </div>
-                                </div>
+                                </dialog>
                             </article>
 
                             <!-- Кейс 2 -->
-                            <article class="case-item" id="second-case">
-                                <div class="case-item__images">
+                            <article class="help__card case-card" id="second-case">
+                                <img class="case-card__cover" src="./images/cases/2.6.png" alt="" loading="lazy">
+                                <h3 class="case-card__title edu__card-title" id="second-case-preview">Грибковая инфекция ногтевой пластины</h3>
+                                <p class="case-card__description">Сопровождение восстановления ногтевой пластины совместно с врачом-дерматологом.</p>
+                                <button class="case-card__more edu__flip-button" type="button" aria-haspopup="dialog" aria-labelledby="second-case-more second-case-preview" id="second-case-more">Подробнее</button>
+                                <dialog class="case-item" aria-labelledby="second-case-title">
+                                    <form class="case-item__actions" method="dialog">
+                                        <button class="case-card__more edu__flip-button" type="submit" autofocus>Закрыть</button>
+                                    </form>
+                                    <div class="case-item__images">
 
-                                    <div class="case-item__slides">
-                                        <div class="case-item__slide case-item__slide--active">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/2.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                        <div class="case-item__slides">
+                                            <div class="case-item__slide case-item__slide--active">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/2.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/2.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/2.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/2.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/2.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/2.6.png" alt="Фото 6" class="case-item__image" style="opacity:1">
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/2.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
+                                        <button class="case-item__prev" aria-label="Предыдущее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="15 18 9 12 15 6"/>
+                                            </svg>
+                                        </button>
+                                        <button class="case-item__next" aria-label="Следующее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"/>
+                                            </svg>
+                                        </button>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/2.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
+                                        <div class="case-item__counter">1 / 6</div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/2.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
-                                            </div>
+                                    </div>
+                                    <div class="case-item__content">
+                                        <h2 class="case-item__title" id="second-case-title">Грибковая инфекция ногтевой пластины</h2>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Проблема:</strong> Клиент обратился с признаками грибковой инфекции ногтевой пластины. Помимо изменения внешнего вида ногтя присутствовали деформация ногтевой пластины, дискомфорт и риск дальнейшего ухудшения состояния. Самостоятельный домашний уход не давал необходимого результата, поэтому требовался комплексный подход.</p>
                                         </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text">
+                                                <strong>Решение:</strong> Работа велась совместно с врачом-дерматологом.
+                                                На первых приёмах был произведён забор материала для лабораторного исследования, после чего клиент направлен к врачу для постановки диагноза и назначения терапии.
+                                                Врач ведёт пациента с точки зрения медикаментозного лечения, а моя задача — создать условия для эффективного восстановления ногтевого аппарата.
+                                            </p>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/2.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
-                                            </div>
+                                            <p class="case-item__label-text">В рамках подологического сопровождения выполнялись:</p>
+
+                                            <ul class="case-item__label-text">
+                                                <li>• регулярные аппаратные обработки ногтевой пластины;</li>
+                                                <li>• улучшение транспортной доступности ногтя для местных препаратов;</li>
+                                                <li>• подбор и контроль домашнего ухода;</li>
+                                                <li>• установка корректирующих систем для сохранения ногтевого ложа и снижения дискомфорта, связанного с врастанием ногтевой пластины.</li>
+                                            </ul>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/2.6.png" alt="Фото 6" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Результат:</strong> Благодаря совместной работе врача, подолога и самого клиента удалось добиться положительной динамики восстановления ногтевой пластины. Ноготь постепенно отрастает более здоровым, уменьшаются признаки поражения, сохраняется ногтевое ложе, отсутствует выраженный дискомфорт при ходьбе и ношении обуви. Работа продолжается, но уже сейчас можно говорить о хорошем восстановительном потенциале и правильном направлении восстановления.</p>
+                                        </div>
+                                        <div class="case-item__meta">
+                                            <span class="case-item__meta-item">Сопровождение продолжается.</span>
                                         </div>
                                     </div>
-
-                                    <button class="case-item__prev" aria-label="Предыдущее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="15 18 9 12 15 6"/>
-                                        </svg>
-                                    </button>
-                                    <button class="case-item__next" aria-label="Следующее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="9 18 15 12 9 6"/>
-                                        </svg>
-                                    </button>
-
-                                    <div class="case-item__counter">1 / 6</div>
-
-                                </div>
-                                <div class="case-item__content">
-                                    <h3 class="case-item__title">Грибковая инфекция ногтевой пластины</h3>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Проблема:</strong> Клиент обратился с признаками грибковой инфекции ногтевой пластины. Помимо изменения внешнего вида ногтя присутствовали деформация ногтевой пластины, дискомфорт и риск дальнейшего ухудшения состояния. Самостоятельный домашний уход не давал необходимого результата, поэтому требовался комплексный подход.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text">
-                                            <strong>Решение:</strong> Работа велась совместно с врачом-дерматологом.
-                                            На первых приёмах был произведён забор материала для лабораторного исследования, после чего клиент направлен к врачу для постановки диагноза и назначения терапии.
-                                            Врач ведёт пациента с точки зрения медикаментозного лечения, а моя задача — создать условия для эффективного восстановления ногтевого аппарата.
-                                        </p>
-
-                                        <p class="case-item__label-text">В рамках подологического сопровождения выполнялись:</p>
-
-                                        <ul class="case-item__label-text">
-                                            <li>• регулярные аппаратные обработки ногтевой пластины;</li>
-                                            <li>• улучшение транспортной доступности ногтя для местных препаратов;</li>
-                                            <li>• подбор и контроль домашнего ухода;</li>
-                                            <li>• установка корректирующих систем для сохранения ногтевого ложа и снижения дискомфорта, связанного с врастанием ногтевой пластины.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Результат:</strong> Благодаря совместной работе врача, подолога и самого клиента удалось добиться положительной динамики восстановления ногтевой пластины. Ноготь постепенно отрастает более здоровым, уменьшаются признаки поражения, сохраняется ногтевое ложе, отсутствует выраженный дискомфорт при ходьбе и ношении обуви. Работа продолжается, но уже сейчас можно говорить о хорошем восстановительном потенциале и правильном направлении восстановления.</p>
-                                    </div>
-                                </div>
+                                </dialog>
                             </article>
 
                             <!-- Кейс 3 -->
-                            <article class="case-item" id="third-case">
-                                <div class="case-item__images">
+                            <article class="help__card case-card" id="third-case">
+                                <img class="case-card__cover" src="./images/cases/3.5.png" alt="" loading="lazy">
+                                <h3 class="case-card__title edu__card-title" id="third-case-preview">Обработка вросшего ногтя, коррекция ногтевой пластины</h3>
+                                <p class="case-card__description">Обработка вросшего ногтя и коррекция его формы.</p>
+                                <button class="case-card__more edu__flip-button" type="button" aria-haspopup="dialog" aria-labelledby="third-case-more third-case-preview" id="third-case-more">Подробнее</button>
+                                <dialog class="case-item" aria-labelledby="third-case-title">
+                                    <form class="case-item__actions" method="dialog">
+                                        <button class="case-card__more edu__flip-button" type="submit" autofocus>Закрыть</button>
+                                    </form>
+                                    <div class="case-item__images">
 
-                                    <div class="case-item__slides">
-                                        <div class="case-item__slide case-item__slide--active">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/3.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                        <div class="case-item__slides">
+                                            <div class="case-item__slide case-item__slide--active">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/3.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/3.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/3.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/3.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/3.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/3.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
+                                        <button class="case-item__prev" aria-label="Предыдущее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="15 18 9 12 15 6"/>
+                                            </svg>
+                                        </button>
+                                        <button class="case-item__next" aria-label="Следующее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"/>
+                                            </svg>
+                                        </button>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/3.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
+                                        <div class="case-item__counter">1 / 5</div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/3.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
-                                            </div>
+                                    </div>
+                                    <div class="case-item__content">
+                                        <h2 class="case-item__title" id="third-case-title">Обработка вросшего ногтя, коррекция ногтевой пластины</h2>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Проблема:</strong> Клиент обратился с проблемой вросшего ногтя. На момент обращения присутствовали болезненность, воспалительный процесс и рана в области бокового ногтевого валика. Ситуация требовала не только устранения причины дискомфорта, но и дальнейшей работы по предотвращению рецидива.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/3.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text">
+                                                <strong>Решение:</strong> На первом этапе была проведена подологическая обработка вросшего ногтя и взят под контроль раневой процесс. Основной задачей было снять давление ногтевой пластины на окружающие ткани, создать условия для заживления и обеспечить комфорт клиенту.
+                                                    Заживление заняло около трёх недель.
+                                                    После стабилизации состояния была установлена корректирующая система — титановая нить. Далее работа была направлена на восстановление правильного роста ногтевой пластины. Проводились регулярные обработки, выполнялись тампонады, контролировалась динамика роста ногтя и соблюдение рекомендаций по домашнему уходу.
+                                            </p>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Результат:</strong> Благодаря комплексной работе удалось устранить болевые ощущения, восстановить правильное направление роста ногтевой пластины и значительно снизить риск повторного врастания.
+                                                За время сопровождения ноготь постепенно изменил свою форму, стал более физиологичным и комфортным для клиента. Полное восстановление заняло около девяти месяцев и позволило сохранить ногтевую пластину без хирургического вмешательства.
+                                                Срок восстановления: около 9 месяцев.
+                                            </p>
+                                        </div>
+                                        <div class="case-item__meta">
+                                            <span class="case-item__meta-item">Заживление — около 3 недель. Восстановление — около 9 месяцев.</span>
                                         </div>
                                     </div>
-
-                                    <button class="case-item__prev" aria-label="Предыдущее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="15 18 9 12 15 6"/>
-                                        </svg>
-                                    </button>
-                                    <button class="case-item__next" aria-label="Следующее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="9 18 15 12 9 6"/>
-                                        </svg>
-                                    </button>
-
-                                    <div class="case-item__counter">1 / 5</div>
-
-                                </div>
-                                <div class="case-item__content">
-                                    <h3 class="case-item__title">Обработка вросшего ногтя, коррекция ногтевой пластины</h3>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Проблема:</strong> Клиент обратился с проблемой вросшего ногтя. На момент обращения присутствовали болезненность, воспалительный процесс и рана в области бокового ногтевого валика. Ситуация требовала не только устранения причины дискомфорта, но и дальнейшей работы по предотвращению рецидива.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text">
-                                            <strong>Решение:</strong> На первом этапе была проведена подологическая обработка вросшего ногтя и взят под контроль раневой процесс. Основной задачей было снять давление ногтевой пластины на окружающие ткани, создать условия для заживления и обеспечить комфорт клиенту.
-                                                Заживление заняло около трёх недель.
-                                                После стабилизации состояния была установлена корректирующая система — титановая нить. Далее работа была направлена на восстановление правильного роста ногтевой пластины. Проводились регулярные обработки, выполнялись тампонады, контролировалась динамика роста ногтя и соблюдение рекомендаций по домашнему уходу.
-                                        </p>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Результат:</strong> Благодаря комплексной работе удалось устранить болевые ощущения, восстановить правильное направление роста ногтевой пластины и значительно снизить риск повторного врастания.
-                                            За время сопровождения ноготь постепенно изменил свою форму, стал более физиологичным и комфортным для клиента. Полное восстановление заняло около девяти месяцев и позволило сохранить ногтевую пластину без хирургического вмешательства.
-                                            Срок восстановления: около 9 месяцев.
-                                        </p>
-                                    </div>
-                                </div>
+                                </dialog>
                             </article>
 
                             <!-- Кейс 4 -->
-                            <article class="case-item" id="fourth-case">
-                                <div class="case-item__images">
+                            <article class="help__card case-card" id="fourth-case">
+                                <img class="case-card__cover" src="./images/cases/4.5.png" alt="" loading="lazy">
+                                <h3 class="case-card__title edu__card-title" id="fourth-case-preview">Обработка вросшего ноготя и работа с деформацией ногтевой пластины</h3>
+                                <p class="case-card__description">Устранение давления на ткани и коррекция деформированной ногтевой пластины.</p>
+                                <button class="case-card__more edu__flip-button" type="button" aria-haspopup="dialog" aria-labelledby="fourth-case-more fourth-case-preview" id="fourth-case-more">Подробнее</button>
+                                <dialog class="case-item" aria-labelledby="fourth-case-title">
+                                    <form class="case-item__actions" method="dialog">
+                                        <button class="case-card__more edu__flip-button" type="submit" autofocus>Закрыть</button>
+                                    </form>
+                                    <div class="case-item__images">
 
-                                    <div class="case-item__slides">
-                                        <div class="case-item__slide case-item__slide--active">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/4.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                        <div class="case-item__slides">
+                                            <div class="case-item__slide case-item__slide--active">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/4.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/4.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/4.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/4.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/4.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/4.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
+                                        <button class="case-item__prev" aria-label="Предыдущее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="15 18 9 12 15 6"/>
+                                            </svg>
+                                        </button>
+                                        <button class="case-item__next" aria-label="Следующее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"/>
+                                            </svg>
+                                        </button>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/4.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
+                                        <div class="case-item__counter">1 / 5</div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/4.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
-                                            </div>
+                                    </div>
+                                    <div class="case-item__content">
+                                        <h2 class="case-item__title" id="fourth-case-title">Обработка вросшего ноготя и работа с деформацией ногтевой пластины</h2>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Проблема:</strong> Клиент обратился с выраженной деформацией ногтевой пластины и проблемой врастания ногтя. Состояние сопровождалось воспалением бокового валика, неприятными ощущениями и болевым синдромом при ходьбе и ношении обуви. Основной задачей было не только устранить воспаление и дискомфорт, но и скорректировать форму ногтевой пластины, чтобы предотвратить повторное врастание.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/4.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Решение:</strong>На первом этапе была проведена подологическая обработка вросшего ногтя и устранено давление ногтевой пластины на окружающие ткани. Благодаря этому болевые ощущения значительно уменьшились уже в течение первой недели после процедуры. Для коррекции выраженной деформации была установлена система «Титановая нить», которая позволила постепенно раскрутить ногтевую пластину и изменить направление её роста.</p>
+                                            <p class="case-item__label-text">После получения первичного результата работа продолжилась с использованием системы Light System различной жёсткости. В ходе восстановления проводились регулярные контрольные обработки, оценивалась динамика роста ногтя и корректировалась тактика восстановления. В домашнем уходе была сыворотка. На завершающем этапе была установлена система Light System в качестве ретейнера для фиксации достигнутого результата и профилактики рецидива.</p>
+                                        </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Результат:</strong> За шесть месяцев удалось значительно изменить форму ногтевой пластины, устранить воспаление и восстановить её физиологичный рост. Болевые ощущения и дискомфорт, связанные с врастанием ногтя, ушли уже на начальном этапе работы. Ногтевая пластина стала более широкой, стабильной и комфортной для клиента.</p>
+                                            <p class="case-item__label-text">Полученный результат зафиксирован системой, что позволяет снизить риск повторной деформации и сохранить достигнутые изменения.</p>
+                                        </div>
+                                        <div class="case-item__meta">
+                                            <span class="case-item__meta-item">Период наблюдения — 6 месяцев.</span>
                                         </div>
                                     </div>
-
-                                    <button class="case-item__prev" aria-label="Предыдущее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="15 18 9 12 15 6"/>
-                                        </svg>
-                                    </button>
-                                    <button class="case-item__next" aria-label="Следующее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="9 18 15 12 9 6"/>
-                                        </svg>
-                                    </button>
-
-                                    <div class="case-item__counter">1 / 5</div>
-
-                                </div>
-                                <div class="case-item__content">
-                                    <h3 class="case-item__title">Обработка вросшего ноготя и работа с деформацией ногтевой пластины</h3>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Проблема:</strong> Клиент обратился с выраженной деформацией ногтевой пластины и проблемой врастания ногтя. Состояние сопровождалось воспалением бокового валика, неприятными ощущениями и болевым синдромом при ходьбе и ношении обуви. Основной задачей было не только устранить воспаление и дискомфорт, но и скорректировать форму ногтевой пластины, чтобы предотвратить повторное врастание.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Решение:</strong>На первом этапе была проведена подологическая обработка вросшего ногтя и устранено давление ногтевой пластины на окружающие ткани. Благодаря этому болевые ощущения значительно уменьшились уже в течение первой недели после процедуры. Для коррекции выраженной деформации была установлена система «Титановая нить», которая позволила постепенно раскрутить ногтевую пластину и изменить направление её роста.</p>
-                                        <p class="case-item__label-text">После получения первичного результата работа продолжилась с использованием системы Light System различной жёсткости. В ходе восстановления проводились регулярные контрольные обработки, оценивалась динамика роста ногтя и корректировалась тактика восстановления. В домашнем уходе была сыворотка. На завершающем этапе была установлена система Light System в качестве ретейнера для фиксации достигнутого результата и профилактики рецидива.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Результат:</strong> За шесть месяцев удалось значительно изменить форму ногтевой пластины, устранить воспаление и восстановить её физиологичный рост. Болевые ощущения и дискомфорт, связанные с врастанием ногтя, ушли уже на начальном этапе работы. Ногтевая пластина стала более широкой, стабильной и комфортной для клиента.</p>
-                                        <p class="case-item__label-text">Полученный результат зафиксирован системой, что позволяет снизить риск повторной деформации и сохранить достигнутые изменения.</p>
-                                    </div>
-                                </div>
+                                </dialog>
                             </article>
 
                             <!-- Кейс 5 -->
-                            <article class="case-item" id="fifth-case">
-                                <div class="case-item__images">
+                            <article class="help__card case-card" id="fifth-case">
+                                <img class="case-card__cover" src="./images/cases/5.3.png" alt="" loading="lazy">
+                                <h3 class="case-card__title edu__card-title" id="fifth-case-preview">Обработка стержневой мозоли</h3>
+                                <p class="case-card__description">Удаление стержневой мозоли и разгрузка болезненного участка.</p>
+                                <button class="case-card__more edu__flip-button" type="button" aria-haspopup="dialog" aria-labelledby="fifth-case-more fifth-case-preview" id="fifth-case-more">Подробнее</button>
+                                <dialog class="case-item" aria-labelledby="fifth-case-title">
+                                    <form class="case-item__actions" method="dialog">
+                                        <button class="case-card__more edu__flip-button" type="submit" autofocus>Закрыть</button>
+                                    </form>
+                                    <div class="case-item__images">
 
-                                    <div class="case-item__slides">
-                                        <div class="case-item__slide case-item__slide--active">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/5.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                        <div class="case-item__slides">
+                                            <div class="case-item__slide case-item__slide--active">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/5.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/5.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/5.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/5.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <button class="case-item__prev" aria-label="Предыдущее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="15 18 9 12 15 6"/>
+                                            </svg>
+                                        </button>
+                                        <button class="case-item__next" aria-label="Следующее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"/>
+                                            </svg>
+                                        </button>
+
+                                        <div class="case-item__counter">1 / 3</div>
+
+                                    </div>
+                                    <div class="case-item__content">
+                                        <h2 class="case-item__title" id="fifth-case-title">Обработка стержневой мозоли</h2>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Проблема:</strong> Клиент регулярно обращается с болезненным образованием в области подошвенной поверхности стопы. По информации от клиента: несколько лет назад на данном участке была удалена подошвенная бородавка методом лазерной деструкции.
+                                                После удаления в зоне воздействия сформировался участок повышенного ороговения, на фоне которого периодически образуется стержневая мозоль. По мере нарастания гиперкератоза появляется дискомфорт и болезненность при ходьбе, что значительно снижает качество жизни клиента.
+                                            </p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/5.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Решение:</strong>При появлении болевых ощущений проводится подологическая обработка проблемного участка.
+                                                Во время процедуры выполняется бережное удаление гиперкератоза и стержневого компонента мозоли с использованием профессиональных инструментов и фрез. После обработки производится разгрузка проблемной зоны и наносится регенерирующая мазь под повязку для более комфортного восстановления тканей.
+                                                Клиенту даны рекомендации по домашнему уходу и контролю состояния кожи между визитами.
+                                            </p>
+                                        </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Результат:</strong> После процедуры болевые ощущения полностью исчезают, восстанавливается комфорт при ходьбе и снижается давление на проблемный участок.
+                                                Благодаря регулярному подологическому сопровождению удаётся своевременно контролировать нарастание гиперкератоза и предотвращать выраженный болевой синдром.
+                                                Поскольку причиной образования является изменённая структура тканей после удаления бородавки, работа носит поддерживающий характер и позволяет клиенту сохранять комфорт и качество жизни на протяжении многих лет.
+                                            </p>
+                                        </div>
+                                        <div class="case-item__meta">
+                                            <span class="case-item__meta-item">
+                                                <img src="./icons/time.svg" alt="" width="20" height="20">
+                                                Периодичность обращений: в среднем 1 раз в 3–4 месяца.
+                                            </span>
                                         </div>
                                     </div>
-
-                                    <button class="case-item__prev" aria-label="Предыдущее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="15 18 9 12 15 6"/>
-                                        </svg>
-                                    </button>
-                                    <button class="case-item__next" aria-label="Следующее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="9 18 15 12 9 6"/>
-                                        </svg>
-                                    </button>
-
-                                    <div class="case-item__counter">1 / 3</div>
-
-                                </div>
-                                <div class="case-item__content">
-                                    <h3 class="case-item__title">Обработка стержневой мозоли</h3>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Проблема:</strong> Клиент регулярно обращается с болезненным образованием в области подошвенной поверхности стопы. По информации от клиента: несколько лет назад на данном участке была удалена подошвенная бородавка методом лазерной деструкции.
-                                            После удаления в зоне воздействия сформировался участок повышенного ороговения, на фоне которого периодически образуется стержневая мозоль. По мере нарастания гиперкератоза появляется дискомфорт и болезненность при ходьбе, что значительно снижает качество жизни клиента.
-                                        </p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Решение:</strong>При появлении болевых ощущений проводится подологическая обработка проблемного участка.
-                                            Во время процедуры выполняется бережное удаление гиперкератоза и стержневого компонента мозоли с использованием профессиональных инструментов и фрез. После обработки производится разгрузка проблемной зоны и наносится регенерирующая мазь под повязку для более комфортного восстановления тканей.
-                                            Клиенту даны рекомендации по домашнему уходу и контролю состояния кожи между визитами.
-                                        </p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Результат:</strong> После процедуры болевые ощущения полностью исчезают, восстанавливается комфорт при ходьбе и снижается давление на проблемный участок.
-                                            Благодаря регулярному подологическому сопровождению удаётся своевременно контролировать нарастание гиперкератоза и предотвращать выраженный болевой синдром.
-                                            Поскольку причиной образования является изменённая структура тканей после удаления бородавки, работа носит поддерживающий характер и позволяет клиенту сохранять комфорт и качество жизни на протяжении многих лет.
-                                        </p>
-                                    </div>
-                                    <div class="case-item__meta">
-                                        <span class="case-item__meta-item">
-                                            <img src="./icons/time.svg" alt="" width="20" height="20">
-                                            Периодичность обращений: в среднем 1 раз в 3–4 месяца.
-                                        </span>
-                                    </div>
-                                </div>
+                                </dialog>
                             </article>
 
                             <!-- Кейс 6 -->
-                            <article class="case-item" id="sixth-case">
-                                <div class="case-item__images">
+                            <article class="help__card case-card" id="sixth-case">
+                                <img class="case-card__cover" src="./images/cases/6.4.png" alt="" loading="lazy">
+                                <h3 class="case-card__title edu__card-title" id="sixth-case-preview">Травматический онихолизис, восстановление</h3>
+                                <p class="case-card__description">Обработка и восстановление ногтевой пластины после травмы.</p>
+                                <button class="case-card__more edu__flip-button" type="button" aria-haspopup="dialog" aria-labelledby="sixth-case-more sixth-case-preview" id="sixth-case-more">Подробнее</button>
+                                <dialog class="case-item" aria-labelledby="sixth-case-title">
+                                    <form class="case-item__actions" method="dialog">
+                                        <button class="case-card__more edu__flip-button" type="submit" autofocus>Закрыть</button>
+                                    </form>
+                                    <div class="case-item__images">
 
-                                    <div class="case-item__slides">
-                                        <div class="case-item__slide case-item__slide--active">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/6.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                        <div class="case-item__slides">
+                                            <div class="case-item__slide case-item__slide--active">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/6.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/6.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/6.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/6.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/6.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/6.6.png" alt="Фото 6" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/6.7.png" alt="Фото 7" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/6.8.png" alt="Фото 8" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/6.9.png" alt="Фото 9" class="case-item__image" style="opacity:1">
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/6.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
+                                        <button class="case-item__prev" aria-label="Предыдущее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="15 18 9 12 15 6"/>
+                                            </svg>
+                                        </button>
+                                        <button class="case-item__next" aria-label="Следующее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"/>
+                                            </svg>
+                                        </button>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/6.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__counter">1 / 9</div>
+                                    </div>
+                                    <div class="case-item__content">
+                                        <h2 class="case-item__title" id="sixth-case-title">Травматический онихолизис, восстановление</h2>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Проблема:</strong> Клиент обратился с травматическим онихолизисом первых пальцев обеих стоп. В результате длительной нагрузки и ношения неправильно подобранной обуви произошло практически полное отслоение ногтевых пластин от ногтевого ложа.
+                                                Помимо выраженной деформации ногтей существовал риск дальнейшей потери ногтевого ложа, что могло значительно осложнить процесс восстановления и повлиять на качество роста новых ногтевых пластин.
+                                            </p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/6.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Решение:</strong>На первичном приёме была проведена зачистка нестабильных участков ногтевых пластин и оценено состояние ногтевого ложа.
+                                                Для сохранения ногтевого ложа и создания условий для правильного роста новых ногтей выполнено протезирование мягким материалом темпо. Протез выполнял защитную функцию, снижал внешнюю травматизацию и помогал сохранить физиологическую форму ногтевого аппарата.
+                                            </p>
+                                            <p class="case-item__label-text">В процессе восстановления проводились регулярные контрольные обработки, оценивалась динамика роста ногтей и при необходимости выполнялась коррекция протезирования. Всего было проведено 4 процедуры.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/6.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Результат:</strong> За период с ноября по февраль удалось сохранить ногтевое ложе, обеспечить комфорт клиенту и создать благоприятные условия для восстановления ногтевых пластин.
+                                                По мере отрастания ногтей наблюдалась положительная динамика: уменьшалась площадь отслоения, улучшался внешний вид ногтей и восстанавливался их контакт с ногтевым ложем.
+                                            </p>
+                                            <p class="case-item__label-text">Комплексный подход позволил избежать дальнейшего ухудшения состояния и получить хороший восстановительный результат.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/6.6.png" alt="Фото 6" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/6.7.png" alt="Фото 7" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/6.8.png" alt="Фото 8" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/6.9.png" alt="Фото 9" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__meta">
+                                            <span class="case-item__meta-item">
+                                                <img src="./icons/time.svg" alt="" width="20" height="20">
+                                                Срок восстановления: около 4 месяцев. Количество процедур: 4.
+                                            </span>
                                         </div>
                                     </div>
-
-                                    <button class="case-item__prev" aria-label="Предыдущее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="15 18 9 12 15 6"/>
-                                        </svg>
-                                    </button>
-                                    <button class="case-item__next" aria-label="Следующее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="9 18 15 12 9 6"/>
-                                        </svg>
-                                    </button>
-
-                                    <div class="case-item__counter">1 / 9</div>
-                                </div>
-                                <div class="case-item__content">
-                                    <h3 class="case-item__title">Травматический онихолизис, восстановление</h3>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Проблема:</strong> Клиент обратился с травматическим онихолизисом первых пальцев обеих стоп. В результате длительной нагрузки и ношения неправильно подобранной обуви произошло практически полное отслоение ногтевых пластин от ногтевого ложа.
-                                            Помимо выраженной деформации ногтей существовал риск дальнейшей потери ногтевого ложа, что могло значительно осложнить процесс восстановления и повлиять на качество роста новых ногтевых пластин.
-                                        </p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Решение:</strong>На первичном приёме была проведена зачистка нестабильных участков ногтевых пластин и оценено состояние ногтевого ложа.
-                                            Для сохранения ногтевого ложа и создания условий для правильного роста новых ногтей выполнено протезирование мягким материалом темпо. Протез выполнял защитную функцию, снижал внешнюю травматизацию и помогал сохранить физиологическую форму ногтевого аппарата.
-                                        </p>
-                                        <p class="case-item__label-text">В процессе восстановления проводились регулярные контрольные обработки, оценивалась динамика роста ногтей и при необходимости выполнялась коррекция протезирования. Всего было проведено 4 процедуры.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Результат:</strong> За период с ноября по февраль удалось сохранить ногтевое ложе, обеспечить комфорт клиенту и создать благоприятные условия для восстановления ногтевых пластин.
-                                            По мере отрастания ногтей наблюдалась положительная динамика: уменьшалась площадь отслоения, улучшался внешний вид ногтей и восстанавливался их контакт с ногтевым ложем.
-                                        </p>
-                                        <p class="case-item__label-text">Комплексный подход позволил избежать дальнейшего ухудшения состояния и получить хороший восстановительный результат.</p>
-                                    </div>
-                                    <div class="case-item__meta">
-                                        <span class="case-item__meta-item">
-                                            <img src="./icons/time.svg" alt="" width="20" height="20">
-                                            Срок восстановления: около 4 месяцев. Количество процедур: 4.
-                                        </span>
-                                    </div>
-                                </div>
+                                </dialog>
                             </article>
 
                             <!-- Кейс 7 -->
-                            <article class="case-item" id="case-seven">
-                                <div class="case-item__images">
+                            <article class="help__card case-card" id="case-seven">
+                                <img class="case-card__cover" src="./images/cases/7.9.png" alt="" loading="lazy">
+                                <h3 class="case-card__title edu__card-title" id="case-seven-preview">Обработка мозолей и гиперкератоза переднего отдела стопы</h3>
+                                <p class="case-card__description">Подологическая обработка и уход за передним отделом стопы.</p>
+                                <button class="case-card__more edu__flip-button" type="button" aria-haspopup="dialog" aria-labelledby="case-seven-more case-seven-preview" id="case-seven-more">Подробнее</button>
+                                <dialog class="case-item" aria-labelledby="case-seven-title">
+                                    <form class="case-item__actions" method="dialog">
+                                        <button class="case-card__more edu__flip-button" type="submit" autofocus>Закрыть</button>
+                                    </form>
+                                    <div class="case-item__images">
 
-                                    <div class="case-item__slides">
-                                        <div class="case-item__slide case-item__slide--active">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/7.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                        <div class="case-item__slides">
+                                            <div class="case-item__slide case-item__slide--active">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/7.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/7.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/7.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/7.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/7.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/7.6.png" alt="Фото 6" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/7.7.png" alt="Фото 7" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/7.8.png" alt="Фото 8" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/7.9.png" alt="Фото 9" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/7.10.png" alt="Фото 10" class="case-item__image" style="opacity:1">
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/7.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
+                                        <button class="case-item__prev" aria-label="Предыдущее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="15 18 9 12 15 6"/>
+                                            </svg>
+                                        </button>
+                                        <button class="case-item__next" aria-label="Следующее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"/>
+                                            </svg>
+                                        </button>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/7.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
+                                        <div class="case-item__counter">1 / 10</div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/7.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
-                                            </div>
+                                    </div>
+                                    <div class="case-item__content">
+                                        <h2 class="case-item__title" id="case-seven-title">Обработка мозолей и гиперкератоза переднего отдела стопы</h2>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Проблема:</strong>
+                                                Клиент обратился с болезненными мозолями в области плюсневой части стопы, в проекции второго и третьего плюснефаланговых суставов. Наличие выраженного гиперкератоза вызывало дискомфорт при ходьбе и затрудняло длительное пребывание на ногах.
+                                            </p>
+                                            <p class="case-item__label-text">Во время осмотра также были выявлены изменения ногтевых пластин, характерные для возможного грибкового поражения. В связи с этим клиент был направлен на диагностику и консультацию врача-дерматолога. По результатам обследования клиент находится на противомикозной терапии под наблюдением врача.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/7.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Решение:</strong>Работа со стопой проводится на регулярной основе с периодичностью один раз в месяц проводится подологическая обработка с применением системы пилинг-педикюр. На начальном этапе требовались более объёмные обработки с использованием профессиональных инструментов и абразивов различной жёсткости для безопасного удаления выраженного гиперкератоза и снижения нагрузки на проблемные участки.</p>
+                                            <p class="case-item__label-text">Параллельно клиенту были даны рекомендации по домашнему уходу и контролю состояния кожи стоп. По мере улучшения состояния тканей объём обработки постепенно сокращался, а процедуры становились менее травматичными и более поддерживающими.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/7.6.png" alt="Фото 6" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Результат:</strong> Уже к третьей-четвёртой процедуре клиент отметил значительное уменьшение болевых ощущений и повышение комфорта при ходьбе. Состояние кожи переднего отдела стопы существенно улучшилось, уменьшилась толщина гиперкератоза, снизилась нагрузка на проблемные зоны.</p>
+                                            <p class="case-item__label-text">На сегодняшний день процедуры занимают меньше времени, а их основной задачей является поддержание достигнутого результата и профилактика повторного формирования болезненных мозолей.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/7.7.png" alt="Фото 7" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/7.8.png" alt="Фото 8" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/7.9.png" alt="Фото 9" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/7.10.png" alt="Фото 10" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__meta">
+                                            <span class="case-item__meta-item">
+                                                <img src="./icons/time.svg" alt="" width="20" height="20">
+                                                Периодичность сопровождения: 1 раз в месяц.
+                                            </span>
                                         </div>
                                     </div>
-
-                                    <button class="case-item__prev" aria-label="Предыдущее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="15 18 9 12 15 6"/>
-                                        </svg>
-                                    </button>
-                                    <button class="case-item__next" aria-label="Следующее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="9 18 15 12 9 6"/>
-                                        </svg>
-                                    </button>
-
-                                    <div class="case-item__counter">1 / 10</div>
-
-                                </div>
-                                <div class="case-item__content">
-                                    <h3 class="case-item__title">Обработка мозолей и гиперкератоза переднего отдела стопы</h3>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Проблема:</strong> 
-                                            Клиент обратился с болезненными мозолями в области плюсневой части стопы, в проекции второго и третьего плюснефаланговых суставов. Наличие выраженного гиперкератоза вызывало дискомфорт при ходьбе и затрудняло длительное пребывание на ногах.
-                                        </p>
-                                        <p class="case-item__label-text">Во время осмотра также были выявлены изменения ногтевых пластин, характерные для возможного грибкового поражения. В связи с этим клиент был направлен на диагностику и консультацию врача-дерматолога. По результатам обследования клиент находится на противомикозной терапии под наблюдением врача.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Решение:</strong>Работа со стопой проводится на регулярной основе с периодичностью один раз в месяц проводится подологическая обработка с применением системы пилинг-педикюр. На начальном этапе требовались более объёмные обработки с использованием профессиональных инструментов и абразивов различной жёсткости для безопасного удаления выраженного гиперкератоза и снижения нагрузки на проблемные участки.</p>
-                                        <p class="case-item__label-text">Параллельно клиенту были даны рекомендации по домашнему уходу и контролю состояния кожи стоп. По мере улучшения состояния тканей объём обработки постепенно сокращался, а процедуры становились менее травматичными и более поддерживающими.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Результат:</strong> Уже к третьей-четвёртой процедуре клиент отметил значительное уменьшение болевых ощущений и повышение комфорта при ходьбе. Состояние кожи переднего отдела стопы существенно улучшилось, уменьшилась толщина гиперкератоза, снизилась нагрузка на проблемные зоны.</p>
-                                        <p class="case-item__label-text">На сегодняшний день процедуры занимают меньше времени, а их основной задачей является поддержание достигнутого результата и профилактика повторного формирования болезненных мозолей.</p>
-                                    </div>
-                                    <div class="case-item__meta">
-                                        <span class="case-item__meta-item">
-                                            <img src="./icons/time.svg" alt="" width="20" height="20">
-                                            Периодичность сопровождения: 1 раз в месяц.
-                                        </span>
-                                    </div>
-                                </div>
+                                </dialog>
                             </article>
 
                             <!-- Кейс 8 -->
-                            <article class="case-item" id="case-eight">
-                                <div class="case-item__images">
+                            <article class="help__card case-card" id="case-eight">
+                                <img class="case-card__cover" src="./images/cases/8.5.png" alt="" loading="lazy">
+                                <h3 class="case-card__title edu__card-title" id="case-eight-preview">Восстановление ногтевой пластины и подологическое сопровождение при деформации ногтя</h3>
+                                <p class="case-card__description">Регулярная обработка деформированного ногтя и контроль восстановления.</p>
+                                <button class="case-card__more edu__flip-button" type="button" aria-haspopup="dialog" aria-labelledby="case-eight-more case-eight-preview" id="case-eight-more">Подробнее</button>
+                                <dialog class="case-item" aria-labelledby="case-eight-title">
+                                    <form class="case-item__actions" method="dialog">
+                                        <button class="case-card__more edu__flip-button" type="submit" autofocus>Закрыть</button>
+                                    </form>
+                                    <div class="case-item__images">
 
-                                    <div class="case-item__slides">
-                                        <div class="case-item__slide case-item__slide--active">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/8.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                        <div class="case-item__slides">
+                                            <div class="case-item__slide case-item__slide--active">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/8.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/8.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/8.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/8.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/8.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/8.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <button class="case-item__prev" aria-label="Предыдущее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="15 18 9 12 15 6"/>
+                                            </svg>
+                                        </button>
+                                        <button class="case-item__next" aria-label="Следующее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"/>
+                                            </svg>
+                                        </button>
+
+                                        <div class="case-item__counter">1 / 5</div>
+
+                                    </div>
+                                    <div class="case-item__content">
+                                        <h2 class="case-item__title" id="case-eight-title">Восстановление ногтевой пластины и подологическое сопровождение при деформации ногтя</h2>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Проблема:</strong>
+                                                Клиент обратился с изменением внешнего вида ногтевой пластины и выраженным подногтевым гиперкератозом. Основной причиной состояния стало длительное ношение неправильно подобранной обуви, что привело к постоянному давлению на ногтевой аппарат и избыточному образованию роговых масс под ногтем.
+                                                Ситуацию усугубил неправильно подобранный домашний уход, который не решал проблему и не способствовал восстановлению ногтевой пластины.
+                                            </p>
+                                            <p class="case-item__label-text">В результате ноготь был деформирован, изменён визуально и требовал регулярного подологического сопровождения.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/8.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Решение:</strong> Работа с клиентом велась с июля по февраль.</p>
+                                            <p class="case-item__label-text">На первичном приёме была проведена подологическая обработка ногтевой пластины и удаление избыточного подногтевого гиперкератоза. Далее обработки выполнялись регулярно с периодичностью один раз в месяц.</p>
+                                            <p class="case-item__label-text">Основными задачами были:</p>
+                                            <ul class="case-item__label-text">
+                                                <li>• контроль состояния ногтевого аппарата;</li>
+                                                <li>• своевременное удаление избыточных ороговений;</li>
+                                                <li>• создание условий для правильного роста ногтя;</li>
+                                                <li>• подбор домашнего ухода.</li>
+                                            </ul>
+                                            <p class="case-item__label-text">В домашний уход было рекомендовано регенерирующее масло для ногтей, которое клиент использовал на протяжении всего периода восстановления.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/8.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Результат:</strong> Благодаря регулярным обработкам и соблюдению домашних рекомендаций удалось значительно улучшить состояние ногтевой пластины. Постепенно уменьшился объём подногтевого гиперкератоза, улучшился внешний вид ногтя, восстановилась его структура и качество роста.</p>
+                                            <p class="case-item__label-text">К завершению работы в феврале ногтевая пластина выглядела значительно более здоровой и физиологичной, а клиент отметил заметные изменения не только визуально, но и в ощущениях комфорта.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/8.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__meta">
+                                            <span class="case-item__meta-item">
+                                                <img src="./icons/time.svg" alt="" width="20" height="20">
+                                                Срок восстановления: около 7 месяцев. Периодичность процедур: 1 раз в месяц.
+                                            </span>
                                         </div>
                                     </div>
-
-                                    <button class="case-item__prev" aria-label="Предыдущее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="15 18 9 12 15 6"/>
-                                        </svg>
-                                    </button>
-                                    <button class="case-item__next" aria-label="Следующее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="9 18 15 12 9 6"/>
-                                        </svg>
-                                    </button>
-
-                                    <div class="case-item__counter">1 / 5</div>
-
-                                </div>
-                                <div class="case-item__content">
-                                    <h3 class="case-item__title">Восстановление ногтевой пластины и подологическое сопровождение при деформации ногтя</h3>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Проблема:</strong> 
-                                            Клиент обратился с изменением внешнего вида ногтевой пластины и выраженным подногтевым гиперкератозом. Основной причиной состояния стало длительное ношение неправильно подобранной обуви, что привело к постоянному давлению на ногтевой аппарат и избыточному образованию роговых масс под ногтем.
-                                            Ситуацию усугубил неправильно подобранный домашний уход, который не решал проблему и не способствовал восстановлению ногтевой пластины.
-                                        </p>
-                                        <p class="case-item__label-text">В результате ноготь был деформирован, изменён визуально и требовал регулярного подологического сопровождения.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Решение:</strong> Работа с клиентом велась с июля по февраль.</p>
-                                        <p class="case-item__label-text">На первичном приёме была проведена подологическая обработка ногтевой пластины и удаление избыточного подногтевого гиперкератоза. Далее обработки выполнялись регулярно с периодичностью один раз в месяц.</p>
-                                        <p class="case-item__label-text">Основными задачами были:</p>
-                                        <ul class="case-item__label-text">
-                                            <li>• контроль состояния ногтевого аппарата;</li>
-                                            <li>• своевременное удаление избыточных ороговений;</li>
-                                            <li>• создание условий для правильного роста ногтя;</li>
-                                            <li>• подбор домашнего ухода.</li>
-                                        </ul>
-                                        <p class="case-item__label-text">В домашний уход было рекомендовано регенерирующее масло для ногтей, которое клиент использовал на протяжении всего периода восстановления.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Результат:</strong> Благодаря регулярным обработкам и соблюдению домашних рекомендаций удалось значительно улучшить состояние ногтевой пластины. Постепенно уменьшился объём подногтевого гиперкератоза, улучшился внешний вид ногтя, восстановилась его структура и качество роста.</p>
-                                        <p class="case-item__label-text">К завершению работы в феврале ногтевая пластина выглядела значительно более здоровой и физиологичной, а клиент отметил заметные изменения не только визуально, но и в ощущениях комфорта.</p>
-                                    </div>
-                                    <div class="case-item__meta">
-                                        <span class="case-item__meta-item">
-                                            <img src="./icons/time.svg" alt="" width="20" height="20">
-                                            Срок восстановления: около 7 месяцев. Периодичность процедур: 1 раз в месяц.
-                                        </span>
-                                    </div>
-                                </div>
+                                </dialog>
                             </article>
 
                             <!-- Кейс 9 -->
-                            <article class="case-item" id="ninth-case">
-                                <div class="case-item__images">
+                            <article class="help__card case-card" id="ninth-case">
+                                <img class="case-card__cover" src="./images/cases/9.5.png" alt="" loading="lazy">
+                                <h3 class="case-card__title edu__card-title" id="ninth-case-preview">Протезирование ногтевой пластины при травматическом онихолизисе</h3>
+                                <p class="case-card__description">Удаление отслоившейся части ногтя и протезирование.</p>
+                                <button class="case-card__more edu__flip-button" type="button" aria-haspopup="dialog" aria-labelledby="ninth-case-more ninth-case-preview" id="ninth-case-more">Подробнее</button>
+                                <dialog class="case-item" aria-labelledby="ninth-case-title">
+                                    <form class="case-item__actions" method="dialog">
+                                        <button class="case-card__more edu__flip-button" type="submit" autofocus>Закрыть</button>
+                                    </form>
+                                    <div class="case-item__images">
 
-                                    <div class="case-item__slides">
-                                        <div class="case-item__slide case-item__slide--active">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/9.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                        <div class="case-item__slides">
+                                            <div class="case-item__slide case-item__slide--active">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/9.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/9.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/9.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/9.5.png" alt="Фото 4" class="case-item__image" style="opacity:1">
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/9.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <button class="case-item__prev" aria-label="Предыдущее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="15 18 9 12 15 6"/>
+                                            </svg>
+                                        </button>
+                                        <button class="case-item__next" aria-label="Следующее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"/>
+                                            </svg>
+                                        </button>
+
+                                        <div class="case-item__counter">1 / 4</div>
+
+                                    </div>
+                                    <div class="case-item__content">
+                                        <h2 class="case-item__title" id="ninth-case-title">Протезирование ногтевой пластины при травматическом онихолизисе</h2>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Проблема:</strong>
+                                                Клиент обратился с отслоением ногтевой пластины. По внешним признакам присутствовал онихолизис, однако перед началом работы было важно определить причину его возникновения и исключить грибковую природу поражения.
+                                            </p>
+                                            <p class="case-item__label-text">До начала активной подологической коррекции клиент был направлен на консультацию к врачу-дерматологу. Также на момент первого визита отсутствовала чёткая граница между стабильной и нестабильной частью ногтевой пластины, поэтому требовалось небольшое время для отрастания ногтя.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/9.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Решение:</strong> На первом визите был проведён осмотр, собран анамнез и даны рекомендации по дальнейшим действиям. Клиент направлен к врачу-дерматологу для уточнения природы происхождения онихолизиса. По результатам обследования грибковая инфекция была исключена, а причиной изменений признан травматический фактор.</p>
+                                            <p class="case-item__label-text">После появления чёткой границы между здоровой и отслоившейся частью ногтя был проведён второй визит. Выполнена полная зачистка нестабильной части ногтевой пластины и тщательно обработано ногтевое ложе.</p>
+                                            <p class="case-item__label-text">Для защиты ногтевого ложа, улучшения эстетики и создания комфортных условий для дальнейшего отрастания ногтя выполнено протезирование специальной подологической массой.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/9.5.png" alt="Фото 4" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Результат:</strong> Удалены все нестабильные участки ногтевой пластины, исключены условия для дальнейшего накопления загрязнений и травматизации ногтевого ложа.</p>
+                                            <p class="case-item__label-text">После протезирования ноготь приобрёл эстетичный внешний вид, а ногтевое ложе получило дополнительную защиту на период восстановления. Клиент получил рекомендации по дальнейшему уходу и наблюдению за динамикой роста ногтевой пластины.</p>
+                                        </div>
+                                        <div class="case-item__meta">
+                                            <span class="case-item__meta-item">
+                                                <img src="./icons/time.svg" alt="" width="20" height="20">
+                                                Количество визитов: 2.
+                                            </span>
                                         </div>
                                     </div>
-
-                                    <button class="case-item__prev" aria-label="Предыдущее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="15 18 9 12 15 6"/>
-                                        </svg>
-                                    </button>
-                                    <button class="case-item__next" aria-label="Следующее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="9 18 15 12 9 6"/>
-                                        </svg>
-                                    </button>
-
-                                    <div class="case-item__counter">1 / 4</div>
-
-                                </div>
-                                <div class="case-item__content">
-                                    <h3 class="case-item__title">Протезирование ногтевой пластины при травматическом онихолизисе</h3>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Проблема:</strong> 
-                                            Клиент обратился с отслоением ногтевой пластины. По внешним признакам присутствовал онихолизис, однако перед началом работы было важно определить причину его возникновения и исключить грибковую природу поражения.
-                                        </p>
-                                        <p class="case-item__label-text">До начала активной подологической коррекции клиент был направлен на консультацию к врачу-дерматологу. Также на момент первого визита отсутствовала чёткая граница между стабильной и нестабильной частью ногтевой пластины, поэтому требовалось небольшое время для отрастания ногтя.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Решение:</strong> На первом визите был проведён осмотр, собран анамнез и даны рекомендации по дальнейшим действиям. Клиент направлен к врачу-дерматологу для уточнения природы происхождения онихолизиса. По результатам обследования грибковая инфекция была исключена, а причиной изменений признан травматический фактор.</p>
-                                        <p class="case-item__label-text">После появления чёткой границы между здоровой и отслоившейся частью ногтя был проведён второй визит. Выполнена полная зачистка нестабильной части ногтевой пластины и тщательно обработано ногтевое ложе.</p>
-                                        <p class="case-item__label-text">Для защиты ногтевого ложа, улучшения эстетики и создания комфортных условий для дальнейшего отрастания ногтя выполнено протезирование специальной подологической массой.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Результат:</strong> Удалены все нестабильные участки ногтевой пластины, исключены условия для дальнейшего накопления загрязнений и травматизации ногтевого ложа.</p>
-                                        <p class="case-item__label-text">После протезирования ноготь приобрёл эстетичный внешний вид, а ногтевое ложе получило дополнительную защиту на период восстановления. Клиент получил рекомендации по дальнейшему уходу и наблюдению за динамикой роста ногтевой пластины.</p>
-                                    </div>
-                                    <div class="case-item__meta">
-                                        <span class="case-item__meta-item">
-                                            <img src="./icons/time.svg" alt="" width="20" height="20">
-                                            Количество визитов: 2.
-                                        </span>
-                                    </div>
-                                </div>
+                                </dialog>
                             </article>
 
                             <!-- Кейс 10 ЗАКЛЮЧИТЕЛЬНЫЙ -->
-                            <article class="case-item" id="tenth-case">
-                                <div class="case-item__images">
+                            <article class="help__card case-card" id="tenth-case">
+                                <img class="case-card__cover" src="./images/cases/10.11.png" alt="" loading="lazy">
+                                <h3 class="case-card__title edu__card-title" id="tenth-case-preview">Подологические обработки при онихомикозе ногтевых пластин</h3>
+                                <p class="case-card__description">Регулярные обработки ногтей в рамках совместного ведения с врачом.</p>
+                                <button class="case-card__more edu__flip-button" type="button" aria-haspopup="dialog" aria-labelledby="tenth-case-more tenth-case-preview" id="tenth-case-more">Подробнее</button>
+                                <dialog class="case-item" aria-labelledby="tenth-case-title">
+                                    <form class="case-item__actions" method="dialog">
+                                        <button class="case-card__more edu__flip-button" type="submit" autofocus>Закрыть</button>
+                                    </form>
+                                    <div class="case-item__images">
 
-                                    <div class="case-item__slides">
-                                        <div class="case-item__slide case-item__slide--active">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/10.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                        <div class="case-item__slides">
+                                            <div class="case-item__slide case-item__slide--active">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/10.1.png" alt="Фото 1" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/10.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/10.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/10.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/10.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/10.6.png" alt="Фото 6" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/10.7.png" alt="Фото 7" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/10.8.png" alt="Фото 8" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/10.9.png" alt="Фото 9" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/10.10.png" alt="Фото 10" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/10.11.png" alt="Фото 11" class="case-item__image" style="opacity:1">
+                                                </div>
+                                            </div>
+
+                                            <div class="case-item__slide">
+                                                <div class="case-item__image-wrapper">
+                                                    <img src="./images/cases/10.12.png" alt="Фото 12" class="case-item__image" style="opacity:1">
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/10.2.png" alt="Фото 2" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
+                                        <button class="case-item__prev" aria-label="Предыдущее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="15 18 9 12 15 6"/>
+                                            </svg>
+                                        </button>
+                                        <button class="case-item__next" aria-label="Следующее фото">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <polyline points="9 18 15 12 9 6"/>
+                                            </svg>
+                                        </button>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/10.3.png" alt="Фото 3" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
+                                        <div class="case-item__counter">1 / 12</div>
 
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/10.4.png" alt="Фото 4" class="case-item__image" style="opacity:1">
-                                            </div>
+                                    </div>
+                                    <div class="case-item__content">
+                                        <h2 class="case-item__title" id="tenth-case-title">Подологические обработки при онихомикозе ногтевых пластин</h2>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Проблема:</strong>
+                                                Клиент обратился с ногтевыми пластинами, поражёнными онихомикозом. Диагноз был подтверждён лабораторно, после чего клиент направлен к врачу-дерматологу для назначения лечения.
+                                            </p>
+                                            <p class="case-item__label-text">На момент обращения ногтевые пластины имели выраженные изменения: утолщение, деформацию, изменение цвета и структуры. Состояние ногтей доставляло как эстетический, так и физический дискомфорт.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/10.5.png" alt="Фото 5" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Решение:</strong> Работа ведётся совместно с врачом-дерматологом. Врачом назначена комплексная терапия, включающая системные и местные противогрибковые препараты.</p>
+                                            <p class="case-item__label-text">Со стороны подолога с января месяца проводятся регулярные аппаратные обработки ногтевых пластин. Основная задача обработок — уменьшить объём поражённых тканей, улучшить проникновение местных препаратов к очагу поражения и создать условия для отрастания здорового ногтя.</p>
+                                            <p class="case-item__label-text">На протяжении всего периода лечения осуществляется контроль динамики роста ногтевых пластин и даются рекомендации по домашнему уходу.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/10.6.png" alt="Фото 6" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__section">
+                                            <p class="case-item__label-text"><strong>Результат:</strong> На сегодняшний день наблюдается выраженная положительная динамика. По сравнению с первыми визитами состояние ногтевых пластин значительно улучшилось: уменьшился объём поражённых тканей, появился участок здорового отрастания ногтя. В настоящее время здоровая ногтевая пластина занимает уже около половины длины ногтя, что свидетельствует о хорошей эффективности комплексной работы врача, подолога и самого клиента.</p>
+                                            <p class="case-item__label-text">Процедуры стали значительно более комфортными и практически не вызывают болезненных ощущений. Лечение продолжается и будет завершено после полного отрастания здоровых ногтевых пластин и достижения стойкого результата.</p>
                                         </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/10.7.png" alt="Фото 7" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/10.8.png" alt="Фото 8" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/10.9.png" alt="Фото 9" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/10.10.png" alt="Фото 10" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/10.11.png" alt="Фото 11" class="case-item__image" style="opacity:1">
-                                            </div>
-                                        </div>
-
-                                        <div class="case-item__slide">
-                                            <div class="case-item__image-wrapper">
-                                                <img src="./images/cases/10.12.png" alt="Фото 12" class="case-item__image" style="opacity:1">
-                                            </div>
+                                        <div class="case-item__meta">
+                                            <span class="case-item__meta-item">Аппаратные обработки проводятся с января.</span>
                                         </div>
                                     </div>
-
-                                    <button class="case-item__prev" aria-label="Предыдущее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="15 18 9 12 15 6"/>
-                                        </svg>
-                                    </button>
-                                    <button class="case-item__next" aria-label="Следующее фото">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="9 18 15 12 9 6"/>
-                                        </svg>
-                                    </button>
-
-                                    <div class="case-item__counter">1 / 12</div>
-
-                                </div>
-                                <div class="case-item__content">
-                                    <h3 class="case-item__title">Подологические обработки при онихомикозе ногтевых пластин</h3>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Проблема:</strong> 
-                                            Клиент обратился с ногтевыми пластинами, поражёнными онихомикозом. Диагноз был подтверждён лабораторно, после чего клиент направлен к врачу-дерматологу для назначения лечения.
-                                        </p>
-                                        <p class="case-item__label-text">На момент обращения ногтевые пластины имели выраженные изменения: утолщение, деформацию, изменение цвета и структуры. Состояние ногтей доставляло как эстетический, так и физический дискомфорт.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Решение:</strong> Работа ведётся совместно с врачом-дерматологом. Врачом назначена комплексная терапия, включающая системные и местные противогрибковые препараты.</p>
-                                        <p class="case-item__label-text">Со стороны подолога с января месяца проводятся регулярные аппаратные обработки ногтевых пластин. Основная задача обработок — уменьшить объём поражённых тканей, улучшить проникновение местных препаратов к очагу поражения и создать условия для отрастания здорового ногтя.</p>
-                                        <p class="case-item__label-text">На протяжении всего периода лечения осуществляется контроль динамики роста ногтевых пластин и даются рекомендации по домашнему уходу.</p>
-                                    </div>
-                                    <div class="case-item__section">
-                                        <p class="case-item__label-text"><strong>Результат:</strong> На сегодняшний день наблюдается выраженная положительная динамика. По сравнению с первыми визитами состояние ногтевых пластин значительно улучшилось: уменьшился объём поражённых тканей, появился участок здорового отрастания ногтя. В настоящее время здоровая ногтевая пластина занимает уже около половины длины ногтя, что свидетельствует о хорошей эффективности комплексной работы врача, подолога и самого клиента.</p>
-                                        <p class="case-item__label-text">Процедуры стали значительно более комфортными и практически не вызывают болезненных ощущений. Лечение продолжается и будет завершено после полного отрастания здоровых ногтевых пластин и достижения стойкого результата.</p>
-                                    </div>
-                                </div>
+                                </dialog>
                             </article>
 
+                        </div>
+                        <div class="help__controls" hidden>
+                            <button type="button" aria-controls="cases-carousel" data-carousel-step="-1">Назад</button>
+                            <button type="button" aria-controls="cases-carousel" data-carousel-step="1">Далее</button>
                         </div>
                     </div>
                 </div>
@@ -975,7 +1053,7 @@
 
             <!-- Телефон и соцсети -->
             <div class="footer__contacts">
-                <a href="tel:+79041838568" class="footer__phone">
+                <a href="tel:+79953357808" class="footer__phone">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                         <path d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor"/>
                     </svg>
@@ -984,15 +1062,9 @@
                 <p class="footer__schedule">Ежедневно 10:00 — 20:00</p>
 
                 <div class="footer__socials">
-                    <a href="https://vk.com/im?sel=708439222" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">
-                        <img src="./icons/contacts/vk.svg" alt="VK" width="20" height="20">
-                    </a>
-                    <a href="https://t.me/podolog_anna_kudurova_ul" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-                        <img src="./icons/contacts/telegram.svg" alt="Telegram" width="20" height="20">
-                    </a>
-                    <a href="https://max.ru/u/f9LHodD0cOKuqBhmrnhg5dCg-Mo-H_g73IvKzCMbZ4Sr70a2YdIQnEO0F1E" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="MAX">
-                        <img src="./icons/contacts/max.svg" alt="MAX" width="20" height="20">
-                    </a>
+                    <a href="https://vk.com/im?sel=708439222" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">ВК</a>
+                    <a href="https://t.me/podolog_anna_kudurova_ul" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="Telegram">Telegram</a>
+                    <a href="https://max.ru/u/f9LHodD0cOKuqBhmrnhg5dCg-Mo-H_g73IvKzCMbZ4Sr70a2YdIQnEO0F1E" class="footer__social" target="_blank" rel="noopener noreferrer" aria-label="MAX">MAX</a>
                 </div>
             </div>
 
@@ -1007,7 +1079,7 @@
             <a href="https://katymist.github.io/Portfolio/" class="footer__dev" target="_blank" rel="noopener noreferrer">
                 <div class="footer__dev-info">
                     <p class="footer__dev-name">Екатерина Туманова</p>
-                    <p class="footer__dev-skills">Frontend Developer & Designer</p>
+                    <p class="footer__dev-skills">Frontend Developer<br>&amp;&nbsp;Designer</p>
                 </div>
             </a>
 

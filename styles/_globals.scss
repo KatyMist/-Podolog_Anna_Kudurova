@@ -203,33 +203,44 @@ button {
     font: inherit;
 }
 
-// КАСТОМНЫЙ КУРСОР (если JS управляет)
-* {
-    cursor: none !important;
-
-    @include tablet {
-        cursor: auto !important;
-    }
-}
-
+// Кастомный курсор
 .cursor {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    width: rem(12);
-    height: rem(12);
-    background-color: var(--accent-light);
-    border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
-    opacity: 1; 
-    transition: width 0.3s ease, height 0.3s ease, opacity 0.2s ease; 
+
+    &::before {
+        content: '';
+        display: block;
+        width: rem(12);
+        height: rem(12);
+        border-radius: 50%;
+        background-color: var(--accent-light);
+        transform: translate(-50%, -50%);
+        transition: transform .2s ease, opacity .2s ease;
+    }
+
+    &--hover::before {
+        transform: translate(-50%, -50%) scale(1.65);
+        opacity: .55;
+    }
 }
 
-.cursor--hover {
-    width: rem(20);
-    height: rem(20);
-    opacity: 0.4;
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+    // Модальное окно находится поверх кастомного курсора.
+    .has-custom-cursor:not(:has(.case-item[open])) {
+        &,
+        * {
+            cursor: none !important;
+        }
+
+        .cursor {
+            display: block;
+        }
+    }
 }
 
 // УТИЛИТЫ
