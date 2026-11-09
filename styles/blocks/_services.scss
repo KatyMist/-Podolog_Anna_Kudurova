@@ -173,21 +173,41 @@
 }
 
 .edu__card.is-flippable {
+    --edu-flip-duration: .95s;
+
     .edu__card-inner {
         transform-style: preserve-3d;
-        transition: transform .95s cubic-bezier(.45, 0, .25, 1);
+        transition: transform var(--edu-flip-duration) ease-in-out;
     }
 
-    &.is-flipped .edu__card-inner {
-        transform: rotateY(180deg);
+    &.is-flipped {
+        .edu__card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .edu__card-front {
+            opacity: 0;
+        }
+
+        .edu__card-back {
+            opacity: 1;
+        }
     }
 
     .edu__card-front,
     .edu__card-back {
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+        // Стороны меняются в момент, когда карточка повёрнута ребром.
+        transition: opacity 0s calc(var(--edu-flip-duration) / 2);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        --edu-flip-duration: 0s;
     }
 
     .edu__card-back {
+        opacity: 0;
         position: absolute;
         inset: 0;
         display: flex;
