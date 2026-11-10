@@ -13,7 +13,7 @@
 <img src="https://img.shields.io/badge/RU-Русский-2f7bd8?labelColor=1b2a4a" alt="Русский"> <img src="https://img.shields.io/badge/EN-English-2f7bd8?labelColor=1b2a4a" alt="English">
 
 <a href="https://annakudurova.ru/">
-  <img src="https://github.com/user-attachments/assets/59f941ab-b08f-426e-847b-b357e848c2cc" alt="Home page on desktop and smartphone" width="100%">
+  <img width="2400" height="1350" alt="image" src="https://github.com/user-attachments/assets/bce5fdc0-4f92-4fc0-b3ea-e527e0e64a59" />
 </a>
 
 </div>
@@ -46,7 +46,7 @@ A multi-page website for Anna Kudurova’s School & Studio of Podology and Healt
 <details open>
 <summary><b>Главная · Home</b></summary>
 <br>
-<img src="https://github.com/user-attachments/assets/c5a5ece0-4bd1-4b46-9a65-eb8dbe173981" alt="Home page" width="100%">
+<img width="2400" height="1350" alt="image" src="https://github.com/user-attachments/assets/5c9678ff-eca3-424c-b22b-03106ffd4d0a" />
 </details>
 
 <details>
