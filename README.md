@@ -58,13 +58,13 @@ A multi-page website for Anna Kudurova’s School & Studio of Podology and Healt
 <details>
 <summary><b>Услуги · Services</b></summary>
 <br>
-<img src="https://github.com/user-attachments/assets/c7d8e370-5d76-4ff0-a8f9-f84f0282e17e" alt="Services page" width="100%">
+<img width="1448" height="1086" alt="image" src="https://github.com/user-attachments/assets/5a6e65f5-4e87-4d2b-9c51-4c3751366505" />
 </details>
 
 <details>
-<summary><b>Кейсы · Cases</b> (медицинские фото до / после · medical before/after photos)</summary>
+<summary><b>Кейсы · Cases</b> (фото до / после · before/after photos)</summary>
 <br>
-<img src="https://github.com/user-attachments/assets/f5fa639e-2b90-4cde-a801-85ce71017756" alt="Cases page" width="100%">
+<img width="1448" height="1086" alt="image" src="https://github.com/user-attachments/assets/465316e5-8e76-46a0-b0fd-a0bffd1b97b7" />
 </details>
 
 <details>
@@ -76,7 +76,7 @@ A multi-page website for Anna Kudurova’s School & Studio of Podology and Healt
 <details>
 <summary><b>Мобильная версия · Mobile Version</b></summary>
 <br>
-<img src="https://github.com/user-attachments/assets/b8206fa9-0235-4e7b-93e9-5033bfa685a3" alt="Mobile version" width="100%">
+<img width="1836" height="943" alt="image" src="https://github.com/user-attachments/assets/1aa7780a-f23a-4472-afb7-ab9cb802d660" />
 </details>
 
 
