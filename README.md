@@ -29,17 +29,17 @@
 
 ## О сайте · About
 
-Многостраничный сайт-визитка для частного подолога и инструктора. Задача — рассказать о специалисте, показать услуги и реальные результаты работы и привести клиента к записи.
+Многостраничный сайт-визитка школы-студии подологии и здоровой эстетики Анны Кудуровой в Ульяновске. Сайт знакомит с Анной как с подологом, инструктором и спикером, показывает услуги, программы обучения для мастеров и результаты работы со стопами и ногтями. Кнопка «Записаться» открывает переписку во ВКонтакте.
 
-A multi-page business card website for a private podologist and instructor. Its goal is to introduce the specialist, present her services and real treatment results, and guide visitors to book an appointment. The website itself is in Russian.
+A multi-page website for Anna Kudurova’s School & Studio of Podology and Healthy Aesthetics in Ulyanovsk. It introduces Anna as a podologist, instructor and speaker, and showcases the studio’s services, training courses for professionals and results of foot and nail care. The booking button opens a chat on VK. The website itself is in Russian.
 
 | Страница · Page | Что на ней · Content |
 |---|---|
-| [Главная · Home](https://annakudurova.ru/) | Первый экран, преимущества, услуги, примеры «до / после»<br>Hero section, key benefits, services, before/after examples |
-| [О себе · About](https://annakudurova.ru/about.html) | История специалиста, преподавание, профессиональная деятельность<br>The specialist's story, teaching, professional activities |
-| [Услуги · Services](https://annakudurova.ru/services.html) | Подология, педикюр, маникюр, обучение<br>Podology, pedicure, manicure, training |
-| [Кейсы · Cases](https://annakudurova.ru/cases.html) | Проблема → решение → результат, слайдер «до / после»<br>Problem → solution → result, before/after slider |
-| [Контакты · Contacts](https://annakudurova.ru/contacts.html) | Мессенджеры, телефон, адрес, часы работы, карта<br>Messengers, phone, address, working hours, map |
+| [Главная · Home](https://annakudurova.ru/) | Первый экран, преимущества, карусели направлений услуг и кейсов «до / после»<br>Hero section, key benefits, service category and before/after case carousels |
+| [О себе · About](https://annakudurova.ru/about.html) | Путь в подологию, программы Rosilak и авторские курсы, выступления, организация профессиональных мероприятий и подход к работе<br>Anna’s path into podology, Rosilak and original courses, speaking and organizing professional events, and her approach to client care |
+| [Услуги · Services](https://annakudurova.ru/services.html) | Подология, педикюр и маникюр с карточками процедур и их длительностью, очные курсы для специалистов в Ульяновске<br>Podology, pedicure and manicure cards with procedure durations, plus in-person courses for professionals in Ulyanovsk |
+| [Кейсы · Cases](https://annakudurova.ru/cases.html) | Карусель подологических кейсов, подробности по схеме «проблема → решение → результат» и слайдер «до / после» в модальных окнах<br>Podology case carousel with problem → solution → outcome write-ups and before/after sliders in modal dialogs |
+| [Контакты · Contacts](https://annakudurova.ru/contacts.html) | ВКонтакте, Telegram и MAX, телефон, адрес, часы приёма по предварительной записи и Яндекс Карты<br>VK, Telegram and MAX, phone, address, appointment hours and Yandex Maps |
 
 ## Скриншоты · Screenshots
 
@@ -85,14 +85,14 @@ A multi-page business card website for a private podologist and instructor. Its 
 | Русский | English |
 |---|---|
 | **Адаптивная вёрстка**, бургер-меню на мобильных | **Responsive layout**, burger menu on mobile |
-| **Слайдер «до / после»** и галерея фото | **Before/after slider** and photo gallery |
-| **Аккордеон услуг** с прямыми ссылками на категорию | **Services accordion** with direct category links |
+| **Карусели кейсов** и слайдеры «до / после» в модальных окнах | **Case carousels** and before/after sliders in modal dialogs |
+| **Карусели услуг** с прямыми ссылками на категории и раскрывающимися описаниями курсов | **Service carousels** with direct category links and expandable course descriptions |
 | **Прелоадер** с индикатором загрузки | **Preloader** with a progress indicator |
 | **Кастомный курсор** (на тач-экранах отключается) | **Custom cursor** (disabled on touch screens) |
 | **Баннер cookies** | **Cookie banner** |
 | **SEO**: мета-теги, Open Graph, Schema.org, sitemap, robots.txt | **SEO**: meta tags, Open Graph, Schema.org, sitemap, robots.txt |
 | **Доступность**: `aria`-атрибуты, `alt` у изображений | **Accessibility**: `aria` attributes, image `alt` text |
-| **Яндекс.Метрика** и политика конфиденциальности | **Yandex.Metrica** and privacy policy |
+| **Яндекс.Метрика**, политика конфиденциальности и ссылка на договор оферты | **Yandex.Metrica**, privacy policy and a link to the public offer document |
 | **Собственный домен** через GitHub Pages | **Custom domain** via GitHub Pages |
 
 ## Технологии · Tech Stack
@@ -115,6 +115,7 @@ A multi-page business card website for a private podologist and instructor. Its 
 ├── contacts.html         # Контакты · Contacts
 ├── privacy.html          # Политика конфиденциальности · Privacy Policy
 ├── 404.html
+├── Договор.docx          # Договор оферты · Public offer document
 ├── styles/               # SCSS
 ├── scripts/              # JavaScript
 ├── images/  icons/  fonts/
