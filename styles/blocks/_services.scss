@@ -49,14 +49,6 @@
     margin-top: rem(2);
 }
 
-[data-category="pedicure"] .services__items > * {
-    max-width: 29rem;
-}
-
-[data-category="pedicure"] .services__item {
-    flex-basis: 100%;
-}
-
 .services__items .services__item {
     grid-template-rows: auto 1fr auto;
 }

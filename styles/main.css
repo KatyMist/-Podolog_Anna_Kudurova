@@ -322,7 +322,7 @@ main {
   flex-grow: 1;
 }
 @media (width <= 30.06125rem) {
-  main {
+  main:not(.about-main) {
     padding-top: 3.75rem !important;
   }
 }
@@ -426,36 +426,21 @@ button {
   font: inherit;
 }
 
-.cursor {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
-}
-.cursor::before {
-  content: "";
-  display: block;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background-color: var(--accent-light);
-  transform: translate(-50%, -50%);
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-.cursor--hover::before {
-  transform: translate(-50%, -50%) scale(1.65);
-  opacity: 0.55;
-}
-
 @media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
-  .has-custom-cursor:not(:has(.case-item[open])),
-  .has-custom-cursor:not(:has(.case-item[open])) * {
-    cursor: none !important;
+  body:not(:has(.case-item[open])) {
+    cursor: url("../icons/cursor.svg") 12 12, auto;
   }
-  .has-custom-cursor:not(:has(.case-item[open])) .cursor {
-    display: block;
+  body:not(:has(.case-item[open])) :where(*) {
+    cursor: inherit;
+  }
+  body:not(:has(.case-item[open])) :where(a[href], button:enabled, label, select:enabled, input:enabled:is([type=button], [type=submit], [type=reset], [type=checkbox],
+  [type=radio], [type=file]),
+  [role=button]:not([aria-disabled=true])) {
+    cursor: url("../icons/cursor-hover.svg") 12 12, pointer;
+  }
+  body:not(:has(.case-item[open])) :where(input, textarea, [contenteditable=true]):where(:not(:is([type=button], [type=submit], [type=reset],
+  [type=checkbox], [type=radio], [type=file], :disabled))) {
+    cursor: text;
   }
 }
 .container {
@@ -1201,7 +1186,7 @@ button {
 }
 @media (width <= 47.99875rem) {
   .about-hero {
-    padding-block: 2rem 1.5rem;
+    padding-block: 1rem 1.5rem;
   }
 }
 
@@ -2016,14 +2001,6 @@ button {
   font-size: 0.875rem;
   color: var(--muted);
   margin-top: 0.125rem;
-}
-
-[data-category=pedicure] .services__items > * {
-  max-width: 29rem;
-}
-
-[data-category=pedicure] .services__item {
-  flex-basis: 100%;
 }
 
 .services__items .services__item {

@@ -1,11 +1,9 @@
 import header from './header.js'
-import cursor from './cursor.js';
 import services from './services.js';
 import cases from './cases.js';
 import cookies from './cookies.js';
 
 new header()
-new cursor();
 new services();
 new cases();
 new cookies();

@@ -8,7 +8,7 @@
     overflow: hidden;
 
     @include tablet { padding-block: rem(48) rem(32); }
-    @include mobile { padding-block: rem(32) rem(24); }
+    @include mobile { padding-block: rem(16) rem(24); }
 }
  
 .about-hero__inner {
